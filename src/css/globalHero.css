@@ -5,7 +5,25 @@
     background-size: cover;
 }
 
-#hero:before {
+#web {
+    width: 100%;
+    height: 100vh;
+    background: url("../assets/web.jpg") top center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#programming {
+    width: 100%;
+    height: 100vh;
+    background: url("../assets/programming.jpg") top center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#hero:before,
+#web:before,
+#programming:before {
     content: "";
     background: rgba(5, 13, 24, 0.3);
     position: absolute;
@@ -16,16 +34,18 @@
     z-index: 1;
 }
 
+#hero h1,
+#web h1,
+#programming h1 {
 
-
-#hero h1 {
-    margin: 0 0 10px 0;
-    font-size: 64px;
     font-weight: 700;
     line-height: 56px;
-    color: #fff;
+
 }
 
+.internship {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
 
 
 

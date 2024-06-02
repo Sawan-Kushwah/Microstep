@@ -1,10 +1,12 @@
- 
+import { NavLink } from "react-router-dom"
+
+
 const HomeCourses = () => {
     return (
         <section id="courses" >
             <div className="heading text-center text-3xl pt-20 ">
                 <div className="mb-4 font-bold">
-                    <h1>Courses</h1>
+                    <h1>Internships</h1>
                 </div>
                 <div className="text text-[3rem]">
                     BECOME SKILLED AT WHAT MATTER&apos;S
@@ -68,11 +70,10 @@ const HomeCourses = () => {
                             </ul>
                         </div>
                         <div className="flex justify-center">
-                            <a href="#">
-                                <button type="button" className="text-white text-lg bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg  px-8 py-2.5 text-center me-2 mb-2">Getting started</button></a>
+                            <NavLink to={"/webdevelopment"}>
+                                <button type="button" className="text-white text-lg bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg  px-8 py-2.5 text-center me-2 mb-2">Getting started</button></NavLink>
                             <a href="#">
                                 <button type="button" className="text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-lg px-8 py-2.5 text-center me-2 mb-2">Learn more</button></a>
-
                         </div>
                     </div>
                     <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
@@ -135,8 +136,8 @@ const HomeCourses = () => {
                             </ul>
                         </div>
                         <div className="flex justify-center">
-                            <a href="#">
-                                <button type="button" className="text-white text-lg bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg  px-8 py-2.5 text-center me-2 mb-2">Getting started</button></a>
+                            <NavLink to={"/programming"}>
+                                <button type="button" className="text-white text-lg bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg  px-8 py-2.5 text-center me-2 mb-2">Getting started</button></NavLink>
                             <a href="#">
                                 <button type="button" className="text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-lg px-8 py-2.5 text-center me-2 mb-2">Learn more</button></a>
 
