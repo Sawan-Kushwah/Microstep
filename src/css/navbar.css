@@ -1,0 +1,11 @@
+.active {
+  color: rgb(6, 143, 201);
+  text-decoration: underline;
+
+}
+
+.testimonialBox {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: 15px;
+  height: fit-content;
+}
