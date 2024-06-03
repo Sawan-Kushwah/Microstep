@@ -1,4 +1,4 @@
-
+import "../css/globalHero.css"
 const FocusedArea = () => {
     return (
         <>
@@ -13,7 +13,7 @@ const FocusedArea = () => {
                     <div className="discovering_card-top py-8 px-20 flex">
 
 
-                        <div className="discovering_card padding-medium bg-black px-10 py-6 rounded-3xl w-[500px] m-3 ">
+                        <div className="discovering_card padding-medium bg-black px-10 py-6 rounded-3xl w-[500px] m-3 internship">
                             <div className="discovering-heading_wrapper flex justify-around items-center pb-2">
                                 <h3 id="w-node-_235fbc4b-5035-cf4b-01f1-3b648c71363e-9e4283c1" className="discovering_card-heading text-3xl w-3/4 font-bold">REAL-WORLD SKILLS</h3>
                                 <div id="w-node-_235fbc4b-5035-cf4b-01f1-3b648c713640-9e4283c1" className="html-embed-2 benefits_icon w-embed">
@@ -28,7 +28,7 @@ const FocusedArea = () => {
                         </div>
 
 
-                        <div className="discovering_card padding-medium bg-black px-10 py-6 rounded-3xl w-[560px] m-3 ">
+                        <div className="discovering_card padding-medium bg-black px-10 py-6 rounded-3xl w-[560px] m-3 internship">
                             <div className="discovering-heading_wrapper flex justify-around items-center pb-2">
                                 <h3 id="w-node-_235fbc4b-5035-cf4b-01f1-3b648c71363e-9e4283c1" className="discovering_card-heading text-3xl w-3/4 font-bold">REAL-WORLD SKILLS</h3>
                                 <div id="w-node-_235fbc4b-5035-cf4b-01f1-3b648c713649-9e4283c1" className="html-embed-2 benefits_icon w-embed">
@@ -42,7 +42,7 @@ const FocusedArea = () => {
                             <p className="discovering_text">We teach practical real-world skills that we truly believe can have a positive impact on your life.</p>
                         </div>
 
-                        <div className="discovering_card padding-medium bg-black px-10 py-6 rounded-3xl w-[500px] m-3 ">
+                        <div className="discovering_card padding-medium bg-black px-10 py-6 rounded-3xl w-[500px] m-3 internship">
                             <div className="discovering-heading_wrapper flex justify-around items-center pb-2">
                                 <h3 id="w-node-_235fbc4b-5035-cf4b-01f1-3b648c71363e-9e4283c1" className="discovering_card-heading text-3xl w-3/4 font-bold">REAL-WORLD SKILLS</h3>
                                 <div id="w-node-_235fbc4b-5035-cf4b-01f1-3b648c713650-9e4283c1" className="html-embed-2 benefits_icon w-embed"><svg width="100" height="101" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -58,7 +58,7 @@ const FocusedArea = () => {
                     </div>
 
                     <div className="discovering_card-top _2 py-2 px-20 flex">
-                        <div className="discovering_card padding-medium bg-black px-10 py-6 rounded-3xl w-1/2 m-3 ">
+                        <div className="discovering_card padding-medium bg-black px-10 py-6 rounded-3xl w-1/2 m-3 internship">
                             <div className="discovering-heading_wrapper flex justify-around items-center pb-2">
                                 <h3 id="w-node-_235fbc4b-5035-cf4b-01f1-3b648c71363e-9e4283c1" className="discovering_card-heading text-3xl w-3/4 font-bold">REAL-WORLD SKILLS</h3>
                                 <div id="w-node-_235fbc4b-5035-cf4b-01f1-3b648c713657-9e4283c1" className="html-embed-2 benefits_icon w-embed"><svg width="100" height="101" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -70,7 +70,7 @@ const FocusedArea = () => {
                             <p className="discovering_text w-[450px]">We teach practical real-world skills that we truly believe can have a positive impact on your life.</p>
                         </div>
 
-                        <div className="discovering_card padding-medium bg-black px-10 py-6 rounded-3xl w-1/2 m-3 ">
+                        <div className="discovering_card padding-medium bg-black px-10 py-6 rounded-3xl w-1/2 m-3 internship">
                             <div className="discovering-heading_wrapper flex justify-around items-center pb-2">
                                 <h3 id="w-node-_235fbc4b-5035-cf4b-01f1-3b648c71363e-9e4283c1" className="discovering_card-heading text-3xl w-3/4 font-bold">REAL-WORLD SKILLS</h3>
                                 <div id="w-node-_235fbc4b-5035-cf4b-01f1-3b648c713657-9e4283c1" className="html-embed-2 benefits_icon w-embed"><svg width="100" height="101" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -4,7 +4,7 @@ const WebIntern = () => {
     return (
         <>
 
-            <section id="webIntern" className="bg-white text-black">
+            <section id="webIntern" className="bg-black text-white min-h-[100vh]">
                 <div className="heading text-center text-3xl pt-20 ">
                     <div className="mb-4 font-bold">
                         <h1>INTERNSHIPS</h1>
@@ -17,7 +17,7 @@ const WebIntern = () => {
 
                     {/* web development */}
 
-                    <div className="container internship mx-auto flex px-16 my-16 md:flex-row flex-col items-center w-11/12 text-black bg-white rounded-[13px] py-10 ">
+                    <div className="container internship mx-auto flex px-16 my-16 md:flex-row flex-col items-center w-11/12 text-black bg-gray-100 rounded-[13px] py-10 ">
                         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
                             <div className="box backdrop-blur-lg bg-slate-900 text-white py-2 px-10 text-lg rounded-r-3xl rounded-l-lg font-bold">
                                 Web Development Internship

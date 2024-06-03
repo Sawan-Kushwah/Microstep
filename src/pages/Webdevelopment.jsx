@@ -3,6 +3,7 @@ import Footer from '../components/Footer'
 import "../css/globalHero.css"
 import web from "../assets/Nerd.png"
 import WebIntern from '../webInternship/WebIntern'
+import { NavLink } from 'react-router-dom'
 
 const Webdevelopment = () => {
     return (
@@ -23,11 +24,11 @@ const Webdevelopment = () => {
                             </div>
                         </div>
                         <div className="level flex justify-between w-3/5 ">
-                            <a href='#' className="totalIntenship bg-gray-900 py-4 px-8 w-fit mt-5 rounded-3xl cursor-pointer">
+                            <NavLink to={"/applicationPageWeb1Month"} className="totalIntenship bg-gray-900 py-4 px-8 w-fit mt-5 rounded-3xl cursor-pointer">
                                 <div className="number font-bold text-white text-lg">
                                     BASIC
                                 </div>
-                            </a>
+                            </NavLink>
                             <a href='#' className="totalIntenship bg-gray-900 py-4 px-8 w-fit mt-5 rounded-3xl cursor-pointer">
                                 <div className="number font-bold text-white text-lg">
                                     INTERMEDIATE

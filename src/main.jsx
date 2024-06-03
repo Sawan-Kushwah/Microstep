@@ -9,6 +9,7 @@ import Contact from './pages/Contact.jsx'
 import WebIntern1 from './webInternship/WebIntern1.jsx'
 import ApplyNow from './ApplyNow.jsx'
 import { Auth0Provider } from '@auth0/auth0-react';
+import SubmittedSuccessfully from './components/SubmittedSuccessfully.jsx'
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
   {
     path: '/applyNow',
     element: <ApplyNow />
+  },
+  {
+    path: '/successfullySubmitted',
+    element: <SubmittedSuccessfully />
   },
 ])
 

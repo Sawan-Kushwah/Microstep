@@ -25,7 +25,7 @@ const WebIntern1 = () => {
 
             <Navbar />
             <section className="py-10">
-                <div className="container internship mx-auto flex px-16 my-16 md:flex-row flex-col items-center w-11/12 text-black bg-white rounded-[13px] py-10 ">
+                <div className="container internship mx-auto flex px-16 my-16 md:flex-row flex-col items-center w-11/12 text-white bg-slate-950 rounded-[13px] py-10 ">
                     <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
                         <div className="box backdrop-blur-lg bg-slate-900 text-white py-2 px-10 text-lg rounded-r-3xl rounded-l-lg font-bold">
                             Web Development Internship
@@ -38,7 +38,7 @@ const WebIntern1 = () => {
                             </a>
                             <a href='#' className="totalIntenship  bg-gray-300  py-2 px-8 w-fit mt-5 rounded-3xl cursor-pointer">
                                 <div className="number font-bold text-black text-lg">
-                                    location India
+                                    location : India
                                 </div>
                             </a>
                             <a href='#' className="totalIntenship bg-gray-300 py-2 px-8 w-fit mt-5 rounded-3xl cursor-pointer">
