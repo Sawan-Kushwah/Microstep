@@ -4,8 +4,13 @@ import "../css/globalHero.css"
 import web from "../assets/Nerd.png"
 import WebIntern from '../webInternship/WebIntern'
 import { NavLink } from 'react-router-dom'
+import { useEffect } from 'react'
 
 const Webdevelopment = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
+       
     return (
 
         <>

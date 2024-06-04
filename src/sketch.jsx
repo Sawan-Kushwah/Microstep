@@ -1,8 +1,9 @@
-import  { useRef, useEffect } from 'react';
+import  { useRef, useEffect, useState } from 'react';
 import p5 from 'p5';
 
 const Sketch = () => {
   const sketchRef = useRef();
+  const [numStars, setNumStars] = useState(5); // Initial number of stars set to 50
 
   useEffect(() => {
     const sketch = (p) => {
@@ -16,7 +17,7 @@ const Sketch = () => {
         canvas.style('left', '0');
         canvas.style('z-index', '-1');
 
-        for (let i = 0; i < 200; i++) {
+        for (let i = 0; i < numStars; i++) {
           let star = new Star();
           stars.push(star);
         }
@@ -65,7 +66,7 @@ const Sketch = () => {
         constructor(x, y) {
           this.x = x;
           this.y = y;
-          this.size = p.random(10, 30);
+          this.size = p.random(10, 25);
           this.baseColor = p.color(
             p.random([
               "#e84e66", "#67c69e",
@@ -78,9 +79,9 @@ const Sketch = () => {
 
           this.color = this.baseColor;
           this.rotation = p.random(p.TWO_PI);
-          this.speed = p.random(1, 3);
-          this.opacity = 255;
-          this.fadeOutRate = p.random(1, 3);
+          this.speed = p.random(0.3, 0.7); // Reduced speed to minimize spread
+          this.opacity = 100;
+          this.fadeOutRate = p.random(1, 1.5); // Reduced fade out rate
           this.shapeType = p.random(["circle", "rect"]);
           this.sparkles = [];
           this.shimmer = p.random(0.3, 0.8);
@@ -109,7 +110,7 @@ const Sketch = () => {
         updateColor() {
           let shimmerVal = p.sin(p.frameCount * this.shimmerSpeed);
           let shimmerColor = p.lerpColor(this.baseColor, p.color(255), shimmerVal);
-          let sparkleColor = p.lerpColor(shimmerColor, p.color(255), this.opacity / 255);
+          let sparkleColor = p.lerpColor(shimmerColor, p.color(255), this.opacity / 100);
           this.color = p.lerpColor(sparkleColor, this.baseColor, this.shimmer);
         }
 
@@ -144,15 +145,15 @@ const Sketch = () => {
           this.y = y;
           this.size = p.random(2, 8);
           this.color = color;
-          this.opacity = 255;
-          this.speedX = p.random(-1, 1);
-          this.speedY = p.random(-1, 1);
+          this.opacity = 100;
+          this.speedX = p.random(-0.5, 0.2); // Reduced speed to minimize spread
+          this.speedY = p.random(-0.5, 0.2); // Reduced speed to minimize spread
         }
 
         update() {
           this.x += this.speedX;
           this.y += this.speedY;
-          this.opacity -= 10;
+          this.opacity -= 130;
         }
 
         display() {
@@ -167,13 +168,13 @@ const Sketch = () => {
           this.x = p.random(p.width);
           this.y = p.random(p.height);
           this.size = p.random(1, 3);
-          this.opacity = p.random(100, 255);
+          this.opacity = p.random(100, 100);
           this.twinkleSpeed = p.random(0.01, 0.03);
         }
 
         update() {
           let twinkleVal = p.sin(p.frameCount * this.twinkleSpeed);
-          this.opacity = p.map(twinkleVal, -1, 1, 100, 255);
+          this.opacity = p.map(twinkleVal, -1, 1, 100, 100);
         }
 
         display() {
@@ -187,7 +188,7 @@ const Sketch = () => {
         const centerX = p.windowWidth / 2;
         const centerY = p.windowHeight / 2;
         const radius = Math.min(p.windowWidth, p.windowHeight) / 4;
-        const duration = 1500;
+        const duration = 150;
 
         const startAngle = 0;
         const endAngle = 2 * Math.PI;
@@ -210,7 +211,7 @@ const Sketch = () => {
 
         const interval = setInterval(() => {
           updateMousePosition();
-          elapsedTime += 16; // 16ms = 1 frame at 60fps
+          elapsedTime += 10; // 16ms = 1 frame at 60fps
           if (elapsedTime >= duration) {
             clearInterval(interval);
           }
@@ -223,9 +224,23 @@ const Sketch = () => {
     return () => {
       p5Instance.remove();
     };
-  }, []);
+  }, [numStars]); // Re-run effect when numStars changes
 
-  return <div ref={sketchRef}  />;
+  return (
+    <div ref={sketchRef}>
+      <input 
+        type="range" 
+        min="10" 
+        max="100" 
+        value={numStars} 
+        onChange={(e) => setNumStars(e.target.value)} 
+        style={{ position: 'fixed', top: '10px', left: '10px', zIndex: '1' }}
+      />
+      <span style={{ position: 'fixed', top: '10px', left: '220px', zIndex: '1', color: 'white' }}>
+        Number of Stars: {numStars}
+      </span>
+    </div>
+  );
 };
 
 export default Sketch;

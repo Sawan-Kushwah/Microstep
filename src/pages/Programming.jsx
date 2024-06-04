@@ -2,8 +2,12 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import programming from "../assets/Nerd.png"
 import "../css/globalHero.css"
+import { useEffect } from 'react'
 
 const Programming = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0) // this is render page from the top
+      }, [])
     return (
 
         <>

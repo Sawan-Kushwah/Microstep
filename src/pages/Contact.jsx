@@ -1,7 +1,11 @@
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import { useEffect } from 'react'
 
 const Contact = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0) // this is render page from the top
+  }, [])
   return (
     <>
       <Navbar />
@@ -17,13 +21,13 @@ const Contact = () => {
               <div className="p-2 w-1/2">
                 <div className="relative">
                   <label htmlFor="name" className="leading-7 text-sm text-gray-400">Name</label>
-                  <input type="text" id="name" name="name" className="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
+                  <input type="text" id="name" name="name" className="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
                 </div>
               </div>
               <div className="p-2 w-1/2">
                 <div className="relative">
                   <label htmlFor="email" className="leading-7 text-sm text-gray-400">Email</label>
-                  <input type="email" id="email" name="email" className="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
+                  <input type="email" id="email" name="email" className="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
                 </div>
               </div>
               <div className="p-2 w-full">
@@ -38,7 +42,7 @@ const Contact = () => {
               <div className="p-2 w-full pt-8 mt-8 border-t border-gray-800 text-center">
                 <a className="text-indigo-400">example@email.com</a>
                 <p className="leading-normal my-5">49 Smith St.
-                  <br/>Saint Cloud, MN 56301
+                  <br />Saint Cloud, MN 56301
                 </p>
                 <span className="inline-flex">
                   <a className="text-gray-500">

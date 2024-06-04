@@ -9,6 +9,7 @@ import Faqs from "./components/Faqs"
 import "./css/button.css"
 import "https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"
 import Sketch from "./sketch"
+import CanvasBackground from "./cursorSingleLine"
 
 const App = () => {
 
@@ -17,9 +18,10 @@ const App = () => {
 
   return (
     <>
-      <div >
+      <div   >
         <Sketch />
-        <div >
+        {/* <CanvasBackground  /> */}
+        <div  >
           <Navbar />
 
           <section id="hero" className="d-flex flex-column justify-content-center align-items-center">

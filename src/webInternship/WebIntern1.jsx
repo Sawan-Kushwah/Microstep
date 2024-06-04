@@ -2,6 +2,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { useAuth0 } from "@auth0/auth0-react";
+import { useEffect } from 'react';
 // import { useState } from 'react';
 // import { useEffect } from 'react';
 
@@ -23,8 +24,9 @@ const WebIntern1 = () => {
         // console.log(intern);
         isAuthenticated ? navigate("/applyNow") : loginWithRedirect();
     }
-
-
+    useEffect(() => {
+        window.scrollTo(0, 0) // this is render page from the top
+    }, [])
     return (
         <>
 

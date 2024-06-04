@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form"
 import { useAuth0 } from "@auth0/auth0-react";
 import axios from "axios";
 import { useLocation, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 
 
@@ -40,6 +41,9 @@ const ApplyNow = () => {
       navigate("/successfullySubmitted");
     }
   }
+  useEffect(() => {
+    window.scrollTo(0, 0) // this is render page from the top
+  }, [])
   return (
     <>
       <Navbar />
