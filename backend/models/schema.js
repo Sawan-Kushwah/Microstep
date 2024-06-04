@@ -10,7 +10,8 @@ const userdataSchema = new mongoose.Schema({
     collegeName: String,
     about: String,
     resume: String,
-    resumePath: String,
+    viewResume: String,
+    internshipFor: String,
     createdAt: { type: Date, default: Date.now() }
 })
 

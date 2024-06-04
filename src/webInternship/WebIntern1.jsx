@@ -2,14 +2,14 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { useAuth0 } from "@auth0/auth0-react";
+// import { useState } from 'react';
 // import { useEffect } from 'react';
 
 const WebIntern1 = () => {
     const { loginWithRedirect, isAuthenticated } = useAuth0();
+    // const [intern, setintern] = useState("")
+    // setintern("web-development-internship-for-1-month");
     const navigate = useNavigate();
-    const goToApplyNow = () => {
-        isAuthenticated ? navigate("/applyNow") : loginWithRedirect();
-    }
     setTimeout(() => {
         if (!isAuthenticated) {
             if (confirm("Login to apply")) {
@@ -18,6 +18,11 @@ const WebIntern1 = () => {
         }
     }, 3000);
 
+
+    const goToApplyNow = () => {
+        // console.log(intern);
+        isAuthenticated ? navigate("/applyNow") : loginWithRedirect();
+    }
 
 
     return (

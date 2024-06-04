@@ -1,5 +1,6 @@
-import bodyParser from "body-parser"
 import { userdata } from "./models/schema.js"
+import sendMailTo from "./sendMail.js"
+import bodyParser from "body-parser"
 import mongoose from "mongoose"
 import express from "express"
 import multer from "multer"
@@ -34,6 +35,7 @@ const upload = multer({ storage: storage })
 
 app.post('/savedata', upload.single("resume"), async (req, res) => { // resume == this is from frontend side inside FormData()
     try {
+        const correctedPath = req.file.path.replace(/\\/g, '/');
         let userdataFromClientSide = {
             firstName: req.body.firstName,
             lastName: req.body.lastName,
@@ -44,9 +46,11 @@ app.post('/savedata', upload.single("resume"), async (req, res) => { // resume =
             collegeName: req.body.collegeName,
             about: req.body.about,
             resume: req.file.filename,
-            resumePath: `${process.env.HOSTED_SERVER}${req.file.path}`
+            viewResume: `${process.env.HOSTED_SERVER}${correctedPath}`,
+            internshipFor: req.body.internshipFor
         }
         await userdata.create(userdataFromClientSide);
+        sendMailTo(userdataFromClientSide);
         res.status(200).send({ message: "Received data" })
     } catch (error) {
         console.log(error)

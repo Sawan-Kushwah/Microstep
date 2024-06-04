@@ -3,11 +3,13 @@ import Footer from "./components/Footer"
 import { useForm } from "react-hook-form"
 import { useAuth0 } from "@auth0/auth0-react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 
 
 const ApplyNow = () => {
+  // const location = useLocation();
+  // console.log(location.state);
   const navigate = useNavigate();
   const { isAuthenticated, user } = useAuth0();
   const {
@@ -28,6 +30,7 @@ const ApplyNow = () => {
     formData.append("collegeName", data.collegeName);
     formData.append("about", data.about);
     formData.append("resume", data.resume[0]);
+    formData.append("internshipFor", data.internshipFor);
 
     let res = await axios.post("http://localhost:3000/savedata", formData, { // axios is used instead of fetch for file type data submission
       headers: { 'Content-Type': 'multipart/form-data' },
@@ -94,6 +97,7 @@ const ApplyNow = () => {
               <div className="mt-1 text-sm text-gray-500 dark:text-gray-300" id="resume_help">Drag and drop you resume here for better chance of selection</div>
               {errors.resume && <div className="text-sm text-red-500">{errors.resume.message}</div>}
             </div>
+            <input type="hidden" {...register("internshipFor")} value="web-development-internship-for-1-month" />
 
 
             <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
