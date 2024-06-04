@@ -12,7 +12,7 @@ const Faqs = () => {
                         </p>
                     </div>
                     <div className="mx-auto mt-8 grid max-w-6xl divide-y divide-neutral-200">
-                        <div className="py-5">
+                        <div className="py-5 z-40">
                             <details className="group">
                                 <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
                                     <span> How does the billing work?</span>
@@ -31,7 +31,7 @@ const Faqs = () => {
                                 </p>
                             </details>
                         </div>
-                        <div className="py-5">
+                        <div className="py-5 z-40">
                             <details className="group">
                                 <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
                                     <span> Can I get a refund for my subscription?</span>
@@ -51,7 +51,7 @@ const Faqs = () => {
                                 </p>
                             </details>
                         </div>
-                        <div className="py-5">
+                        <div className="py-5 z-40">
                             <details className="group">
                                 <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
                                     <span> How do I cancel my subscription?</span>
@@ -69,7 +69,7 @@ const Faqs = () => {
                                 </p>
                             </details>
                         </div>
-                        <div className="py-5">
+                        <div className="py-5 z-40">
                             <details className="group">
                                 <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
                                     <span> Is there a free trial?</span>
@@ -87,7 +87,7 @@ const Faqs = () => {
                                 </p>
                             </details>
                         </div>
-                        <div className="py-5">
+                        <div className="py-5 z-40">
                             <details className="group">
                                 <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
                                     <span> How do I contact support?</span>
@@ -105,7 +105,7 @@ const Faqs = () => {
                                 </p>
                             </details>
                         </div>
-                        <div className="py-5">
+                        <div className="py-5 z-40">
                             <details className="group">
                                 <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
                                     <span> Do you offer any discounts or promotions?</span>

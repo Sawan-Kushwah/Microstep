@@ -16,9 +16,9 @@ const HomeCourses = () => {
 
                 {/* web development */}
 
-                <div className="container mx-auto flex px-16 my-16 md:flex-row flex-col items-center w-11/12 bg-gray-950 rounded-[40px] py-16 ">
+                <div className="container mx-auto flex px-16 my-16 md:flex-row flex-col items-center w-11/12 border rounded-[25px] py-16 box-shadow">
                     <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                        <div className="box backdrop-blur-lg bg-gray-300 text-black py-2 px-10 text-lg rounded-r-3xl rounded-l-lg font-bold mb-4">
+                        <div className="box backdrop-blur-lg bg-gray-300 text-black py-3 px-14 text-lg rounded-r-3xl rounded-l-lg font-bold mb-4">
                             Web Development
                         </div>
                         <h1 className="title-font sm:text-4xl text-3xl mb-2 font-medium text-white">THE WEB DEVELOPER :
@@ -69,11 +69,13 @@ const HomeCourses = () => {
                                 </li>
                             </ul>
                         </div>
-                        <div className="flex justify-center">
+                        <div className="flex justify-center z-30">
                             <NavLink to={"/webdevelopment"}>
-                                <button type="button" className="text-white text-lg bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg  px-8 py-2.5 text-center me-2 mb-2">Getting started</button></NavLink>
-                            <a href="#">
-                                <button type="button" className="text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-lg px-8 py-2.5 text-center me-2 mb-2">Learn more</button></a>
+                                <button className="btn btn-green">
+                                    getting started
+                                </button>
+                            </NavLink>
+
                         </div>
                     </div>
                     <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
@@ -82,9 +84,9 @@ const HomeCourses = () => {
                 </div>
 
                 {/* programming */}
-                <div className="container mx-auto flex px-16 my-16 md:flex-row-reverse flex-row-reverse items-center w-11/12 bg-gray-950 rounded-[40px] py-16 ">
+                <div className="container mx-auto flex px-16 my-16 md:flex-row-reverse flex-row-reverse items-center w-11/12 border rounded-[25px] py-16 box-shadow">
                     <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-18 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                        <div className="box backdrop-blur-lg bg-gray-300 text-black py-2 px-10 text-lg rounded-l-3xl rounded-r-lg font-bold mb-4">
+                        <div className="box backdrop-blur-lg bg-gray-300 text-black py-3 px-14 text-lg rounded-l-3xl rounded-r-lg font-bold mb-4">
                             Programmer
                         </div>
                         <h1 className="title-font sm:text-4xl text-3xl mb-2 font-medium text-white">THE PROGRAMMER :
@@ -135,11 +137,12 @@ const HomeCourses = () => {
                                 </li>
                             </ul>
                         </div>
-                        <div className="flex justify-center">
+                        <div className="flex justify-center z-30">
                             <NavLink to={"/programming"}>
-                                <button type="button" className="text-white text-lg bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg  px-8 py-2.5 text-center me-2 mb-2">Getting started</button></NavLink>
-                            <a href="#">
-                                <button type="button" className="text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-lg px-8 py-2.5 text-center me-2 mb-2">Learn more</button></a>
+
+                                <button className="btn btn-red">getting started</button>
+                            </NavLink>
+
 
                         </div>
                     </div>

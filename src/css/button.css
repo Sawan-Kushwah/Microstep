@@ -1,0 +1,108 @@
+.btn {
+    padding: 13px 88px;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid;
+    border-radius: 12px;
+}
+
+.btn::before {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent,
+            #00fffc, transparent);
+    transform: translateX(-100%);
+    transition: 0.6s;
+    position: absolute;
+}
+
+.btn:hover {
+    background: transparent;
+    box-shadow: 0 0 14px 5px #2b4646;
+}
+
+.btn:hover::before {
+    transform: translateX(100%);
+}
+
+.btn-green::before {
+    background: linear-gradient(120deg, transparent,
+            #22c55e, transparent);
+}
+
+.btn-green {
+    border-color: #22c55e;
+    padding: 13px 170px;
+}
+
+.btn-red::before {
+    background: linear-gradient(120deg, transparent,
+            red, transparent);
+}
+
+.btn-red {
+    border-color: red;
+    padding: 13px 170px;
+}
+
+.btn-login::before {
+    background: linear-gradient(120deg, transparent,
+            green, transparent);
+}
+
+.btn-login {
+    border-color: green;
+    padding: 7px 27px;
+    display: flex;
+    align-items: center;
+}
+
+.btn-logout {
+    padding: 7px 27px;
+    display: flex;
+    align-items: center;
+}
+
+
+.card {
+    width: 100%;
+    height: 100%;
+    cursor: url(https://cdn.custom-cursor.com/db/cursor/32/colorful_cursor.png),
+        default !important;
+    position: relative;
+}
+
+
+.useremailbutton {
+    /* padding: 5px 10px; */
+    /* border: 1px solid; */
+    font-size: 1.4rem;
+    color: white;
+
+    animation: glowing 1300ms infinite;
+}
+
+@keyframes glowing {
+    0% {
+        /* background-color: rgb(0, 143, 143); */
+        /* backdrop-filter: rgb(0, 143, 143); */
+        box-shadow: 0 0 5px rgb(0, 143, 143);
+    }
+
+    50% {
+        /* background-color: ; */
+        /* backdrop-filter: rgb(4, 180, 180); */
+        box-shadow: 0 0 20px rgb(4, 180, 180);
+    }
+
+    100% {
+        /* backdrop-filter: rgb(0, 143, 143); */
+        box-shadow: 0 0 5px rgb(0, 143, 143);
+    }
+}

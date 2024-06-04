@@ -1,5 +1,4 @@
 // import { NavLink } from "react-router-dom"
-import '../css/navbar.css'
 import { NavLink } from "react-router-dom"
 import { useAuth0 } from "@auth0/auth0-react";
 const Navbar = () => {
@@ -24,13 +23,14 @@ const Navbar = () => {
                         <NavLink to={"/contact"} className="mr-5 hover:text-white text-xl">Contact us</NavLink>
                     </nav>
 
-                    {isAuthenticated && <p className=' text-sm font-bold '>{user.email}</p> && <p className=' text-sm font-bold '>{user.name}</p>}
-                    {isAuthenticated ? <button className="inline-flex items-center   border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Logout
-                        <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
-                            <path d="M5 12h14M12 5l7 7-7 7"></path>
-                        </svg>
-                    </button> :
-                        <button className="inline-flex items-center   border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0" onClick={() => loginWithRedirect()}>Login
+                    {isAuthenticated && <button className='useremailbutton absolute top-[21rem] -right-[8.5rem] text-lg rounded-lg py-3 px-12  font-normal rotate-90'>Welcome {user.email}</button> && <button className='useremailbutton absolute top-[21rem] -right-[8.5rem] text-lg rounded-lg py-3 px-12  font-normal rotate-90'>Welcome {user.name}</button>}
+                    {isAuthenticated ?
+                        <button className="btn btn-red btn-logout" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Logout
+                            <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </button> :
+                        <button className="btn btn-login " onClick={() => loginWithRedirect()}>Login
                             <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
                                 <path d="M5 12h14M12 5l7 7-7 7"></path>
                             </svg>

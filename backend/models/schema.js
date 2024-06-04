@@ -12,7 +12,7 @@ const userdataSchema = new mongoose.Schema({
     resume: String,
     viewResume: String,
     internshipFor: String,
-    createdAt: { type: Date, default: Date.now() }
+    createdAt: { type: Date, default: new Date() }
 })
 
 export const userdata = mongoose.model("userdata", userdataSchema)

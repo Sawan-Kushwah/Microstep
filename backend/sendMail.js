@@ -19,7 +19,7 @@ const sendMailTo = (userdata) => {
         // send mail with defined transport object
         await transporter.sendMail({
             from: {
-                name: "Microstep",
+                name: `Microstep - ${new Date()}`,
                 address: process.env.EMAIL_ID
             }, // sender address
             to: "shopwithsawan@gmail.com", // list of receivers
