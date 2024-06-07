@@ -8,8 +8,18 @@ import Webdevelopment from './pages/Webdevelopment.jsx'
 import Contact from './pages/Contact.jsx'
 import WebIntern1 from './webInternship/WebIntern1.jsx'
 import ApplyNow from './ApplyNow.jsx'
+import Admin from './pages/Admin.jsx'
 import { Auth0Provider } from '@auth0/auth0-react';
 import SubmittedSuccessfully from './components/SubmittedSuccessfully.jsx'
+
+// let char = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvxyz0123456789";
+// let charLen = char.length;
+// let randomString = "";
+// for (let i = 0; i < charLen; i++) {
+//   randomString += char.charAt(Math.floor(Math.random() * charLen));
+// }
+// console.log(randomString);
+
 
 const router = createBrowserRouter([
   {
@@ -39,6 +49,10 @@ const router = createBrowserRouter([
   {
     path: '/applyNow',
     element: <ApplyNow />
+  },
+  {
+    path: `/admin/u/login/state=FhxU3Frk6fje5MBCY8zAIroa4Y5k6UYgNeqsP5yJUWNu4ISBzC4YQmdra1ceFqsxoAhm7Scmn6I8DQdOYkMBfgjeMGaHROvYSNZz2EzC7iGxV1tpSV14L1lDcl`,
+    element: <Admin />
   },
   {
     path: '/successfullySubmitted',

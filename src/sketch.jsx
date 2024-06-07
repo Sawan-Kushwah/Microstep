@@ -228,17 +228,17 @@ const Sketch = () => {
 
   return (
     <div ref={sketchRef}>
-      <input 
+      {/* <input 
         type="range" 
         min="10" 
         max="100" 
         value={numStars} 
         onChange={(e) => setNumStars(e.target.value)} 
         style={{ position: 'fixed', top: '10px', left: '10px', zIndex: '1' }}
-      />
-      <span style={{ position: 'fixed', top: '10px', left: '220px', zIndex: '1', color: 'white' }}>
+      /> */}
+      {/* <span style={{ position: 'fixed', top: '10px', left: '220px', zIndex: '1', color: 'white' }}>
         Number of Stars: {numStars}
-      </span>
+      </span> */}
     </div>
   );
 };

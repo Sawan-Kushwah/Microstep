@@ -12,6 +12,7 @@ const userdataSchema = new mongoose.Schema({
     resume: String,
     viewResume: String,
     internshipFor: String,
+    isSelectedForInternship: Boolean,
     createdAt: { type: Date, default: new Date() }
 })
 

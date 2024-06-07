@@ -1,8 +1,19 @@
 // import { NavLink } from "react-router-dom"
-import { NavLink } from "react-router-dom"
+import { NavLink, useNavigate } from "react-router-dom"
 import { useAuth0 } from "@auth0/auth0-react";
 const Navbar = () => {
     const { loginWithRedirect, logout, isAuthenticated, user } = useAuth0();
+    const navigate = useNavigate();
+    const getAdmin = async () => {
+        let res = await fetch("http://localhost:3000/getAdminPassword");
+        let r = await res.json();
+        if (r.adminID === user.email) {
+            navigate(`/admin/u/login/state=FhxU3Frk6fje5MBCY8zAIroa4Y5k6UYgNeqsP5yJUWNu4ISBzC4YQmdra1ceFqsxoAhm7Scmn6I8DQdOYkMBfgjeMGaHROvYSNZz2EzC7iGxV1tpSV14L1lDcl`);
+        }
+    }
+    if (isAuthenticated) {
+        getAdmin()
+    }
 
     return (
 
