@@ -11,6 +11,7 @@ import ApplyNow from './ApplyNow.jsx'
 import Admin from './pages/Admin.jsx'
 import { Auth0Provider } from '@auth0/auth0-react';
 import SubmittedSuccessfully from './components/SubmittedSuccessfully.jsx'
+import SubmittedTask from './pages/SubmittedTask.jsx'
 
 // let char = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvxyz0123456789";
 // let charLen = char.length;
@@ -57,6 +58,10 @@ const router = createBrowserRouter([
   {
     path: '/successfullySubmitted',
     element: <SubmittedSuccessfully />
+  },
+  {
+    path: '/user/submitted',
+    element: <SubmittedTask />
   },
 ])
 

@@ -102,7 +102,7 @@ app.delete("/rejectStudent", async (req, res) => {
 app.post("/checkStudentEnrollment", async (req, res) => {
     try {
         console.log(req.body);
-        let student = await userdata.findOne({ email: req.body.studentMail });
+        let student = await userdata.findOne({ _id: req.body.studentID });
         console.log(student)
         if (student === null) {
             res.status(404).json({ message: "Student is not Enrolled in any program" })

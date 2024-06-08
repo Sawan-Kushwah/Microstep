@@ -10,31 +10,76 @@ import "./css/button.css"
 import "https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"
 import Sketch from "./sketch"
 import { useAuth0 } from "@auth0/auth0-react";
+import { useState } from "react"
+import { useNavigate } from "react-router-dom";
+
+
 const App = () => {
 
-  const { isAuthenticated, user } = useAuth0();
-  console.log(user);
-  const checkStudentIsEnrolled = async () => {
-    let response = await fetch("http://localhost:3000/checkStudentEnrollment", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ studentMail: user.email })
-    })
-    let res = await response.json();
-    if (response.status === 404) {
-      alert("You are not Enroll in any current program");
-    } else if (response.status === 500) {
-      alert("Try again later");
-    } else if (response.status === 400) {
-      alert("You are not selected")
-    } else {
-      alert("ho gaya bhai");
-    }
-    console.log(res);
+  const { isAuthenticated } = useAuth0();
+  const navigate = useNavigate();
+  const [studentID, setStudentID] = useState("");
+  const [error, seterror] = useState("");
+
+  //handel student id form
+  const closeFrom = () => {
+    document.getElementById('studentIdForm').classList.add('hidden');
+    seterror("");
+    setStudentID("");
   }
+  const showStudentIdForm = () => {
+    document.getElementById('studentIdForm').classList.remove("hidden")
+  }
+
+  const getStudentId = (e) => {
+    setStudentID(e.target.value);
+    console.log(e.target.value);
+    seterror("");
+  }
+
+
+  const checkStudentIsEnrolled = async () => {
+    if (studentID === "") {
+      seterror("This field is required");
+    } else {
+      // setStudentID("");
+      let response = await fetch("http://localhost:3000/checkStudentEnrollment", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ studentID: studentID })
+      })
+      let res = await response.json();
+      if (response.status === 404) {
+        // alert("You are not Enroll in any current program");
+        seterror("Invalid ID")
+      } else if (response.status === 500) {
+        seterror("Invalid ID")
+        // alert("Invalid ID")
+      } else if (response.status === 400) {
+        alert("You are not selected")
+      } else {
+        navigate("/user/submitted", { state: studentID })
+      }
+      console.log(res);
+    }
+  }
+
+
 
   return (
     <>
+      <div id="studentIdForm" className="border p-15 h-96  w-2/3 space-x-4 bg-slate-900 absolute top-[22%] left-[18%] hidden  z-[100]">
+        <div className="close mb-5  text-end p-5 cursor-pointer" onClick={closeFrom}>Close</div>
+        <div className="  m-0 form flex flex-col justify-center items-center">
+          <div className="text font-bold text-3xl pb-6">
+            Give Your Submission ID
+          </div>
+          <p className="relative right-[36%] text-sm text-gray-400 font-normal mb-2">Sent on the mail with offer letter</p>
+          <input type="text" className="p-2 border w-11/12 mx-auto bg-white text-black font-bold text-lg mb-8" placeholder="Submission ID" onChange={getStudentId} value={studentID ? studentID : ""} />
+          {error && <p className="relative  -top-7   text-red-400 font-normal">*{error}</p>}
+          <button type="submit" className="btn px-20 btn-green" onClick={checkStudentIsEnrolled}>Verify</button>
+        </div>
+      </div >
       <div   >
         <Sketch />
         {/* <CanvasBackground  /> */}
@@ -57,7 +102,7 @@ const App = () => {
                         </button>
                       </a>
                       {isAuthenticated &&
-                        <div onClick={checkStudentIsEnrolled} className="w-fit">
+                        <div onClick={showStudentIdForm} className="w-fit">
                           <button className="btn btn-green px-16">
                             Submit Your Code
                           </button>
