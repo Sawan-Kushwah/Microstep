@@ -78,6 +78,15 @@
 }
 
 .active {
-    color: rgb(6, 143, 201);
-    text-decoration: underline;
+    color: rgb(206, 0, 0);
+    border-bottom: 2px solid red;
+     
+}
+
+.accountBox {
+    background: #2b2b2b;
+}
+
+.useremailbutton:hover+.accountBox {
+    display: block;
 }

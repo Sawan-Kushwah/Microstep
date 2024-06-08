@@ -64,7 +64,7 @@ app.post('/savedata', upload.single("resume"), async (req, res) => { // resume =
 })
 
 
-
+// Admin Dashboard activity
 app.post('/sendMailToSelectedStudent', async (req, res) => {
     try {
         console.log(req.body);
@@ -76,6 +76,7 @@ app.post('/sendMailToSelectedStudent', async (req, res) => {
         res.status(500).json({ message: "Server error" });
     }
 })
+
 const deleteFile = async (filePath) => {
     try {
         await fs.unlink(`resume/${filePath}`);
@@ -83,6 +84,7 @@ const deleteFile = async (filePath) => {
         console.log(error)
     }
 }
+
 app.delete("/rejectStudent", async (req, res) => {
     try {
         let studentToDelete = await userdata.findOne({ _id: req.body.id });
@@ -96,13 +98,30 @@ app.delete("/rejectStudent", async (req, res) => {
 })
 
 
+// Submit task
+app.post("/checkStudentEnrollment", async (req, res) => {
+    try {
+        console.log(req.body);
+        let student = await userdata.findOne({ email: req.body.studentMail });
+        console.log(student)
+        if (student === null) {
+            res.status(404).json({ message: "Student is not Enrolled in any program" })
+        } else if (student.isSelectedForInternship === false) {
+            res.status(400).json({ message: "Student is not selected for Internship" });
+        } else {
+            res.status(200).json({ message: "Student is verified" });
+        }
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ message: "Server Error" });
+    }
+})
 
-
+//verify Admin to open dashboard
 app.get("/getAdminPassword", async (req, res) => {
     res.status(200).json({ adminID: process.env.ADMIN_ID, password: process.env.ADMIN_PASSWORD })
     // res.send("ok");
 })
-
 
 // give all students name
 app.get('/getDataFromDatabase', async (req, res) => {
