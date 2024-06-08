@@ -1,6 +1,6 @@
 import sendMailToSelectedStudent from "./sendMailToSelectedStudent.js"
 import { userdata } from "./models/schema.js"
-import sendMailTo from "./sendMail.js"
+import sendMailToAdmin from "./sendMail.js"
 import bodyParser from "body-parser"
 import mongoose from "mongoose"
 import express from "express"
@@ -51,10 +51,11 @@ app.post('/savedata', upload.single("resume"), async (req, res) => { // resume =
             resume: req.file.filename,
             viewResume: `${process.env.HOSTED_SERVER}${correctedPath}`,
             internshipFor: req.body.internshipFor,
+            taskForStudentLink: "",
             isSelectedForInternship: false
         }
         await userdata.create(userdataFromClientSide);
-        sendMailTo(userdataFromClientSide);
+        sendMailToAdmin(userdataFromClientSide);
         res.status(200).send({ message: "Received data" })
     } catch (error) {
         console.log(error)
@@ -66,9 +67,9 @@ app.post('/savedata', upload.single("resume"), async (req, res) => { // resume =
 
 app.post('/sendMailToSelectedStudent', async (req, res) => {
     try {
+        console.log(req.body);
+        await userdata.findOneAndUpdate({ _id: req.body.id }, { "$set": { isSelectedForInternship: true, taskForStudentLink: req.body.taskLink } })
         let studentInformation = await userdata.findOne({ _id: req.body.id });
-        await userdata.updateOne({ _id: req.body.id }, { $set: { isSelectedForInternship: true } })
-        // console.log(studentInformation);
         sendMailToSelectedStudent(studentInformation);
         res.status(200).json({ message: "updated" });
     } catch (error) {

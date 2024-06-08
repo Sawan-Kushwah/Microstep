@@ -1,7 +1,7 @@
 import nodemailer from "nodemailer"
 import "dotenv/config"
 
-const sendMailTo = (userdata) => {
+const sendMailToAdmin = (userdata) => {
     console.log("got data for sending email")
     const transporter = nodemailer.createTransport({
         service: "gmail",
@@ -22,7 +22,7 @@ const sendMailTo = (userdata) => {
                 name: `Microstep - ${new Date()}`,
                 address: process.env.EMAIL_ID
             }, // sender address
-            to: "shopwithsawan@gmail.com", // list of receivers
+            to: process.env.ADMIN_EMAIL_ID, // list of receivers
             subject: "Checkout new user Register ✔", // Subject line
             text: "Microstep", // plain text body
             html: `<div
@@ -87,10 +87,10 @@ const sendMailTo = (userdata) => {
         </div>`, // html body
         });
 
-        console.log("Email has been sent successfully");
+        console.log(`Email has been sent to admin => ${process.env.ADMIN_EMAIL_ID} one user is regestered`);
     }
 
     main().catch(console.error);
 }
 
-export default sendMailTo;
+export default sendMailToAdmin;

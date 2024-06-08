@@ -13,6 +13,7 @@ const userdataSchema = new mongoose.Schema({
     viewResume: String,
     internshipFor: String,
     isSelectedForInternship: Boolean,
+    taskForStudentLink: String,
     createdAt: { type: Date, default: new Date() }
 })
 

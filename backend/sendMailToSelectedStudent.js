@@ -9,6 +9,7 @@ completionDate = completionDate.toDateString();
 const sendMailToSelectedStudent = (student) => {
     console.log("got data for sending email")
     // console.log(student)
+    // console.log(task);
     const transporter = nodemailer.createTransport({
         service: "gmail",
         host: "smtp.gmail.com",
@@ -50,7 +51,7 @@ const sendMailToSelectedStudent = (student) => {
                     <p>We look forward to having you on board and seeing you thrive during your internship.</p>
                     <p>Best regards,</p>
                     <p>Microstep Team</p>
-                    <a href="https://www.google.com/" style="display: inline-block; padding: 10px 20px; margin-top: 20px; background-color: #007BFF; color: #fff; text-decoration: none; border-radius: 5px;">View Task</a>
+                    <a href=${student.taskForStudentLink} style="display: inline-block; padding: 10px 20px; margin-top: 20px; background-color: #007BFF; color: #fff; text-decoration: none; border-radius: 5px;" target="_blank">View Task</a>
                 </div>
                 <div style="margin-top: 20px; text-align: center; font-size: 14px; color: #666;">
                     <p>Microstep | [Company Address] | [Company Phone]</p>
@@ -60,7 +61,7 @@ const sendMailToSelectedStudent = (student) => {
         </div>`, // html body
         });
 
-        console.log("Email has been sent successfully");
+        console.log("Email has been sent successfully to " + student.email);
     }
 
     main().catch(console.error);
