@@ -1,13 +1,13 @@
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import programming from "../assets/Nerd.png"
-import "../css/globalHero.css"
 import { useEffect } from 'react'
+import CodingIntern from '../programmingInternships/CodingIntern'
 
 const Programming = () => {
     useEffect(() => {
         window.scrollTo(0, 0) // this is render page from the top
-      }, [])
+    }, [])
     return (
 
         <>
@@ -26,17 +26,17 @@ const Programming = () => {
                             </div>
                         </div>
                         <div className="level flex justify-between w-3/5 ">
-                            <a href='#' className="totalIntenship bg-slate-800 py-4 px-16 w-fit mt-5 rounded-3xl cursor-pointer">
+                            <a href='#c' className="totalIntenship bg-slate-800 py-4 px-16 w-fit mt-5 rounded-3xl cursor-pointer">
                                 <div className="number font-bold text-white text-lg">
                                     C
                                 </div>
                             </a>
-                            <a href='#' className="totalIntenship bg-slate-800 py-4 px-16 w-fit mt-5 rounded-3xl cursor-pointer">
+                            <a href='#cpp' className="totalIntenship bg-slate-800 py-4 px-16 w-fit mt-5 rounded-3xl cursor-pointer">
                                 <div className="number font-bold text-white text-lg">
                                     C++
                                 </div>
                             </a>
-                            <a href='#' className="totalIntenship bg-slate-800 py-4 px-16 w-fit mt-5 rounded-3xl cursor-pointer">
+                            <a href='#java' className="totalIntenship bg-slate-800 py-4 px-16 w-fit mt-5 rounded-3xl cursor-pointer">
                                 <div className="number font-bold text-white text-lg">
                                     JAVA
                                 </div>
@@ -45,7 +45,7 @@ const Programming = () => {
                         </div>
                         <div className="coursesHappyLearner pt-8">
                             <div className="button">
-                                <a href="#">
+                                <a href="#codingIntern">
                                     <button className="btn btn-red">
                                         join today !!!
                                     </button>
@@ -73,7 +73,7 @@ const Programming = () => {
                     </div>
                 </div>
             </section>
-
+            <CodingIntern />
             <Footer />
 
         </>

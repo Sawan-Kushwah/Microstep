@@ -14,6 +14,10 @@ const userdataSchema = new mongoose.Schema({
     internshipFor: String,
     isSelectedForInternship: Boolean,
     taskForStudentLink: String,
+    isTaskSubmitted: Boolean,
+    driveLink: String,
+    linkedinLink: String,
+    githubLink: String,
     createdAt: { type: Date, default: new Date() }
 })
 

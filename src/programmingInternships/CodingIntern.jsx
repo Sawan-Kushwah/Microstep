@@ -1,15 +1,15 @@
-import AdvanceDevelopment from "./AdvanceDevelopment"
-import BasicDevelopment from "./BasicDevelopment"
-import IntermediateDevelopment from "./IntermediateDevelopment"
+import C from "./C"
+import Cpp from "./Cpp"
+import Java from "./Java"
 
 
 
-const WebIntern = () => {
+const CodingIntern = () => {
 
     return (
         <>
 
-            <section id="webIntern" className="bg-black text-white min-h-[100vh]">
+            <section id="condingIntern" className="bg-black text-white min-h-[100vh]">
                 <div className="heading text-center text-3xl pt-20 ">
                     <div className="mb-4 font-bold">
                         <h1>INTERNSHIPS</h1>
@@ -20,9 +20,9 @@ const WebIntern = () => {
                 </div>
                 <div className="coursesContainer">
                     {/* web development */}
-                    <BasicDevelopment />
-                    <IntermediateDevelopment />
-                    <AdvanceDevelopment />
+                    <C />
+                    <Cpp />
+                    <Java />
                 </div>
             </section>
 
@@ -30,4 +30,4 @@ const WebIntern = () => {
     )
 }
 
-export default WebIntern
+export default CodingIntern

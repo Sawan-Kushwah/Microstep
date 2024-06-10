@@ -1,7 +1,35 @@
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
+import { useForm } from 'react-hook-form';
+import { useEffect } from 'react';
 const SubmittedTask = () => {
     let location = useLocation();
-    console.log(location.state)
+
+    let navigate = useNavigate();
+
+    const {
+        register,
+        handleSubmit,
+    } = useForm()
+
+    const onTaskSubmission = async (data) => {
+        let response = await fetch("http://localhost:3000/submitTask", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ ...data })
+        })
+        await response.json();
+        if (response.status) {
+            navigate("/successfullySubmitted");
+        }
+    }
+
+    useEffect(() => {
+        if (location.state === null) {
+            console.log("khali h bhai")
+            navigate("/");
+        }
+    }, [])
+
     return (
         <>
 
@@ -10,36 +38,46 @@ const SubmittedTask = () => {
                     <div className="flex flex-col text-center w-full mb-12">
                         <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">Submitted Your Task Here</h1>
                         <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Drive link is compulsary . If you submit fill other field your chances of clamming certificate will increase. Fill form accurately !!</p>
+                        <h1>Read guide liance properly before you submit your response</h1>
                     </div>
+
                     <div className="lg:w-1/2 md:w-2/3 mx-auto">
                         <div className="flex flex-wrap -m-2">
-                            <div className="p-2 w-1/2">
-                                <div className="relative">
-                                    <label htmlFor="submissionID" className="leading-7 text-sm text-gray-400">Submission ID </label>
-                                    <input type="text" id="submissionID" name="submissionID" className="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-green-500 focus:bg-gray-900 focus:ring-2 focus:ring-green-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" value={location.state ? location.state : "ayegiLink"} readOnly />
+                            <form onSubmit={handleSubmit(onTaskSubmission)} className='flex flex-wrap -m-2'>
+                                <div className="p-2 w-1/2">
+                                    <div className="relative">
+                                        <label htmlFor="submissionID" className="leading-7 text-sm text-gray-400">Submission ID </label>
+                                        <input type="text" id="submissionID" name="submissionID" className="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-green-500 focus:bg-gray-900 focus:ring-2 focus:ring-green-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" value={location.state ? location.state.studentID : "ayegiLink"} readOnly {...register("submissionID")} />
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="p-2 w-1/2">
-                                <div className="relative">
-                                    <label htmlFor="text" className="leading-7 text-sm text-gray-400">Drive Link</label>
-                                    <input type="text" id="text" name="text" className="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-green-500 focus:bg-gray-900 focus:ring-2 focus:ring-green-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required />
+                                <div className="p-2 w-1/2">
+                                    <div className="relative">
+                                        <label htmlFor="email" className="leading-7 text-sm text-gray-400">Email ID</label>
+                                        <input type="email" id="email" name="email" className="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-green-500 focus:bg-gray-900 focus:ring-2 focus:ring-green-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" value={location.state ? location.state.email : "email@gmail.com"} required {...register("studentEmail")} />
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="p-2 w-full">
-                                <div className="relative">
-                                    <label htmlFor="text" className="leading-7 text-sm text-gray-400">GitHub</label>
-                                    <input type="text" id="text" name="text" className="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-green-500 focus:bg-gray-900 focus:ring-2 focus:ring-green-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required />
+                                <div className="p-2 w-full">
+                                    <div className="relative">
+                                        <label htmlFor="text" className="leading-7 text-sm text-gray-400">Drive Link</label>
+                                        <input type="text" id="text" name="text" className="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-green-500 focus:bg-gray-900 focus:ring-2 focus:ring-green-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required {...register("driveLink")} />
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="p-2 w-full">
-                                <div className="relative">
-                                    <label htmlFor="text" className="leading-7 text-sm text-gray-400">Linked in</label>
-                                    <input type="text" id="text" name="text" className="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-green-500 focus:bg-gray-900 focus:ring-2 focus:ring-green-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required />
+                                <div className="p-2 w-full">
+                                    <div className="relative">
+                                        <label htmlFor="text" className="leading-7 text-sm text-gray-400">GitHub</label>
+                                        <input type="text" id="text" name="text" className="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-green-500 focus:bg-gray-900 focus:ring-2 focus:ring-green-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"  {...register("githubLink")} />
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="p-2 w-full">
-                                <button className="flex mx-auto text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg">Submit</button>
-                            </div>
+                                <div className="p-2 w-full">
+                                    <div className="relative">
+                                        <label htmlFor="text" className="leading-7 text-sm text-gray-400">Linked in</label>
+                                        <input type="text" id="text" name="text" className="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-green-500 focus:bg-gray-900 focus:ring-2 focus:ring-green-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"  {...register("linkedinLink")} />
+                                    </div>
+                                </div>
+                                <div className="p-2 w-full">
+                                    <button className="flex mx-auto text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg" type='submit'>Submit</button>
+                                </div>
+                            </form>
                             <div className="p-2 w-full pt-8 mt-8 border-t border-gray-800 text-center">
                                 <a className="text-green-400">example@text.com</a>
                                 <p className="leading-normal my-5">49 Smith St.

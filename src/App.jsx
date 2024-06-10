@@ -49,22 +49,15 @@ const App = () => {
         body: JSON.stringify({ studentID: studentID })
       })
       let res = await response.json();
-      if (response.status === 404) {
-        // alert("You are not Enroll in any current program");
-        seterror("Invalid ID")
-      } else if (response.status === 500) {
-        seterror("Invalid ID")
-        // alert("Invalid ID")
-      } else if (response.status === 400) {
-        alert("You are not selected")
-      } else {
-        navigate("/user/submitted", { state: studentID })
-      }
       console.log(res);
+
+      if (response.status === 200) {
+        navigate("/submitTask", { state: { studentID: studentID, email: res.email } });
+      } else {
+        seterror("Invalid ID");
+      }
     }
   }
-
-
 
   return (
     <>

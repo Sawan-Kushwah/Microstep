@@ -1,4 +1,5 @@
 import sendMailToSelectedStudent from "./sendMailToSelectedStudent.js"
+// import { taskSubmission } from "./models/submission.js"
 import { userdata } from "./models/schema.js"
 import sendMailToAdmin from "./sendMail.js"
 import bodyParser from "body-parser"
@@ -51,8 +52,12 @@ app.post('/savedata', upload.single("resume"), async (req, res) => { // resume =
             resume: req.file.filename,
             viewResume: `${process.env.HOSTED_SERVER}${correctedPath}`,
             internshipFor: req.body.internshipFor,
-            taskForStudentLink: "",
-            isSelectedForInternship: false
+            taskForStudentLink: "Not yet submitted",
+            isSelectedForInternship: false,
+            isTaskSubmitted: false,
+            driveLink: "Not yet submitted",
+            linkedinLink: "Not yet submitted",
+            githubLink: "Not yet submitted",
         }
         await userdata.create(userdataFromClientSide);
         sendMailToAdmin(userdataFromClientSide);
@@ -109,7 +114,7 @@ app.post("/checkStudentEnrollment", async (req, res) => {
         } else if (student.isSelectedForInternship === false) {
             res.status(400).json({ message: "Student is not selected for Internship" });
         } else {
-            res.status(200).json({ message: "Student is verified" });
+            res.status(200).json({ message: "Student is verified", email: student.email });
         }
     } catch (error) {
         console.log(error);
@@ -119,7 +124,8 @@ app.post("/checkStudentEnrollment", async (req, res) => {
 
 //verify Admin to open dashboard
 app.get("/getAdminPassword", async (req, res) => {
-    res.status(200).json({ adminID: process.env.ADMIN_ID, password: process.env.ADMIN_PASSWORD })
+    // console.log("resquest for admin")
+    res.status(200).json({ adminID: process.env.ADMIN_ID })
     // res.send("ok");
 })
 
@@ -127,6 +133,19 @@ app.get("/getAdminPassword", async (req, res) => {
 app.get('/getDataFromDatabase', async (req, res) => {
     let getData = await userdata.find({});
     res.json(getData);
+})
+
+// Task submission work will be handled here
+app.post("/submitTask", async (req, res) => {
+    try {
+        console.log(req.body);
+        let student = await userdata.findOneAndUpdate({ _id: req.body.submissionID }, { "$set": { isTaskSubmitted: true, driveLink: req.body.driveLink, linkedinLink: req.body.linkedinLink, githubLink: req.body.githubLink } })
+        console.log(student);
+        res.status(200).json({ message: "Got it " });
+    } catch (error) {
+        console.log(error)
+        res.status(500).json({ message: "Server Error" });
+    }
 })
 
 app.listen(port, () => {

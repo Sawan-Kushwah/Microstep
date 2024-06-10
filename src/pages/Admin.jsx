@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useAuth0 } from "@auth0/auth0-react";
+import Navbar from "../components/Navbar";
 
 
 const Admin = () => {
-  const { logout } = useAuth0();
   const [studentInformation, setstudentInformation] = useState([]);
   const [task, setTask] = useState("");
   const [studentId, setStudentId] = useState("")
@@ -77,9 +76,21 @@ const Admin = () => {
     }
   }
 
+  // const showDrop = () => {
+  //   let drop = document.querySelector(".dropdown");
+  //   console.log(drop)
+  //   if (drop.classList.contains("hidden")) {
+  //     drop.classList.remove("hidden");
+  //   } else {
+  //     drop.classList.add("hidden");
+  //   }
+  // }
+
+
   useEffect(() => {
     getAllUser();
   }, []);
+
   return (
     <>
       <ToastContainer
@@ -94,9 +105,9 @@ const Admin = () => {
         pauseOnHover
         theme="dark"
       />
+      <Navbar />
 
-
-      <div id="addTask" className="border p-15 h-96  w-2/3 space-x-4 bg-slate-900 absolute top-[22%] left-[18%] hidden">
+      <div id="addTask" className="border p-15 h-96  w-2/3 space-x-4 z-50 bg-slate-900 absolute top-[22%] left-[18%] hidden">
         <div className="close mb-5  text-end p-5 cursor-pointer" onClick={closeFrom}>Close</div>
         <div className="  m-0 form flex flex-col justify-center items-center">
           <div className="text font-bold text-3xl pb-6">
@@ -107,15 +118,10 @@ const Admin = () => {
         </div>
       </div >
 
-      <main className="container">
+      <main className="container py-20">
         <div className="navbar flex justify-around items-center">
           <div className="heading text-3xl font-bold text-center text-white p-10">
-            Admin Dashboard
-          </div>
-          <div className="logout">
-            <button className="btn btn-red" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
-              logout
-            </button>
+            Admin , Welcome <span className="text-cyan-500">Sawan Kushwah</span>
           </div>
         </div>
 
@@ -128,8 +134,8 @@ const Admin = () => {
                 <th className="px-1 py-4 font-bold text-center border title-font tracking-wider text-gray-200 text-lg bg-blue-900">Email</th>
                 <th className="px-1 py-4 font-bold text-center border title-font tracking-wider text-gray-200 text-lg bg-blue-900">Phone Number</th>
                 <th className="px-1 py-4 font-bold text-center border title-font tracking-wider text-gray-200 text-lg bg-blue-900">Address</th>
-                <th className="px-1 py-4 font-bold text-center border title-font tracking-wider text-gray-200 text-lg bg-blue-900">View Resume</th>
-                <th className="px-1 py-4 font-bold text-center border title-font tracking-wider text-gray-200 text-lg bg-blue-900">Actions</th>
+                <th className="px-1 py-4 font-bold text-center border title-font tracking-wider text-gray-200 text-lg bg-blue-900">User Actions</th>
+                <th className="px-1 py-4 font-bold text-center border title-font tracking-wider text-gray-200 text-lg bg-blue-900">Admin Actions</th>
               </tr>
             </thead>
             {studentInformation.map(item => {
@@ -140,15 +146,48 @@ const Admin = () => {
                   <td className="px-1 py-1 text-center border"  > {item.email}  </td>
                   <td className="px-1 py-1 text-center border"  > {item.phoneNumber}  </td>
                   <td className="px-1 py-1 text-center border">{item.city} {item.state}</td>
-                  <td className="border cursor-pointer text-center" ><a href={item.viewResume} target="__blank" className=" bg-blue-500 p-2 hover:bg-blue-700">{item.firstName} resume here</a></td>
-                  {item.isSelectedForInternship ? <td className="p-2 border text-lg text-white flex-col flex gap-2 justify-center items-center">
-                    <a href={item.taskForStudentLink} target="_blank"><button className="flex justify-center w-full  sendButton text-white bg-blue-500 p-[6px] focus:outline-none hover:bg-blue-600 rounded" >ViewTask✔</button></a>
-                    <button className="flex justify-center w-full delelteButton text-white bg-red-500  p-[6px] focus:outline-none hover:bg-red-600 rounded" onClick={() => deleteStudent(item._id)}>Remove❌</button>
-                  </td> : <td className="px-2 py-2 border text-lg text-white flex-col flex gap-2 justify-center items-center">
-                    <button className="flex justify-center w-full  sendButton text-white bg-green-500 p-[6px] focus:outline-none hover:bg-green-600 rounded" onClick={() => openAddTaskForm(item._id)} >Select?</button>
-                    <button className="flex justify-center w-full delelteButton text-white bg-red-500  p-[6px] focus:outline-none hover:bg-red-600 rounded" onClick={() => deleteStudent(item._id)}>Delete❌</button>
+                  <td className="border cursor-pointer text-center p-2 space-x-0.5">
+                    <a href={item.viewResume} target="__blank" className="w-full"><button className="flex justify-center delelteButton text-white bg-blue-500  p-2 focus:outline-none hover:bg-blue-600 rounded w-4/5 m-auto">Resume here</button></a>
+
+                    {item.isTaskSubmitted &&
+                      <div className=" mt-2 flex justify-center">
+                        {/* <svg className="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                          <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4" />
+                        </svg> */}
+                        {/* <button className="flex justify-center w-full delelteButton text-white bg-green-500  p-[6px] focus:outline-none hover:bg-green-600 rounded items-center" onClick={showDrop}>Task Submitted 
+                        </button> */}
+                        <div className="dropdown z-10 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 mt-2 min-w-10 w-fit">
+                          <ul className="py-1 text-sm text-gray-900 dark:text-gray-200 flex">
+                            {item.driveLink &&
+                              <li>
+                                <a href={item.driveLink} className="block px-4 py-2 text-start  hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Drive Link</a>
+                              </li>
+                            }
+                            {item.linkedinLink &&
+                              <li>
+                                <a href={item.linkedinLink} className="block px-4 py-2 text-start hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Github Link</a>
+                              </li>
+                            }
+                            {item.githubLink &&
+                              <li>
+                                <a href={item.githubLink} className="block px-4 py-2 text-start hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Linkedin Link</a>
+                              </li>
+                            }
+                          </ul>
+                        </div>
+                      </div>
+
+                      // <a href={item.viewResume} target="__blank"><button className="flex justify-center w-full delelteButton text-white bg-green-500  p-[6px] focus:outline-none hover:bg-green-600 rounded">Task submitted</button></a>
+                    }
                   </td>
-                  }
+
+                  <td className="p-2 border text-lg text-white flex-col flex gap-2 justify-center items-center">
+                    {item.isSelectedForInternship ? <><a href={item.taskForStudentLink} target="_blank" className=" w-full"><button className="flex justify-center w-full  sendButton text-white bg-blue-500 p-[6px] focus:outline-none hover:bg-blue-600 rounded" >ViewTask✔</button></a>
+                      <button className="flex justify-center w-full delelteButton text-white bg-red-500  p-[6px] focus:outline-none hover:bg-red-600 rounded" onClick={() => deleteStudent(item._id)}>Remove❌</button>
+                    </> : <><button className="flex justify-center w-full  sendButton text-white bg-green-500 p-[6px] focus:outline-none hover:bg-green-600 rounded" onClick={() => openAddTaskForm(item._id)} >Select?</button>
+                      <button className="flex justify-center w-full delelteButton text-white bg-red-500  p-[6px] focus:outline-none hover:bg-red-600 rounded" onClick={() => deleteStudent(item._id)}>Delete❌</button></>
+                    }
+                  </td>
                 </tr>
               </tbody>
               )

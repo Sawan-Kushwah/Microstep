@@ -51,6 +51,7 @@ const sendMailToSelectedStudent = (student) => {
                     <p>We look forward to having you on board and seeing you thrive during your internship.</p>
                     <p>Best regards,</p>
                     <p>Microstep Team</p>
+                    <p>Your submission id is : <span style="color:red;">${student._id}</span></p>
                     <a href=${student.taskForStudentLink} style="display: inline-block; padding: 10px 20px; margin-top: 20px; background-color: #007BFF; color: #fff; text-decoration: none; border-radius: 5px;" target="_blank">View Task</a>
                 </div>
                 <div style="margin-top: 20px; text-align: center; font-size: 14px; color: #666;">

@@ -6,12 +6,12 @@ import About from './pages/About.jsx'
 import Programming from './pages/Programming.jsx'
 import Webdevelopment from './pages/Webdevelopment.jsx'
 import Contact from './pages/Contact.jsx'
-import WebIntern1 from './webInternship/WebIntern1.jsx'
 import ApplyNow from './ApplyNow.jsx'
 import Admin from './pages/Admin.jsx'
 import { Auth0Provider } from '@auth0/auth0-react';
 import SubmittedSuccessfully from './components/SubmittedSuccessfully.jsx'
 import SubmittedTask from './pages/SubmittedTask.jsx'
+import Private from './components/Private.jsx'
 
 // let char = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvxyz0123456789";
 // let charLen = char.length;
@@ -44,15 +44,11 @@ const router = createBrowserRouter([
     element: <Contact />
   },
   {
-    path: '/applicationPageWeb1Month',
-    element: <WebIntern1 />
-  },
-  {
     path: '/applyNow',
     element: <ApplyNow />
   },
   {
-    path: `/admin/u/login/state=FhxU3Frk6fje5MBCY8zAIroa4Y5k6UYgNeqsP5yJUWNu4ISBzC4YQmdra1ceFqsxoAhm7Scmn6I8DQdOYkMBfgjeMGaHROvYSNZz2EzC7iGxV1tpSV14L1lDcl`,
+    path: '/admin',
     element: <Admin />
   },
   {
@@ -60,8 +56,18 @@ const router = createBrowserRouter([
     element: <SubmittedSuccessfully />
   },
   {
-    path: '/user/submitted',
+    path: '/submitTask',
     element: <SubmittedTask />
+  },
+  {
+    path: '/private',
+    element: <Private />,
+    children: [
+      {
+        path: 'admin',
+        element: <Admin />
+      }
+    ]
   },
 ])
 
