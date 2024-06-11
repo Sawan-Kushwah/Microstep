@@ -43,7 +43,7 @@
 
 .btn-red::before {
     background: linear-gradient(120deg, transparent,
-            red, transparent);
+            rgb(243, 101, 101), transparent);
 }
 
 .btn-red {
