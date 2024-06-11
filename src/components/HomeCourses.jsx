@@ -16,8 +16,8 @@ const HomeCourses = () => {
 
                 {/* web development */}
 
-                <div className="container mx-auto flex px-16 my-16 md:flex-row flex-col items-center w-11/12 border rounded-[25px] py-16 box-shadow">
-                    <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                <div className="container mx-auto flex my-16 md:flex-row flex-col items-center w-11/12 border rounded-[25px]  pl-8 box-shadow">
+                    <div className="lg:flex-grow md:w-11/12 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
                         <div className="box backdrop-blur-lg bg-gray-300 text-black py-3 px-14 text-lg rounded-r-3xl rounded-l-lg font-bold mb-4">
                             Web Development
                         </div>
@@ -79,14 +79,14 @@ const HomeCourses = () => {
 
                         </div>
                     </div>
-                    <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-                        <img className="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600" />
+                    <div className="w-full h-[588px] ">
+                        <img className="object-cover object-center rounded h-full w-full rounded-tr-[25px] rounded-br-[25px]" alt="hero" src="https://img.freepik.com/free-photo/programming-background-collage_23-2149901770.jpg?w=1380&amp;t=st=1718100370~exp=1718100970~hmac=e812751d5d0d93d1fa86df7b80ae3051a008029d1fc0b9c2c9e1f429ddcc13e4" />
                     </div>
                 </div>
 
                 {/* programming */}
-                <div className="container mx-auto flex px-16 my-16 md:flex-row-reverse flex-row-reverse items-center w-11/12 border rounded-[25px] py-16 box-shadow">
-                    <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-18 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                <div className="container mx-auto flex  my-16 md:flex-row-reverse flex-row-reverse items-center w-11/12 border rounded-[25px] box-shadow">
+                    <div className="lg:flex-grow pl-5 md:w-11/12 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
                         <div className="box backdrop-blur-lg bg-gray-300 text-black py-3 px-14 text-lg rounded-l-3xl rounded-r-lg font-bold mb-4">
                             Programmer
                         </div>
@@ -147,8 +147,8 @@ const HomeCourses = () => {
 
                         </div>
                     </div>
-                    <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-                        <img className="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600" />
+                    <div className="w-full h-[588px]">
+                        <img className="object-cover object-center rounded h-full w-full rounded-tl-[25px] rounded-bl-[25px]" alt="hero" src="https://images.unsplash.com/photo-1550439062-609e1531270e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
                     </div>
                 </div>
 

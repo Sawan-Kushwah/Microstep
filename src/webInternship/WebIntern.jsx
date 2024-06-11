@@ -9,7 +9,7 @@ const WebIntern = () => {
     return (
         <>
 
-            <section id="webIntern" className="bg-black text-white min-h-[100vh]">
+            <section id="webIntern" className="  text-white min-h-[100vh]">
                 <div className="heading text-center text-3xl pt-20 ">
                     <div className="mb-4 font-bold">
                         <h1>INTERNSHIPS</h1>
