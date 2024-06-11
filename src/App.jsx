@@ -86,7 +86,8 @@ const App = () => {
                   <h1 className=" pb-6 text-6xl mb-3">LEARN WHAT COLLEGE DOESN&apos;T TEACH YOU</h1>
                   <p className=" text-md text-slate-400 w-4/5">At <span className=" text-blue-500 cursor-pointer">Microstep</span>, you can gain practical knowledge and learn real-world skills that will help you transform your life at work, college and placement</p>
                 </div>
-                <div className="coursesHappyLearner pt-11">
+                <div className="coursesHappyLearner pt-9">
+                <p className=" text-md text-slate-400 w-4/5 mb-4"><span className=" text-red-500 cursor-pointer">Real-world Project</span> & <span className=" text-red-500 cursor-pointer">Internship</span> Opportunities for Early Learners</p>
                   <div className="button">
                     <div className="flex flex-col gap-4">
                       <a href="#courses" className=" w-fit">

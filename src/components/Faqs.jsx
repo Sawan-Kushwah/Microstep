@@ -1,131 +1,118 @@
+import plus from '../assets/plus.png'
+import minus from '../assets/minus.png'
+ 
+ 
 
 const Faqs = () => {
+    const handleClick = (index) => {
+
+        let text = document.getElementsByClassName('textToShow')[index];
+        let srcImg = document.getElementsByClassName('srcImg')[index];
+        console.log(text);
+        if (text.classList.contains("hidden")) {
+            text.classList.remove('hidden');
+            srcImg.src = minus;
+        } else {
+            text.classList.add('hidden');
+            srcImg.src = plus;
+        }
+    }
     return (
         <>
-            <div
-                className="relative w-full px-6 pt-10 pb-8 mt-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:rounded-lg sm:px-10">
-                <div className="mx-auto px-5 w-full">
-                    <div className="flex flex-col items-center">
-                        <h2 className="mt-5 text-center text-3xl font-bold tracking-tight md:text-5xl">FAQ</h2>
-                        <p className="mt-3 text-lg text-neutral-500 md:text-xl">Frequenty asked questions
+        
+            <section className="">
+                <div className="container w-4/5 px-6 py-10 mx-auto">
+                    <h1 className="text-2xl font-semibold text-center text-gray-800 lg:text-3xl dark:text-white">Frequently asked questions</h1>
 
-                        </p>
-                    </div>
-                    <div className="mx-auto mt-8 grid max-w-6xl divide-y divide-neutral-200">
-                        <div className="py-5 z-40">
-                            <details className="group">
-                                <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
-                                    <span> How does the billing work?</span>
-                                    <span className="transition group-open:rotate-180">
-                                        <svg fill="none" height="24" shapeRendering="geometricPrecision"
-                                            stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"
-                                            strokeWidth="1.5" viewBox="0 0 24 24" width="24">
-                                            <path d="M6 9l6 6 6-6"></path>
-                                        </svg>
-                                    </span>
-                                </summary>
-                                <p className="group-open:animate-fadeIn mt-3 text-neutral-600">Springerdata offers a variety of
-                                    billing options, including monthly and annual subscription plans, as well as pay-as-you-go
-                                    pricing for certain services. Payment is typically made through a credit card or other
-                                    secure online payment method.
-                                </p>
-                            </details>
+                    <div className="mt-12 space-y-8">
+                        <div className="border-2 border-gray-100 rounded-lg dark:border-gray-700">
+                            <button className="flex items-center justify-between w-full p-8" onClick={() => handleClick(0)}  >
+                                <h1 className="font-semibold text-gray-700 dark:text-white">How i can play for my appoinment ?</h1>
+
+                                <span className="text-gray-400 bg-gray-200 rounded-full">
+                                    <img className='srcImg' src={plus} alt="plus" width={"28px"} />
+                                </span>
+                            </button>
+
+                            <hr className="border-gray-200 dark:border-gray-700" />
+
+                            <p className="textToShow hidden p-8 text-sm text-gray-500 dark:text-gray-300">
+                                0 wala
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas eaque nobis, fugit odit omnis fugiat deleniti animi ab maxime cum laboriosam recusandae facere dolorum veniam quia pariatur obcaecati illo ducimus?
+                            </p>
                         </div>
-                        <div className="py-5 z-40">
-                            <details className="group">
-                                <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
-                                    <span> Can I get a refund for my subscription?</span>
-                                    <span className="transition group-open:rotate-180">
-                                        <svg fill="none" height="24" shapeRendering="geometricPrecision"
-                                            stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"
-                                            strokeWidth="1.5" viewBox="0 0 24 24" width="24">
-                                            <path d="M6 9l6 6 6-6"></path>
-                                        </svg>
-                                    </span>
-                                </summary>
-                                <p className="group-open:animate-fadeIn mt-3 text-neutral-600">We offer a 30-day money-back
-                                    guarantee for most of its subscription plans. If you are not satisfied with your
-                                    subscription within the first 30 days, you can request a full refund. Refunds for
-                                    subscriptions that have been active for longer than 30 days may be considered on a
-                                    case-by-case basis.
-                                </p>
-                            </details>
+
+                        <div className="border-2 border-gray-100 rounded-lg dark:border-gray-700">
+                            <button className="flex items-center justify-between w-full p-8" onClick={() => handleClick(1)}>
+                                <h1 className="font-semibold text-gray-700 dark:text-white">Is the cost of the appoinment covered by private health insurance?</h1>
+
+                                <span className="text-white bg-blue-500 rounded-full">
+                                    <img className='srcImg' src={plus} alt="plus" width={"28px"} />
+                                </span>
+                            </button>
+
+                            <hr className="border-gray-200 dark:border-gray-700" />
+
+                            <p className="textToShow hidden p-8 text-sm text-gray-500 dark:text-gray-300">
+                                1 wala
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas eaque nobis, fugit odit omnis fugiat deleniti animi ab maxime cum laboriosam recusandae facere dolorum veniam quia pariatur obcaecati illo ducimus?
+                            </p>
                         </div>
-                        <div className="py-5 z-40">
-                            <details className="group">
-                                <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
-                                    <span> How do I cancel my subscription?</span>
-                                    <span className="transition group-open:rotate-180">
-                                        <svg fill="none" height="24" shapeRendering="geometricPrecision"
-                                            stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"
-                                            strokeWidth="1.5" viewBox="0 0 24 24" width="24">
-                                            <path d="M6 9l6 6 6-6"></path>
-                                        </svg>
-                                    </span>
-                                </summary>
-                                <p className="group-open:animate-fadeIn mt-3 text-neutral-600">To cancel your subscription, you can
-                                    log in to your account and navigate to the subscription management page. From there, you
-                                    should be able to cancel your subscription and stop future billing.
-                                </p>
-                            </details>
+
+                        <div className="border-2 border-gray-100 rounded-lg dark:border-gray-700">
+                            <button className="flex items-center justify-between w-full p-8" onClick={() => handleClick(2)}>
+                                <h1 className="font-semibold text-gray-700 dark:text-white">Do i need a referral?</h1>
+
+                                <span className="text-white bg-blue-500 rounded-full">
+                                    <img className='srcImg' src={plus} alt="plus" width={"28px"} />
+                                </span>
+                            </button>
+
+                            <hr className="border-gray-200 dark:border-gray-700" />
+
+                            <p className="textToShow hidden p-8 text-sm text-gray-500 dark:text-gray-300">
+                                2 wala
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas eaque nobis, fugit odit omnis fugiat deleniti animi ab maxime cum laboriosam recusandae facere dolorum veniam quia pariatur obcaecati illo ducimus?
+                            </p>
                         </div>
-                        <div className="py-5 z-40">
-                            <details className="group">
-                                <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
-                                    <span> Is there a free trial?</span>
-                                    <span className="transition group-open:rotate-180">
-                                        <svg fill="none" height="24" shapeRendering="geometricPrecision"
-                                            stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"
-                                            strokeWidth="1.5" viewBox="0 0 24 24" width="24">
-                                            <path d="M6 9l6 6 6-6"></path>
-                                        </svg>
-                                    </span>
-                                </summary>
-                                <p className="group-open:animate-fadeIn mt-3 text-neutral-600">We offer a free trial of our software
-                                    for a limited time. During the trial period, you will have access to a limited set of
-                                    features and functionality, but you will not be charged.
-                                </p>
-                            </details>
+
+                        <div className="border-2 border-gray-100 rounded-lg dark:border-gray-700">
+                            <button className="flex items-center justify-between w-full p-8" onClick={() => handleClick(3)}>
+                                <h1 className="font-semibold text-gray-700 dark:text-white">What are your opening house?</h1>
+
+                                <span className="text-white bg-blue-500 rounded-full">
+                                    <img className='srcImg' src={plus} alt="plus" width={"28px"} />
+                                </span>
+                            </button>
+
+                            <hr className="border-gray-200 dark:border-gray-700" />
+
+                            <p className="textToShow hidden p-8 text-sm text-gray-500 dark:text-gray-300">
+                                3 wala
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas eaque nobis, fugit odit omnis fugiat deleniti animi ab maxime cum laboriosam recusandae facere dolorum veniam quia pariatur obcaecati illo ducimus?
+                            </p>
                         </div>
-                        <div className="py-5 z-40">
-                            <details className="group">
-                                <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
-                                    <span> How do I contact support?</span>
-                                    <span className="transition group-open:rotate-180">
-                                        <svg fill="none" height="24" shapeRendering="geometricPrecision"
-                                            stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"
-                                            strokeWidth="1.5" viewBox="0 0 24 24" width="24">
-                                            <path d="M6 9l6 6 6-6"></path>
-                                        </svg>
-                                    </span>
-                                </summary>
-                                <p className="group-open:animate-fadeIn mt-3 text-neutral-600">If you need help with our platform or
-                                    have any other questions, you can contact the  support team by submitting a support
-                                    request through the website or by emailing support@ourwebsite.com.
-                                </p>
-                            </details>
-                        </div>
-                        <div className="py-5 z-40">
-                            <details className="group">
-                                <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
-                                    <span> Do you offer any discounts or promotions?</span>
-                                    <span className="transition group-open:rotate-180">
-                                        <svg fill="none" height="24" shapeRendering="geometricPrecision"
-                                            stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"
-                                            strokeWidth="1.5" viewBox="0 0 24 24" width="24">
-                                            <path d="M6 9l6 6 6-6"></path>
-                                        </svg>
-                                    </span>
-                                </summary>
-                                <p className="group-open:animate-fadeIn mt-3 text-neutral-600">We may offer discounts or promotions
-                                    from time to time. To stay up-to-date on the latest deals and special offers, you can sign
-                                    up for the compan newsletter or follow it on social media.
-                                </p>
-                            </details>
+
+                        <div className="border-2 border-gray-100 rounded-lg dark:border-gray-700">
+                            <button className="flex items-center justify-between w-full p-8" onClick={() => handleClick(4)}>
+                                <h1 className="font-semibold text-gray-700 dark:text-white">What can i expect at my first consultation?</h1>
+
+                                <span className="text-white bg-blue-500 rounded-full">
+                                    <img className='srcImg' src={plus} alt="plus" width={"28px"} />
+                                </span>
+                            </button>
+
+                            <hr className="border-gray-200 dark:border-gray-700" />
+
+                            <p className="textToShow hidden p-8 text-sm text-gray-500 dark:text-gray-300">
+                                4 wala
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas eaque nobis, fugit odit omnis fugiat deleniti animi ab maxime cum laboriosam recusandae facere dolorum veniam quia pariatur obcaecati illo ducimus?
+                            </p>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
+
 
         </>
     )

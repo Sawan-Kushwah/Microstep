@@ -24,7 +24,7 @@ const HomeCourses = () => {
                         <h1 className="title-font sm:text-4xl text-3xl mb-2 font-medium text-white">THE WEB DEVELOPER :
                             <br className="hidden lg:inline-block" />MAKE WEBSITE  <br />CREATION OF YOUR CARRIER !
                         </h1>
-                        <p className="mb-8 leading-relaxed">Have you ever dream of becoming a Web developer? This is your first step to getting there. Whether you want to take up web development as a full time career or a part-time job, this all-in-one course is your perfect plan of action.</p>
+                        <p className="mb-8 leading-relaxed"><strong>Ever dreamed of building websites? This is your launchpad!</strong> Master the skills for a full-time web dev career or a side hustle This is your first step to getting there.</p>
                         <div className="benifits py-3">
                             <ul>
                                 <li className="py-1.5">
@@ -33,7 +33,7 @@ const HomeCourses = () => {
                                             <svg width="15" height="25" viewBox="0 0 15 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M13.5007 12.9874C13.0007 15.4874 11.1157 17.8414 8.47071 18.3674C7.1807 18.6243 5.84252 18.4676 4.64672 17.9197C3.45091 17.3719 2.45843 16.4607 1.81061 15.3159C1.16278 14.1712 0.892631 12.8512 1.03862 11.544C1.18461 10.2368 1.7393 9.00898 2.62371 8.03535C4.43771 6.03735 7.50071 5.48735 10.0007 6.48735M5.00071 11.9874L7.50071 14.4874L13.5007 7.98735" stroke="#EEEEEE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
                                             </svg></div>
-                                        <p className="courses_card-heading text-size-regular pl-3">Find your niche based on your passion and skills.</p></div>
+                                        <p className="courses_card-heading text-size-regular pl-3"><span className=" text-green-400 font-semibold">Learn by Doing: Build Real Websites, Not Just Code.</span> (hands-on experience).</p></div>
                                 </li>
                                 <li className="py-1.5">
                                     <div className="courses_list-item flex items-center" >
@@ -41,7 +41,7 @@ const HomeCourses = () => {
                                             <svg width="15" height="25" viewBox="0 0 15 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M13.5007 12.9874C13.0007 15.4874 11.1157 17.8414 8.47071 18.3674C7.1807 18.6243 5.84252 18.4676 4.64672 17.9197C3.45091 17.3719 2.45843 16.4607 1.81061 15.3159C1.16278 14.1712 0.892631 12.8512 1.03862 11.544C1.18461 10.2368 1.7393 9.00898 2.62371 8.03535C4.43771 6.03735 7.50071 5.48735 10.0007 6.48735M5.00071 11.9874L7.50071 14.4874L13.5007 7.98735" stroke="#EEEEEE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
                                             </svg></div>
-                                        <p className="courses_card-heading text-size-regular pl-3">Find your niche based on your passion and skills.</p></div>
+                                        <p className="courses_card-heading text-size-regular pl-3"><span className=" text-green-400 font-semibold">Zero to Hero: Start with Basics, Master Advanced Techniques</span> </p></div>
                                 </li>
                                 <li className="py-1.5">
                                     <div className="courses_list-item flex items-center" >
@@ -49,7 +49,8 @@ const HomeCourses = () => {
                                             <svg width="15" height="25" viewBox="0 0 15 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M13.5007 12.9874C13.0007 15.4874 11.1157 17.8414 8.47071 18.3674C7.1807 18.6243 5.84252 18.4676 4.64672 17.9197C3.45091 17.3719 2.45843 16.4607 1.81061 15.3159C1.16278 14.1712 0.892631 12.8512 1.03862 11.544C1.18461 10.2368 1.7393 9.00898 2.62371 8.03535C4.43771 6.03735 7.50071 5.48735 10.0007 6.48735M5.00071 11.9874L7.50071 14.4874L13.5007 7.98735" stroke="#EEEEEE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
                                             </svg></div>
-                                        <p className="courses_card-heading text-size-regular pl-3">Find your niche based on your passion and skills.</p></div>
+                                        <p className="courses_card-heading text-size-regular pl-3"><span className=" text-green-400 font-semibold">Stand Out from the Crowd: Gain Real-World Projects for Your Portfolio.</span></p>
+                                    </div>
                                 </li>
                                 <li className="py-1.5">
                                     <div className="courses_list-item flex items-center" >
@@ -57,7 +58,7 @@ const HomeCourses = () => {
                                             <svg width="15" height="25" viewBox="0 0 15 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M13.5007 12.9874C13.0007 15.4874 11.1157 17.8414 8.47071 18.3674C7.1807 18.6243 5.84252 18.4676 4.64672 17.9197C3.45091 17.3719 2.45843 16.4607 1.81061 15.3159C1.16278 14.1712 0.892631 12.8512 1.03862 11.544C1.18461 10.2368 1.7393 9.00898 2.62371 8.03535C4.43771 6.03735 7.50071 5.48735 10.0007 6.48735M5.00071 11.9874L7.50071 14.4874L13.5007 7.98735" stroke="#EEEEEE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
                                             </svg></div>
-                                        <p className="courses_card-heading text-size-regular pl-3">Find your niche based on your passion and skills.</p></div>
+                                        <p className="courses_card-heading text-size-regular pl-3"><span className=" text-green-400 font-semibold">No Experience Needed: Passion for Tech is All You Need</span>  (Welcomes beginners)</p></div>
                                 </li>
                                 <li className="py-1.5">
                                     <div className="courses_list-item flex items-center" >
@@ -65,7 +66,7 @@ const HomeCourses = () => {
                                             <svg width="15" height="25" viewBox="0 0 15 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M13.5007 12.9874C13.0007 15.4874 11.1157 17.8414 8.47071 18.3674C7.1807 18.6243 5.84252 18.4676 4.64672 17.9197C3.45091 17.3719 2.45843 16.4607 1.81061 15.3159C1.16278 14.1712 0.892631 12.8512 1.03862 11.544C1.18461 10.2368 1.7393 9.00898 2.62371 8.03535C4.43771 6.03735 7.50071 5.48735 10.0007 6.48735M5.00071 11.9874L7.50071 14.4874L13.5007 7.98735" stroke="#EEEEEE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
                                             </svg></div>
-                                        <p className="courses_card-heading text-size-regular pl-3">Find your niche based on your passion and skills.</p></div>
+                                        <p className="courses_card-heading text-size-regular pl-3"><span className=" text-red-500 font-bold">Get Certified, Get Hired: Showcase Your Skills to Employers </span></p></div>
                                 </li>
                             </ul>
                         </div>
@@ -101,7 +102,7 @@ const HomeCourses = () => {
                                             <svg width="15" height="25" viewBox="0 0 15 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M13.5007 12.9874C13.0007 15.4874 11.1157 17.8414 8.47071 18.3674C7.1807 18.6243 5.84252 18.4676 4.64672 17.9197C3.45091 17.3719 2.45843 16.4607 1.81061 15.3159C1.16278 14.1712 0.892631 12.8512 1.03862 11.544C1.18461 10.2368 1.7393 9.00898 2.62371 8.03535C4.43771 6.03735 7.50071 5.48735 10.0007 6.48735M5.00071 11.9874L7.50071 14.4874L13.5007 7.98735" stroke="#EEEEEE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
                                             </svg></div>
-                                        <p className="courses_card-heading text-size-regular pl-3">Find your niche based on your passion and skills.</p></div>
+                                        <p className="courses_card-heading text-size-regular pl-3"><span className=" text-green-400 font-semibold">Code Your Future: Master Powerful Programming Languages</span></p></div>
                                 </li>
                                 <li className="py-1.5">
                                     <div className="courses_list-item flex items-center" >
@@ -109,7 +110,7 @@ const HomeCourses = () => {
                                             <svg width="15" height="25" viewBox="0 0 15 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M13.5007 12.9874C13.0007 15.4874 11.1157 17.8414 8.47071 18.3674C7.1807 18.6243 5.84252 18.4676 4.64672 17.9197C3.45091 17.3719 2.45843 16.4607 1.81061 15.3159C1.16278 14.1712 0.892631 12.8512 1.03862 11.544C1.18461 10.2368 1.7393 9.00898 2.62371 8.03535C4.43771 6.03735 7.50071 5.48735 10.0007 6.48735M5.00071 11.9874L7.50071 14.4874L13.5007 7.98735" stroke="#EEEEEE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
                                             </svg></div>
-                                        <p className="courses_card-heading text-size-regular pl-3">Find your niche based on your passion and skills.</p></div>
+                                        <p className="courses_card-heading text-size-regular pl-3"><span className=" text-green-400 font-semibold">Unlock the Logic: Solve Real-World Problems with Code</span></p></div>
                                 </li>
                                 <li className="py-1.5">
                                     <div className="courses_list-item flex items-center" >
@@ -117,7 +118,7 @@ const HomeCourses = () => {
                                             <svg width="15" height="25" viewBox="0 0 15 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M13.5007 12.9874C13.0007 15.4874 11.1157 17.8414 8.47071 18.3674C7.1807 18.6243 5.84252 18.4676 4.64672 17.9197C3.45091 17.3719 2.45843 16.4607 1.81061 15.3159C1.16278 14.1712 0.892631 12.8512 1.03862 11.544C1.18461 10.2368 1.7393 9.00898 2.62371 8.03535C4.43771 6.03735 7.50071 5.48735 10.0007 6.48735M5.00071 11.9874L7.50071 14.4874L13.5007 7.98735" stroke="#EEEEEE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
                                             </svg></div>
-                                        <p className="courses_card-heading text-size-regular pl-3">Find your niche based on your passion and skills.</p></div>
+                                        <p className="courses_card-heading text-size-regular pl-3"><span className=" text-green-400 font-semibold">Games, Apps, and More: Build Anything You Imagine</span></p></div>
                                 </li>
                                 <li className="py-1.5">
                                     <div className="courses_list-item flex items-center" >
@@ -125,7 +126,7 @@ const HomeCourses = () => {
                                             <svg width="15" height="25" viewBox="0 0 15 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M13.5007 12.9874C13.0007 15.4874 11.1157 17.8414 8.47071 18.3674C7.1807 18.6243 5.84252 18.4676 4.64672 17.9197C3.45091 17.3719 2.45843 16.4607 1.81061 15.3159C1.16278 14.1712 0.892631 12.8512 1.03862 11.544C1.18461 10.2368 1.7393 9.00898 2.62371 8.03535C4.43771 6.03735 7.50071 5.48735 10.0007 6.48735M5.00071 11.9874L7.50071 14.4874L13.5007 7.98735" stroke="#EEEEEE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
                                             </svg></div>
-                                        <p className="courses_card-heading text-size-regular pl-3">Find your niche based on your passion and skills.</p></div>
+                                        <p className="courses_card-heading text-size-regular pl-3"><span className=" text-green-400 font-semibold">Level Up Your Skills: From Beginner to Coding Pro</span></p></div>
                                 </li>
                                 <li className="py-1.5">
                                     <div className="courses_list-item flex items-center" >
@@ -133,7 +134,7 @@ const HomeCourses = () => {
                                             <svg width="15" height="25" viewBox="0 0 15 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M13.5007 12.9874C13.0007 15.4874 11.1157 17.8414 8.47071 18.3674C7.1807 18.6243 5.84252 18.4676 4.64672 17.9197C3.45091 17.3719 2.45843 16.4607 1.81061 15.3159C1.16278 14.1712 0.892631 12.8512 1.03862 11.544C1.18461 10.2368 1.7393 9.00898 2.62371 8.03535C4.43771 6.03735 7.50071 5.48735 10.0007 6.48735M5.00071 11.9874L7.50071 14.4874L13.5007 7.98735" stroke="#EEEEEE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
                                             </svg></div>
-                                        <p className="courses_card-heading text-size-regular pl-3">Find your niche based on your passion and skills.</p></div>
+                                        <p className="courses_card-heading text-size-regular pl-3"><span className=" text-red-500 font-bold">Get Certified, Showcase In-Demand Programming Skills</span></p></div>
                                 </li>
                             </ul>
                         </div>

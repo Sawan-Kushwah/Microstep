@@ -80,7 +80,7 @@
 .active {
     color: rgb(206, 0, 0);
     border-bottom: 2px solid red;
-     
+
 }
 
 .background-gray {
@@ -89,4 +89,8 @@
 
 .useremailbutton:hover+.accountBox {
     display: block;
+}
+
+.textToShow{
+    transition: all 0.3 ease-in-out;
 }

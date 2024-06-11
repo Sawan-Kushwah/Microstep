@@ -1,4 +1,19 @@
 const Testimonial = () => {
+    const showMoreTestimonials = () => {
+        let testimonial = document.getElementsByClassName('showMore')[0];
+        let showButton = document.getElementById('showButton');
+        if (testimonial.classList.contains("hidden")) {
+            testimonial.classList.add('flex');
+            testimonial.classList.remove('hidden');
+            showButton.innerText = "Show Less"
+
+        } else {
+            testimonial.classList.remove('flex');
+            testimonial.classList.add('hidden');
+            showButton.innerText = "Show More"
+        }
+
+    }
     return (
         <>
             <section id="studentReview" className="testimonial ">
@@ -9,7 +24,7 @@ const Testimonial = () => {
                     <div className="container px-5 py-24 mx-auto">
                         <div className="flex flex-wrap m-auto justify-evenly">
 
-                            <div className=" md:w-2/5 w-full   flex flex-col justify-center items-center rounded-3xl testimonialBox h-72">
+                            <div className=" md:w-[30%] w-full   flex flex-col justify-center items-center rounded-3xl testimonialBox h-auto">
                                 <div className="results_card-3 secondary flex flex-col justify-center items-center ">
                                     <div className="w-embed pb-4">
                                         <svg width="130" height="131" viewBox="0 0 130 131" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -25,52 +40,186 @@ const Testimonial = () => {
                                 </div>
                             </div>
 
-                            <div className="md:w-2/5 w-full testimonialBox  rounded-3xl">
+                            <div className="md:w-[30%] w-full testimonialBox  rounded-3xl">
                                 <div className="h-full bg-gray-950 text-white z-30 bg-opacity-40 p-8 rounded-3xl">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="block w-5 h-5 text-gray-500 mb-4" viewBox="0 0 975.036 975.036">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="block w-5 h-5  mb-4 text-red-500" viewBox="0 0 975.036 975.036">
                                         <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
                                     </svg>
-                                    <p className="leading-relaxed mb-6"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam eum ducimus laudantium consequatur velit repellendus veritatis tempora suscipit repudiandae, exercitationem accusamus iusto itaque explicabo quae! Illo doloremque distinctio corporis perspiciatis eum minima deserunt obcaecati?Synth chartreuse iPhone lomo cray raw denim brunch everyday carry neutra before they sold out fixie 90s microdosing. Tacos pinterest fanny pack venmo, post-ironic heirloom try-hard pabst authentic iceland.</p>
+                                    <p className="leading-relaxed mb-6">I had no prior experience, but this program gave me the skills to build my own portfolio website. Now I feel confident applying for web development internships!</p>
                                     <a className="inline-flex items-center">
                                         <img alt="testimonial" src="https://dummyimage.com/106x106" className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center" />
                                         <span className="flex-grow flex flex-col pl-4">
-                                            <span className="title-font font-medium text-white">Holden Caulfield</span>
-                                            <span className="text-gray-500 text-sm">UI DEVELOPER</span>
+                                            <span className="title-font font-medium text-white">Ayush sharma</span>
+                                            <span className="text-gray-500 text-sm">First-year Student</span>
                                         </span>
                                     </a>
                                 </div>
                             </div>
 
-                            <div className=" md:w-2/5 w-full   rounded-3xl testimonialBox">
+                            <div className=" md:w-[30%] w-full   rounded-3xl testimonialBox">
                                 <div className="h-full bg-gray-950 text-white z-30 bg-opacity-40 p-8 rounded-3xl">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="block w-5 h-5 text-gray-500 mb-4" viewBox="0 0 975.036 975.036">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="block w-5 h-5  mb-4 text-red-500" viewBox="0 0 975.036 975.036">
                                         <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
                                     </svg>
-                                    <p className="leading-relaxed mb-6"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis ipsam tempore porro exercitationem sint impedit consequatur! Nemo dignissimos deleniti ea voluptates. Porro nisi temporibus molestiae consequuntur nulla? Molestiae vel sapiente quia deleniti aliquid architecto. Synth chartreuse iPhone lomo cray raw denim brunch everyday carry neutra before they sold out fixie 90s microdosing. Tacos pinterest fanny pack venmo, post-ironic heirloom try-hard pabst authentic iceland.</p>
+                                    <p className="leading-relaxed mb-6"> Thanks to this platform, I was able to learn Java and build a simple game. It was so rewarding to see my code come to life!.</p>
                                     <a className="inline-flex items-center">
                                         <img alt="testimonial" src="https://dummyimage.com/107x107" className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center" />
                                         <span className="flex-grow flex flex-col pl-4">
-                                            <span className="title-font font-medium text-white">Alper Kamu</span>
-                                            <span className="text-gray-500 text-sm">DESIGNER</span>
+                                            <span className="title-font font-medium text-white">Swati singh</span>
+                                            <span className="text-gray-500 text-sm">First-year Student</span>
                                         </span>
                                     </a>
                                 </div>
                             </div>
-                            <div className=" md:w-2/5 w-full rounded-3xl testimonialBox">
+                            <div className=" md:w-[30%] w-full rounded-3xl testimonialBox">
                                 <div className="h-full bg-gray-950 text-white z-30 bg-opacity-40 p-8 rounded-3xl">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="block w-5 h-5 text-gray-500 mb-4" viewBox="0 0 975.036 975.036">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="block w-5 h-5  mb-4 text-red-500" viewBox="0 0 975.036 975.036">
                                         <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
                                     </svg>
-                                    <p className="leading-relaxed mb-6">  Synth chartreuse iPhone lomo cray raw denim brunch everyday carry neutra before they sold out fixie 90s microdosing. Tacos pinterest fanny pack venmo, post-ironic heirloom try-hard pabst authentic iceland.</p>
+                                    <p className="leading-relaxed mb-6"> Confused by theory? Me too! This platform was my game-changer. With real-world projects (think building a website!), I mastered HTML, CSS, and gained the confidence to impress. My portfolio landed me a summer internship at a tech startup, and even a part-time job! Feeling lost turned into launching a tech career all thanks to this platform!.</p>
                                     <a className="inline-flex items-center">
                                         <img alt="testimonial" src="https://dummyimage.com/107x107" className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center" />
                                         <span className="flex-grow flex flex-col pl-4">
-                                            <span className="title-font font-medium text-white">Alper Kamu</span>
-                                            <span className="text-gray-500 text-sm">DESIGNER</span>
+                                            <span className="title-font font-medium text-white">Rahul M.</span>
+                                            <span className="text-gray-500 text-sm">Second-year Student</span>
                                         </span>
                                     </a>
                                 </div>
                             </div>
+
+                            <div className=" md:w-[30%] w-full rounded-3xl testimonialBox">
+                                <div className="h-full bg-gray-950 text-white z-30 bg-opacity-40 p-8 rounded-3xl">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="block w-5 h-5  mb-4 text-red-500" viewBox="0 0 975.036 975.036">
+                                        <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
+                                    </svg>
+                                    <p className="leading-relaxed mb-6"> This program helped me solidify my understanding of C programming concepts. Now I feel much more prepared for my computer science courses.</p>
+                                    <a className="inline-flex items-center">
+                                        <img alt="testimonial" src="https://dummyimage.com/107x107" className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center" />
+                                        <span className="flex-grow flex flex-col pl-4">
+                                            <span className="title-font font-medium text-white">Aditya Singh</span>
+                                            <span className="text-gray-500 text-sm">First-year Student</span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div className=" md:w-[30%] w-full rounded-3xl testimonialBox">
+                                <div className="h-full bg-gray-950 text-white z-30 bg-opacity-40 p-8 rounded-3xl">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="block w-5 h-5  mb-4 text-red-500" viewBox="0 0 975.036 975.036">
+                                        <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
+                                    </svg>
+                                    <p className="leading-relaxed mb-6"> C programming always seemed intimidating, but the mentors on this platform made it so much easier. They helped me understand the concepts and solve complex coding challenges. Feeling much more prepared for my CS degree!</p>
+                                    <a className="inline-flex items-center">
+                                        <img alt="testimonial" src="https://dummyimage.com/107x107" className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center" />
+                                        <span className="flex-grow flex flex-col pl-4">
+                                            <span className="title-font font-medium text-white">Krishna Y.</span>
+                                            <span className="text-gray-500 text-sm">First-year Student</span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+
+
+
+
+                            <div className="showMore hidden flex-wrap m-auto justify-evenly">
+
+                                <div className=" md:w-[30%] w-full rounded-3xl testimonialBox">
+                                    <div className="h-full bg-gray-950 text-white z-30 bg-opacity-40 p-8 rounded-3xl">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="block w-5 h-5  mb-4 text-red-500" viewBox="0 0 975.036 975.036">
+                                            <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
+                                        </svg>
+                                        <p className="leading-relaxed mb-6">I always loved creating games, but never knew how to code them. This platform&apos;s Java course was amazing! I built a simple game and learned so much in the process. Feeling like a coding rockstar now!.</p>
+                                        <a className="inline-flex items-center">
+                                            <img alt="testimonial" src="https://dummyimage.com/107x107" className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center" />
+                                            <span className="flex-grow flex flex-col pl-4">
+                                                <span className="title-font font-medium text-white">Rohan Desai</span>
+                                                <span className="text-gray-500 text-sm">Second-year Student</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className=" md:w-[30%] w-full rounded-3xl testimonialBox">
+                                    <div className="h-full bg-gray-950 text-white z-30 bg-opacity-40 p-8 rounded-3xl">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="block w-5 h-5  mb-4 text-red-500" viewBox="0 0 975.036 975.036">
+                                            <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
+                                        </svg>
+                                        <p className="leading-relaxed mb-6"> Never thought coding could be this fun! This platform&apos;s interactive lessons made learning web development enjoyable. Now I can build basic websites and impress my friends with my skills. Thanks!</p>
+                                        <a className="inline-flex items-center">
+                                            <img alt="testimonial" src="https://dummyimage.com/107x107" className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center" />
+                                            <span className="flex-grow flex flex-col pl-4">
+                                                <span className="title-font font-medium text-white">Riya Sharma</span>
+                                                <span className="text-gray-500 text-sm">First-year Student</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className=" md:w-[30%] w-full rounded-3xl testimonialBox">
+                                    <div className="h-full bg-gray-950 text-white z-30 bg-opacity-40 p-8 rounded-3xl">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="block w-5 h-5  mb-4 text-red-500" viewBox="0 0 975.036 975.036">
+                                            <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
+                                        </svg>
+                                        <p className="leading-relaxed mb-6"> The project-based approach was fantastic! I learned so much more by doing real web development tasks than just reading textbooks.</p>
+                                        <a className="inline-flex items-center">
+                                            <img alt="testimonial" src="https://dummyimage.com/107x107" className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center" />
+                                            <span className="flex-grow flex flex-col pl-4">
+                                                <span className="title-font font-medium text-white">Anika Patel</span>
+                                                <span className="text-gray-500 text-sm">Second-year Student</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+
+
+                                <div className=" md:w-[30%] w-full rounded-3xl testimonialBox">
+                                    <div className="h-full bg-gray-950 text-white z-30 bg-opacity-40 p-8 rounded-3xl">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="block w-5 h-5  mb-4 text-red-500" viewBox="0 0 975.036 975.036">
+                                            <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
+                                        </svg>
+                                        <p className="leading-relaxed mb-6">Thanks to this platform,
+                                            I landed a fantastic web development internship! The project-based learning helped me build a strong portfolio that impressed the company.</p>
+                                        <a className="inline-flex items-center">
+                                            <img alt="testimonial" src="https://dummyimage.com/107x107" className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center" />
+                                            <span className="flex-grow flex flex-col pl-4">
+                                                <span className="title-font font-medium text-white">Zara Khan</span>
+                                                <span className="text-gray-500 text-sm">First-year Student</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className=" md:w-[30%] w-full rounded-3xl testimonialBox">
+                                    <div className="h-full bg-gray-950 text-white z-30 bg-opacity-40 p-8 rounded-3xl">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="block w-5 h-5  mb-4 text-red-500" viewBox="0 0 975.036 975.036">
+                                            <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
+                                        </svg>
+                                        <p className="leading-relaxed mb-6">I love the supportive community on this platform! Fellow students and mentors are always there to answer questions and share resources</p>
+                                        <a className="inline-flex items-center">
+                                            <img alt="testimonial" src="https://dummyimage.com/107x107" className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center" />
+                                            <span className="flex-grow flex flex-col pl-4">
+                                                <span className="title-font font-medium text-white">Vikram Joshi</span>
+                                                <span className="text-gray-500 text-sm">Second-year Student</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className=" md:w-[30%] w-full rounded-3xl testimonialBox">
+                                    <div className="h-full bg-gray-950 text-white z-30 bg-opacity-40 p-8 rounded-3xl">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="block w-5 h-5  mb-4 text-red-500" viewBox="0 0 975.036 975.036">
+                                            <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
+                                        </svg>
+                                        <p className="leading-relaxed mb-6"> C++ programming always seemed daunting,
+                                            but the mentors on this platform made it clear and engaging. They helped me break down complex problems into manageable steps, and now I can tackle coding challenges with confidence. This platform is a lifesaver!</p>
+                                        <a className="inline-flex items-center">
+                                            <img alt="testimonial" src="https://dummyimage.com/107x107" className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center" />
+                                            <span className="flex-grow flex flex-col pl-4">
+                                                <span className="title-font font-medium text-white">Navdeep Kaur</span>
+                                                <span className="text-gray-500 text-sm">First-year Student</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <button id="showButton" className="btn btn-red hover:bg-red-700" onClick={showMoreTestimonials}>Show more</button>
 
                         </div>
                     </div>
