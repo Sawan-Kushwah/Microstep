@@ -31,13 +31,16 @@ const Navbar = () => {
                         </svg>
                         <span className="ml-3 text-xl">Microstep</span>
                     </NavLink>
+
+
+
                     <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-                        <NavLink to={"/"} className="mr-5 hover:text-red-500 text-xl">Home</NavLink>
-                        <NavLink to={"/webdevelopment"} className="mr-5 text-xl hover:text-red-500">Web development</NavLink>
-                        <NavLink to={"/programming"} className="mr-5 text-xl hover:text-red-500">Programming</NavLink>
-                        <NavLink to={"/about"} className="mr-5 text-xl hover:text-red-500">About</NavLink>
-                        {!isAdmin && <NavLink to={"/contact"} className="mr-5 text-xl hover:text-red-500">Contact us</NavLink>}
-                        {isAdmin && <NavLink to={"/private/admin"} className="mr-5 text-xl hover:text-red-500">Admin Dashboard</NavLink>}
+                        <NavLink to={"/"} className=" py-2 px-6 navItems text-xl">Home</NavLink>
+                        <NavLink to={"/webdevelopment"} className="py-2 px-6  text-xl  navItems">Web development</NavLink>
+                        <NavLink to={"/programming"} className="py-2 px-6  text-xl  navItems">Programming</NavLink>
+                        <NavLink to={"/about"} className="py-2 px-6  text-xl  navItems">About</NavLink>
+                        {!isAdmin && <NavLink to={"/contact"} className="py-2 px-6  text-xl  navItems">Contact us</NavLink>}
+                        {isAdmin && <NavLink to={"/private/admin"} className="py-2 px-6  text-xl  navItems">Admin Dashboard</NavLink>}
                     </nav>
 
                     {isAuthenticated && <div>

@@ -87,7 +87,7 @@ const App = () => {
                   <p className=" text-md text-slate-400 w-4/5">At <span className=" text-blue-500 cursor-pointer">Microstep</span>, you can gain practical knowledge and learn real-world skills that will help you transform your life at work, college and placement</p>
                 </div>
                 <div className="coursesHappyLearner pt-9">
-                <p className=" text-md text-slate-400 w-4/5 mb-4"><span className=" text-red-500 cursor-pointer">Real-world Project</span> & <span className=" text-red-500 cursor-pointer">Internship</span> Opportunities for Early Learners</p>
+                  <p className=" text-md text-slate-400 w-4/5 mb-4"><span className=" text-red-500 cursor-pointer">Real-world Project</span> & <span className=" text-red-500 cursor-pointer">Internship</span> Opportunities for Early Learners</p>
                   <div className="button">
                     <div className="flex flex-col gap-4">
                       <a href="#courses" className=" w-fit">
@@ -123,6 +123,19 @@ const App = () => {
               </div>
               <div className="hero-container heroImageSection w-2/5">
                 <img src={heroImg} alt="" className=" w-full" />
+              </div>
+            </div>
+            <div className="floatingText absolute bottom-3 w-full h-20  z-50" >
+              <div className="marquee text-white text text-6xl w-11/12 m-auto h-full overflow-hidden">
+                <h1>
+                  <span className="text-red-500">C</span>ode with Confidence: 
+                  <span className="text-red-500"> Bu</span>ild Real-World 
+                  <span className="text-red-500"> Pro</span>jects, Apps & 
+                  <span className="text-red-500"> G</span>ames, Code Your 
+                  <span className="text-red-500"> Futu</span>re, 
+                  <span className="text-red-500"> G</span>et  Certif
+                  <span className="text-red-500">ied.</span>
+                  </h1>
               </div>
             </div>
           </section>

@@ -33,7 +33,7 @@ const AdvanceDevelopment = () => {
             <div id="advance" className="container internship mx-auto flex px-16 my-16 md:flex-row flex-col items-center w-11/12 text-black bg-gray-100 rounded-[13px] py-10 ">
                 <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
                     <div className="box backdrop-blur-lg bg-slate-900 text-white py-2 px-10 text-lg rounded-r-3xl rounded-l-lg font-bold">
-                        Web Development Internship
+                        Advance Web Development Internship
                     </div>
                     <div className="level flex justify-between w-3/5 ">
                         <a href='#' className="totalIntenship bg-gray-300 py-2 px-8 w-fit mt-5 rounded-3xl cursor-pointer">
@@ -52,8 +52,8 @@ const AdvanceDevelopment = () => {
                             </div>
                         </a>
                     </div>
-                    <div className="flex justify-center  mt-2">
-                        <button className="py-2 px-5 border bg-blue-600 text-white rounded-lg hover:bg-blue-700 " onClick={goToApplyNow}>
+                    <div className="flex justify-center  mt-4">
+                        <button className="py-3 px-16 border bg-blue-600 text-white rounded-lg hover:bg-blue-700 " onClick={goToApplyNow}>
                             Apply now
                         </button>
                     </div>
@@ -63,50 +63,47 @@ const AdvanceDevelopment = () => {
                         <ul>
                             <li className="py-1.5 list-disc">
                                 <div className="courses_list-item flex items-center" >
-                                    <p className="courses_card-heading text-size-regular pl-3">Bachelor&apos;s degree in Computer Science, a related technical field, or equivalent practical experience.</p>
+                                    <p className="courses_card-heading text-size-regular pl-3">Currently Enrolled in Bachelor&apos;s degree preferably in Computer Science, Information Technology, or a related field.
+                                    </p>
                                 </div>
                             </li>
                             <li className="py-1.5 list-disc">
                                 <div className="courses_list-item flex items-center" >
-                                    <p className="courses_card-heading text-size-regular pl-3">5 years of experience in full-stack web development.</p>
+                                    <p className="courses_card-heading text-size-regular pl-3">Proficiency in HTML, CSS, and JavaScript and Advance understanding of responsive web design principles.</p>
                                 </div>
                             </li>
                             <li className="py-1.5 list-disc">
                                 <div className="courses_list-item flex items-center" >
-                                    <p className="courses_card-heading text-size-regular pl-3">5 years of experience in Java, C++, Python, or related object oriented programming.</p>
+                                    <p className="courses_card-heading text-size-regular pl-3">Experience with front-end frameworks/libraries such as React, Angular, or Vue.js.</p>
                                 </div>
                             </li>
                             <li className="py-1.5 list-disc">
                                 <div className="courses_list-item flex items-center" >
-                                    <p className="courses_card-heading text-size-regular pl-3">5 years of experience in TypeScript/JavaScript front-end programming and Database/SQL.</p>
+                                    <p className="courses_card-heading text-size-regular pl-3">Knowledge in back-end technologies like Node.js, Python, Ruby on Rails, or similar.</p>
+                                </div>
+                            </li>
+                            <li className="py-1.5 list-disc">
+                                <div className="courses_list-item flex items-center" >
+                                    <p className="courses_card-heading text-size-regular pl-3">Familiarity with databases (SQL and NoSQL) Or MongoDB.</p>
                                 </div>
                             </li>
                         </ul>
                     </div>
                     <div id="learnMoreTextAdvance" className="text hidden">
                         <div className="line bg-gray-600 w-full  pt-0.5 my-3"> </div>
+
                         <div className="preferredQualification">
-                            <h2 className=" text-2xl font-bold">Preferred qualifications : </h2>
+                            <h2 className=" text-2xl font-bold">Additional Skills (Preferred but not mandatory):</h2>
                             <div className="qualification py-3 pl-16">
                                 <ul>
                                     <li className="py-1.5 list-disc">
                                         <div className="courses_list-item flex items-center" >
-                                            <p className="courses_card-heading text-size-regular pl-3">Bachelor&apos;s degree in Computer Science, a related technical field, or equivalent practical experience.</p>
+                                            <p className="courses_card-heading text-size-regular pl-3">Knowledge of RESTful API design and development.</p>
                                         </div>
                                     </li>
                                     <li className="py-1.5 list-disc">
                                         <div className="courses_list-item flex items-center" >
-                                            <p className="courses_card-heading text-size-regular pl-3">5 years of experience in full-stack web development.</p>
-                                        </div>
-                                    </li>
-                                    <li className="py-1.5 list-disc">
-                                        <div className="courses_list-item flex items-center" >
-                                            <p className="courses_card-heading text-size-regular pl-3">5 years of experience in Java, C++, Python, or related object oriented programming.</p>
-                                        </div>
-                                    </li>
-                                    <li className="py-1.5 list-disc">
-                                        <div className="courses_list-item flex items-center" >
-                                            <p className="courses_card-heading text-size-regular pl-3">5 years of experience in TypeScript/JavaScript front-end programming and Database/SQL.</p>
+                                            <p className="courses_card-heading text-size-regular pl-3">Understanding of web performance optimization techniques.</p>
                                         </div>
                                     </li>
                                 </ul>
@@ -121,30 +118,43 @@ const AdvanceDevelopment = () => {
                                 <ul>
                                     <li className="py-1.5">
                                         <div className="courses_list-item flex items-center" >
-                                            <p className="courses_card-heading text-size-regular pl-3"> The gTech Analytics, Platforms, and Tools team maintains close relationships with the Engineering and Product partners necessary to develop and improve Googles products and internal tools. As a Web Solutions Engineer on the Tools Development and Automation team, youll be responsible for managing solutions that make the broader Global Business Organization more efficient. Youll help drive the development of tools and will be involved in ideating required product features and designing/implementing quick and scalable solutions. You will work with Googles infrastructure to resolve problems over datasets.</p>
+                                            <p className="courses_card-heading text-size-regular pl-3">Our intermediate level web development internship is designed to provide hands-on experience and enhance your technical skills through practical application. Here are some key highlights of the internship:</p>
                                         </div>
                                     </li>
                                     <li className="py-1.5">
                                         <div className="courses_list-item flex items-center" >
-                                            <p className="courses_card-heading text-size-regular pl-3"> Additionally, youll be working as a part of an Engineering team responsible for developing and supporting tools, prototyping proofs of concept, and writing/reviewing technical design documents to meet the needs of the services teams. You will adhere to Googls software development practices and work in partnership with other Project/Product Management and Engineering teams.</p>
+                                            <p className="courses_card-heading text-size-regular pl-3"><strong>Skill Development:</strong><br />
+                                                <li> Enhance your understanding of front-end and back-end development.</li>
+                                                <li>Gain experience with version control and collaborative coding practices.</li>
+                                            </p>
                                         </div>
                                     </li>
                                     <li className="py-1.5">
                                         <div className="courses_list-item flex items-center" >
-                                            <p className="courses_card-heading text-size-regular pl-3"> Google creates products and services that make the world a better place, and gTecs role is to help bring them to life. Our teams of trusted advisors support customers globally. Our solutions are rooted in our technical skill, product expertise, and a thorough understanding of our customers complex needs. Whether the answer is a bespoke solution to solve a unique problem, or a new tool that can scale across Google, everything we do aims to ensure our customers benefit from the full potential of Google products.</p>
+                                            <p className="courses_card-heading text-size-regular pl-3"><strong> Full Stack web development Project : </strong> Engage in a comprehensive full-stack project where you will develop both front-end and back-end components.</p>
                                         </div>
                                     </li>
                                     <li className="py-1.5">
                                         <div className="courses_list-item flex items-center" >
-                                            <p className="courses_card-heading text-size-regular pl-3"> To learn more about gTech, check out our video..</p>
+                                            <p className="courses_card-heading text-size-regular pl-3"><strong> Certification : </strong> Upon successful completion of the internship, you will receive a certification that acknowledges your skills and contributions.</p>
+                                        </div>
+                                    </li>
+                                    <li className="py-1.5">
+                                        <div className="courses_list-item flex items-center" >
+                                            <p className="courses_card-heading text-size-regular pl-3"><strong> Shine you resume : </strong> By inculding this full stack project and certification of completion.</p>
+                                        </div>
+                                    </li>
+                                    <li className="py-1.5">
+                                        <div className="courses_list-item flex items-center" >
+                                            <p className="courses_card-heading text-size-regular pl-3"><strong> Work Environment : </strong> Flexible working hours to accommodate your academic schedule.</p>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
 
                         </div>
-                        <div className="flex justify-center mt-2">
-                            <button className="py-2 px-5 border bg-blue-600 text-white rounded-lg hover:bg-blue-700 " onClick={goToApplyNow}>
+                        <div className="flex justify-center mt-2 absolute left-1/3">
+                            <button className=" py-4 px-40 border bg-blue-600 text-white rounded-lg hover:bg-blue-700 " onClick={goToApplyNow}>
                                 Apply now
                             </button>
                         </div>
