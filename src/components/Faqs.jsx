@@ -56,7 +56,7 @@ const Faqs = () => {
                                 <br />
                                 <span><strong>STEP 3 : </strong>Submit your <strong>Code </strong>as Drive link , Gihub link , Linkedin Link (Anyone or two can be considered) </span>
                                 <br />
-                                <span><strong>STEP 4 : </strong><strong className=' text-green-500'>Get Certified! </strong>Our will send you after reviewing your code</span>
+                                <span><strong>STEP 4 : </strong><strong className=' text-green-500'>Get Certified! </strong>Microstep Team will send you after reviewing your code</span>
                             </p>
                         </div>
 

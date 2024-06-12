@@ -45,7 +45,7 @@ const Programming = () => {
                         </div>
                         <div className="coursesHappyLearner pt-8">
                             <div className="button">
-                                <a href="#codingIntern">
+                                <a href="#condingIntern">
                                     <button className="btn btn-red">
                                         join today !!!
                                     </button>

@@ -63,50 +63,51 @@ const C = () => {
                         <ul>
                             <li className="py-1.5 list-disc">
                                 <div className="courses_list-item flex items-center" >
-                                    <p className="courses_card-heading text-size-regular pl-3">Bachelor&apos;s degree in Computer Science, a related technical field, or equivalent practical experience.</p>
+                                    <p className="courses_card-heading text-size-regular pl-3"><strong className=" text-blue-500">Currently Pursuing a Bachelor&apos;s Degree : </strong>
+                                        Are you currently enrolled in a Bachelor&apos;s program, in first or second year of study ? We welcome students from all backgrounds with a passion for technology!</p>
                                 </div>
                             </li>
                             <li className="py-1.5 list-disc">
                                 <div className="courses_list-item flex items-center" >
-                                    <p className="courses_card-heading text-size-regular pl-3">5 years of experience in full-stack web development.</p>
+                                    <p className="courses_card-heading text-size-regular pl-3">Basic proficiency in C programming language</p>
                                 </div>
                             </li>
                             <li className="py-1.5 list-disc">
                                 <div className="courses_list-item flex items-center" >
-                                    <p className="courses_card-heading text-size-regular pl-3">5 years of experience in Java, C++, Python, or related object oriented programming.</p>
+                                    <p className="courses_card-heading text-size-regular pl-3">Understanding of fundamental programming concepts such as loops, conditionals, and functions.</p>
                                 </div>
                             </li>
                             <li className="py-1.5 list-disc">
                                 <div className="courses_list-item flex items-center" >
-                                    <p className="courses_card-heading text-size-regular pl-3">5 years of experience in TypeScript/JavaScript front-end programming and Database/SQL.</p>
+                                    <p className="courses_card-heading text-size-regular pl-3">Basic knowledge of data structures like arrays and linked lists.</p>
                                 </div>
                             </li>
                         </ul>
                     </div>
-                    <div id="learnMoreTextC" className="text hidden">
+                    <div id="learnMoreTextC" className="text hidden w-full">
                         <div className="line bg-gray-600 w-full  pt-0.5 my-3"> </div>
                         <div className="preferredQualification">
-                            <h2 className=" text-2xl font-bold">Preferred qualifications : </h2>
+                            <h2 className=" text-2xl font-bold">Additional Skills (Preferred but not mandatory): </h2>
                             <div className="qualification py-3 pl-16">
                                 <ul>
                                     <li className="py-1.5 list-disc">
                                         <div className="courses_list-item flex items-center" >
-                                            <p className="courses_card-heading text-size-regular pl-3">Bachelor&apos;s degree in Computer Science, a related technical field, or equivalent practical experience.</p>
+                                            <p className="courses_card-heading text-size-regular pl-3">Basic understanding of algorithms.</p>
                                         </div>
                                     </li>
                                     <li className="py-1.5 list-disc">
                                         <div className="courses_list-item flex items-center" >
-                                            <p className="courses_card-heading text-size-regular pl-3">5 years of experience in full-stack web development.</p>
+                                            <p className="courses_card-heading text-size-regular pl-3">Familiarity with concepts of memory management and pointers.</p>
                                         </div>
                                     </li>
                                     <li className="py-1.5 list-disc">
                                         <div className="courses_list-item flex items-center" >
-                                            <p className="courses_card-heading text-size-regular pl-3">5 years of experience in Java, C++, Python, or related object oriented programming.</p>
+                                            <p className="courses_card-heading text-size-regular pl-3">Experience with basic file handling in C.</p>
                                         </div>
                                     </li>
                                     <li className="py-1.5 list-disc">
                                         <div className="courses_list-item flex items-center" >
-                                            <p className="courses_card-heading text-size-regular pl-3">5 years of experience in TypeScript/JavaScript front-end programming and Database/SQL.</p>
+                                            <p className="courses_card-heading text-size-regular pl-3">Strong problem-solving abilities.</p>
                                         </div>
                                     </li>
                                 </ul>
@@ -121,22 +122,23 @@ const C = () => {
                                 <ul>
                                     <li className="py-1.5">
                                         <div className="courses_list-item flex items-center" >
-                                            <p className="courses_card-heading text-size-regular pl-3"> The gTech Analytics, Platforms, and Tools team maintains close relationships with the Engineering and Product partners necessary to develop and improve Googles products and internal tools. As a Web Solutions Engineer on the Tools Development and Automation team, youll be responsible for managing solutions that make the broader Global Business Organization more efficient. Youll help drive the development of tools and will be involved in ideating required product features and designing/implementing quick and scalable solutions. You will work with Googles infrastructure to resolve problems over datasets.</p>
+                                            <p className="courses_card-heading text-size-regular pl-3"> <strong>Master the Fundamentals : </strong>
+                                                Gain a deep understanding of C programming concepts like variables, data types, control flow, functions, and memory management.</p>
                                         </div>
                                     </li>
                                     <li className="py-1.5">
                                         <div className="courses_list-item flex items-center" >
-                                            <p className="courses_card-heading text-size-regular pl-3"> Additionally, youll be working as a part of an Engineering team responsible for developing and supporting tools, prototyping proofs of concept, and writing/reviewing technical design documents to meet the needs of the services teams. You will adhere to Googls software development practices and work in partnership with other Project/Product Management and Engineering teams.</p>
+                                            <p className="courses_card-heading text-size-regular pl-3"><strong>Project-Based Learning : </strong>Engage in real-world projects where you will apply your knowledge of C programming.</p>
                                         </div>
                                     </li>
                                     <li className="py-1.5">
                                         <div className="courses_list-item flex items-center" >
-                                            <p className="courses_card-heading text-size-regular pl-3"> Google creates products and services that make the world a better place, and gTecs role is to help bring them to life. Our teams of trusted advisors support customers globally. Our solutions are rooted in our technical skill, product expertise, and a thorough understanding of our customers complex needs. Whether the answer is a bespoke solution to solve a unique problem, or a new tool that can scale across Google, everything we do aims to ensure our customers benefit from the full potential of Google products.</p>
+                                            <p className="courses_card-heading text-size-regular pl-3"><strong>Certification : </strong>Upon successful completion of the internship, you will receive a certification that acknowledges your skills and contributions.</p>
                                         </div>
                                     </li>
                                     <li className="py-1.5">
                                         <div className="courses_list-item flex items-center" >
-                                            <p className="courses_card-heading text-size-regular pl-3"> To learn more about gTech, check out our video..</p>
+                                            <p className="courses_card-heading text-size-regular pl-3">Flexible working hours to accommodate your academic schedule.</p>
                                         </div>
                                     </li>
                                 </ul>
@@ -150,11 +152,9 @@ const C = () => {
                         </div>
                     </div>
                     <div className="flex justify-center pl-16">
-                        {/* <NavLink to={"/applicationPageWeb1Month"}> */}
                         <button id="learnC" className="py-3 px-7 border text-blue-500 hover:bg-gray-200 hover:text-blue-600 " onClick={learnMoreButton}>
                             Read more
                         </button>
-                        {/* </NavLink> */}
                     </div>
                 </div>
             </div>

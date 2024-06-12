@@ -10,70 +10,14 @@ import "./css/button.css"
 import "https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"
 import Sketch from "./sketch"
 import { useAuth0 } from "@auth0/auth0-react";
-import { useState } from "react"
-import { useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 
 const App = () => {
-
   const { isAuthenticated } = useAuth0();
-  const navigate = useNavigate();
-  const [studentID, setStudentID] = useState("");
-  const [error, seterror] = useState("");
-
-  //handel student id form
-  const closeFrom = () => {
-    document.getElementById('studentIdForm').classList.add('hidden');
-    seterror("");
-    setStudentID("");
-  }
-  const showStudentIdForm = () => {
-    document.getElementById('studentIdForm').classList.remove("hidden")
-  }
-
-  const getStudentId = (e) => {
-    setStudentID(e.target.value);
-    console.log(e.target.value);
-    seterror("");
-  }
-
-
-  const checkStudentIsEnrolled = async () => {
-    if (studentID === "") {
-      seterror("This field is required");
-    } else {
-      // setStudentID("");
-      let response = await fetch("http://localhost:3000/checkStudentEnrollment", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ studentID: studentID })
-      })
-      let res = await response.json();
-      console.log(res);
-
-      if (response.status === 200) {
-        navigate("/submitTask", { state: { studentID: studentID, email: res.email } });
-      } else {
-        seterror("Invalid ID");
-      }
-    }
-  }
-
   return (
     <>
-      <div id="studentIdForm" className="border p-15 h-96  w-2/3 space-x-4 bg-slate-900 absolute top-[22%] left-[18%] hidden  z-[100]">
-        <div className="close mb-5  text-end p-5 cursor-pointer" onClick={closeFrom}>Close</div>
-        <div className="  m-0 form flex flex-col justify-center items-center">
-          <div className="text font-bold text-3xl pb-6">
-            Give Your Submission ID
-          </div>
-          <p className="relative right-[36%] text-sm text-gray-400 font-normal mb-2">Sent on the mail with offer letter</p>
-          <input type="text" className="p-2 border w-11/12 mx-auto bg-white text-black font-bold text-lg mb-8" placeholder="Submission ID" onChange={getStudentId} value={studentID ? studentID : ""} />
-          {error && <p className="relative  -top-7   text-red-400 font-normal">*{error}</p>}
-          <button type="submit" className="btn px-20 btn-green" onClick={checkStudentIsEnrolled}>Verify</button>
-        </div>
-      </div >
-      <div   >
+      <div>
         <Sketch />
         {/* <CanvasBackground  /> */}
         <div  >
@@ -96,11 +40,11 @@ const App = () => {
                         </button>
                       </a>
                       {isAuthenticated &&
-                        <div onClick={showStudentIdForm} className="w-fit">
+                        <NavLink to={"/submitYourCodeHere"} className="w-fit">
                           <button className="btn btn-green px-16">
                             Submit Your Code
                           </button>
-                        </div>
+                        </NavLink>
                       }
                     </div>
                     <div className="happyLearner text-white flex w-72 justify-evenly pt-7">
@@ -128,14 +72,14 @@ const App = () => {
             <div className="floatingText absolute bottom-3 w-full h-20  z-50" >
               <div className="marquee text-white text text-6xl w-11/12 m-auto h-full overflow-hidden">
                 <h1>
-                  <span className="text-red-500">C</span>ode with Confidence: 
-                  <span className="text-red-500"> Bu</span>ild Real-World 
-                  <span className="text-red-500"> Pro</span>jects, Apps & 
-                  <span className="text-red-500"> G</span>ames, Code Your 
-                  <span className="text-red-500"> Futu</span>re, 
+                  <span className="text-red-500">C</span>ode with Confidence:
+                  <span className="text-red-500"> Bu</span>ild Real-World
+                  <span className="text-red-500"> Pro</span>jects, Apps &
+                  <span className="text-red-500"> G</span>ames, Code Your
+                  <span className="text-red-500"> Futu</span>re,
                   <span className="text-red-500"> G</span>et  Certif
                   <span className="text-red-500">ied.</span>
-                  </h1>
+                </h1>
               </div>
             </div>
           </section>
@@ -146,7 +90,7 @@ const App = () => {
           <Faqs />
           <Footer />
         </div>
-      </div>
+      </div >
 
     </>
   )

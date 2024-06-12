@@ -153,8 +153,8 @@ const AdvanceDevelopment = () => {
                             </div>
 
                         </div>
-                        <div className="flex justify-center mt-2 absolute left-1/3">
-                            <button className=" py-4 px-40 border bg-blue-600 text-white rounded-lg hover:bg-blue-700 " onClick={goToApplyNow}>
+                        <div className="flex justify-center mt-2">
+                            <button className="py-2 px-5 border bg-blue-600 text-white rounded-lg hover:bg-blue-700 " onClick={goToApplyNow}>
                                 Apply now
                             </button>
                         </div>

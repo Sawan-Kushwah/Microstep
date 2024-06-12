@@ -12,6 +12,7 @@ import { Auth0Provider } from '@auth0/auth0-react';
 import SubmittedSuccessfully from './components/SubmittedSuccessfully.jsx'
 import SubmittedTask from './pages/SubmittedTask.jsx'
 import Private from './components/Private.jsx'
+import HowToSubmitCode from './pages/HowToSubmitCode.jsx'
 
 // let char = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvxyz0123456789";
 // let charLen = char.length;
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
   {
     path: '/submitTask',
     element: <SubmittedTask />
+  },
+  {
+    path: '/submitYourCodeHere',
+    element: <HowToSubmitCode />
   },
   {
     path: '/private',

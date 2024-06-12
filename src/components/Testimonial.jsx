@@ -18,7 +18,7 @@ const Testimonial = () => {
         <>
             <section id="studentReview" className="testimonial ">
                 <div className="heading text-center text-[3rem] font-bold pt-20">
-                    <h2>HERE WHAT YOUR CURRENT STUDENT WANT TO SAY...</h2>
+                    <h2>HERE WHAT OUR CURRENT STUDENT WANT TO SAY...</h2>
                 </div>
                 <div className="text-gray-400   body-font">
                     <div className="container px-5 py-24 mx-auto">

@@ -157,18 +157,16 @@ const IntermediateDevelopment = () => {
                             </div>
 
                         </div>
-                        <div className="flex justify-center mt-2 absolute left-1/3">
-                            <button className=" py-4 px-40 border bg-blue-600 text-white rounded-lg hover:bg-blue-700 " onClick={goToApplyNow}>
+                        <div className="flex justify-center mt-2">
+                            <button className="py-2 px-5 border bg-blue-600 text-white rounded-lg hover:bg-blue-700 " onClick={goToApplyNow}>
                                 Apply now
                             </button>
                         </div>
                     </div>
                     <div className="flex justify-center pl-16">
-                        {/* <NavLink to={"/applicationPageWeb1Month"}> */}
                         <button id="learnInter" className="py-3 px-7 border text-blue-500 hover:bg-gray-200 hover:text-blue-600 " onClick={learnMoreButton}>
                             Read more
                         </button>
-                        {/* </NavLink> */}
                     </div>
                 </div>
             </div>

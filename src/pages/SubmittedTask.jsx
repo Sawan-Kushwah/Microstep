@@ -1,9 +1,11 @@
 import { useLocation, useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form';
 import { useEffect } from 'react';
+
+
 const SubmittedTask = () => {
     let location = useLocation();
-
+    // console.log(location.state)
     let navigate = useNavigate();
 
     const {
@@ -25,7 +27,7 @@ const SubmittedTask = () => {
 
     useEffect(() => {
         if (location.state === null) {
-            console.log("khali h bhai")
+            // console.log("khali h bhai")
             navigate("/");
         }
     }, [])
@@ -33,15 +35,16 @@ const SubmittedTask = () => {
     return (
         <>
 
-            <section className="text-gray-400 bg-gray-900 body-font relative">
-                <div className="container px-5 py-24 mx-auto">
+            <section className="text-gray-400 bg-gray-900 body-font relative h-[100vh] flex justify-center items-center ">
+                <div className="container px-5 py-12 mx-auto">
                     <div className="flex flex-col text-center w-full mb-12">
-                        <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">Submitted Your Task Here</h1>
-                        <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Drive link is compulsary . If you submit fill other field your chances of clamming certificate will increase. Fill form accurately !!</p>
-                        <h1>Read guide liance properly before you submit your response</h1>
+                        <h1 className="  text-3xl title-font mb-4 text-white font-bold">Submitting Your Work: Showcase Your Skills!</h1>
+                        <p className="lg:w-2/3 mx-auto leading-relaxe text-xl">We offer multiple ways to submit your work for evaluation, ensuring flexibility and catering to your preferences.
+                            Here are your options : <strong className=' text-white'> You can fill Anyone or Three of them</strong> </p>
+
                     </div>
 
-                    <div className="lg:w-1/2 md:w-2/3 mx-auto">
+                    <div className="lg:w-1/2 md:w-2/3 mx-auto" id='submitCode'>
                         <div className="flex flex-wrap -m-2">
                             <form onSubmit={handleSubmit(onTaskSubmission)} className='flex flex-wrap -m-2'>
                                 <div className="p-2 w-1/2">
@@ -58,31 +61,29 @@ const SubmittedTask = () => {
                                 </div>
                                 <div className="p-2 w-full">
                                     <div className="relative">
-                                        <label htmlFor="text" className="leading-7 text-sm text-gray-400">Drive Link</label>
-                                        <input type="text" id="text" name="text" className="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-green-500 focus:bg-gray-900 focus:ring-2 focus:ring-green-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required {...register("driveLink")} />
+                                        <label htmlFor="text" className="leading-7 text-sm text-gray-400">Google Drive Link</label>
+                                        <input type="text" id="text" name="text" className="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-green-500 focus:bg-gray-900 focus:ring-2 focus:ring-green-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" {...register("driveLink")} required={location.state.from === "drive"} />
                                     </div>
                                 </div>
                                 <div className="p-2 w-full">
                                     <div className="relative">
-                                        <label htmlFor="text" className="leading-7 text-sm text-gray-400">GitHub</label>
-                                        <input type="text" id="text" name="text" className="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-green-500 focus:bg-gray-900 focus:ring-2 focus:ring-green-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"  {...register("githubLink")} />
+                                        <label htmlFor="text" className="leading-7 text-sm text-gray-400">GitHub Repository Link</label>
+                                        <input type="text" id="text" name="text" className="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-green-500 focus:bg-gray-900 focus:ring-2 focus:ring-green-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"  {...register("githubLink")} required={location.state.from === "github"} />
                                     </div>
                                 </div>
                                 <div className="p-2 w-full">
                                     <div className="relative">
-                                        <label htmlFor="text" className="leading-7 text-sm text-gray-400">Linked in</label>
-                                        <input type="text" id="text" name="text" className="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-green-500 focus:bg-gray-900 focus:ring-2 focus:ring-green-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"  {...register("linkedinLink")} />
+                                        <label htmlFor="text" className="leading-7 text-sm text-gray-400">Linkedin Post Link</label>
+                                        <input type="text" id="text" name="text" className="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-green-500 focus:bg-gray-900 focus:ring-2 focus:ring-green-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"  {...register("linkedinLink")} required={location.state.from === "linkedin"} />
                                     </div>
                                 </div>
                                 <div className="p-2 w-full">
                                     <button className="flex mx-auto text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg" type='submit'>Submit</button>
                                 </div>
                             </form>
-                            <div className="p-2 w-full pt-8 mt-8 border-t border-gray-800 text-center">
-                                <a className="text-green-400">example@text.com</a>
-                                <p className="leading-normal my-5">49 Smith St.
-                                    <br />Saint Cloud, MN 56301
-                                </p>
+                            <div className="p-2 w-full pt-8 mt-8 border-t border-gray-800 text-center flex items-center justify-center">
+                                <a className="text-green-400">microstep@gmail.com</a>
+
                                 <span className="inline-flex">
                                     <a className="text-gray-500">
                                         <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
