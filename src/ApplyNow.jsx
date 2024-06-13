@@ -83,12 +83,12 @@ const ApplyNow = () => {
               <div className="relative z-0 w-full mb-5 group">
                 <select type="text" name="internship" id="internship" className="py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer flex justify-center items-center cursor-pointer" placeholder=" " {...register("internshipFor")} required >
                   <option value="" className="text-white bg-red-500 p-0 m-0">Select Internship</option>
-                  <option value="Internship-1-month-web" className=" background-gray cursor-pointer text-white hover:bg-red-500 p-0 m-0">Basic Development</option>
-                  <option value="Internship-2-month-web" className=" background-gray cursor-pointer text-white p-0 m-0">Intermediate Development</option>
-                  <option value="Internship-3-month-web" className=" background-gray cursor-pointer text-white p-0 m-0">Advance Development</option>
-                  <option value="Internship-Java-programming" className=" background-gray cursor-pointer text-white p-0 m-0">JAVA Programming</option>
-                  <option value="Internship-C++-programming" className=" background-gray cursor-pointer text-white p-0 m-0">C++ Programming</option>
-                  <option value="Internship-C-programming" className=" background-gray cursor-pointer text-white p-0 m-0">C Programming</option>
+                  <option value="Basic Web Development Internship" className=" background-gray cursor-pointer text-white hover:bg-red-500 p-0 m-0">Basic Development</option>
+                  <option value="Intermediate Web Development Internship" className=" background-gray cursor-pointer text-white p-0 m-0">Intermediate Development</option>
+                  <option value="Advance Web Development Internship" className=" background-gray cursor-pointer text-white p-0 m-0">Advance Development</option>
+                  <option value="Java Programming Internship" className=" background-gray cursor-pointer text-white p-0 m-0">JAVA Programming</option>
+                  <option value="C++ Programming Internship" className=" background-gray cursor-pointer text-white p-0 m-0">C++ Programming</option>
+                  <option value="C Programming Internship" className=" background-gray cursor-pointer text-white p-0 m-0">C Programming</option>
                 </select>
                 <label htmlFor="internship" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transhtmlForm -translate-y-7 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0">Internship For</label>
               </div>

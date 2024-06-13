@@ -51,7 +51,7 @@ const Drive = () => {
                         Give Your Submission ID
                     </div>
                     <p className="relative right-[36%] text-sm text-gray-200 font-normal mb-2">Sent on the mail with offer letter</p>
-                    <input type="text" className="p-2 border w-11/12 mx-auto bg-white text-black font-bold text-lg mb-8" placeholder="Submission ID" onChange={getStudentId} value={studentID ? studentID : ""} />
+                    <input type="text" className="p-2 border w-11/12 mx-auto bg-white text-black font-bold text-lg mb-8" placeholder="Submission ID" onChange={getStudentId} value={studentID ? studentID : ""} required/>
                     {error && <p className="relative  -top-7   text-red-400 font-normal">*{error}</p>}
                     <button type="submit" className="btn px-20 btn-green" onClick={checkStudentIsEnrolled}>Verify</button>
                 </div>

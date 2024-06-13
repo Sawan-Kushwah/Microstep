@@ -1,9 +1,10 @@
 import plus from '../assets/plus.png'
 import minus from '../assets/minus.png'
-
+import { NavLink } from 'react-router-dom'
 
 
 const Faqs = () => {
+
     const handleClick = (index) => {
 
         let text = document.getElementsByClassName('textToShow')[index];
@@ -76,7 +77,8 @@ const Faqs = () => {
                                 <strong className=' text-green-500'>Github link  </strong>of your code <strong>(WILL BE PREFERED MOST) </strong> <br />
                                 <strong className=' text-green-500'>Linkedin post</strong> with images or video , Share link with us <br />
                                 <strong className=' text-green-500'>Video and images of your project</strong> (Upload on drive) Share link with us <br />
-                                Anyone or two can be considered , <strong className="text-red-400">Make Sure your code will be visible clearly</strong>
+                                Anyone or two can be considered , <strong className="text-red-400">Make Sure your code will be visible clearly</strong> <br />
+                                <NavLink to={'/submitYourCodeHere'} className=" text-blue-500 underline cursor-pointer">For more details visit here</NavLink>
                             </p>
                         </div>
                         <div className="border-2 border-gray-100 rounded-lg dark:border-gray-700">
@@ -91,7 +93,8 @@ const Faqs = () => {
                             <hr className="border-gray-200 dark:border-gray-700" />
 
                             <p className="textToShow hidden p-5 text-lg text-gray-500 dark:text-gray-300">After Login You will see ,<strong>Submit your code button</strong><br />
-                                Enter your <strong className='text-red-500'>Submission ID</strong> which we have sent you with offer letter <br /> Enter and Submit <span className=' text-blue-500'>Drive Link , linkedin post link , Github link </span>(Anyone or two can be considered)
+                                Enter your <strong className='text-red-500'>Submission ID</strong> which we have sent you with offer letter <br /> Enter and Submit <span className=' text-blue-500'>Drive Link , linkedin post link , Github link </span>(Anyone or two can be considered) <br />
+                                <NavLink to={'/submitYourCodeHere'} className=" text-blue-500 underline cursor-pointer">For more details visit here</NavLink>
                             </p>
                         </div>
                         <div className="border-2 border-gray-100 rounded-lg dark:border-gray-700">

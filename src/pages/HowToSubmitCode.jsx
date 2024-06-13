@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import Footer from "../components/Footer"
 import Navbar from "../components/Navbar"
 import Drive from "../submissionProcess/Drive"
@@ -6,7 +7,9 @@ import Linkedin from "../submissionProcess/Linkedin"
 import NoteForSubmission from "../submissionProcess/NoteForSubmission"
 
 const HowToSubmitCode = () => {
-
+    useEffect(() => {
+        window.scrollTo(0, 0) // this is render page from the top
+    }, [])
     return (
         <>
             <Navbar />
