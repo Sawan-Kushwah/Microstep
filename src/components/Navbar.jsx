@@ -39,7 +39,7 @@ const Navbar = () => {
                         <NavLink to={"/webdevelopment"} className="py-2 px-6  text-xl  navItems">Web development</NavLink>
                         <NavLink to={"/programming"} className="py-2 px-6  text-xl  navItems">Programming</NavLink>
                         <NavLink to={"/about"} className="py-2 px-6  text-xl  navItems">About</NavLink>
-                        {!isAdmin && <NavLink to={"/contact"} className="py-2 px-6  text-xl  navItems">Contact us</NavLink>}
+                        {!isAdmin && <NavLink to={"/contact"} className="py-2 px-6  text-xl  navItems">Any Querry</NavLink>}
                         {isAdmin && <NavLink to={"/private/admin"} className="py-2 px-6  text-xl  navItems">Admin Dashboard</NavLink>}
                     </nav>
 

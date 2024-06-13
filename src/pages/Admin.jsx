@@ -85,6 +85,29 @@ const Admin = () => {
   //     drop.classList.add("hidden");
   //   }
   // }
+  const giveCertificate = async (id) => {
+    if (confirm(`Do you want to give CERTIFIFCATE to this student? ${id}`)) {
+      let response = await fetch("http://localhost:3000/sendCertificate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id, certificateLink: task })
+      });
+      if (response.status === 200) {
+        toast.success('Certificated has been sent successfully 🚀', {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
+        getAllUser();
+        closeFrom();
+      }
+    }
+  }
 
 
   useEffect(() => {
@@ -111,10 +134,13 @@ const Admin = () => {
         <div className="close mb-5  text-end p-5 cursor-pointer" onClick={closeFrom}>Close</div>
         <div className="  m-0 form flex flex-col justify-center items-center">
           <div className="text font-bold text-3xl pb-6">
-            Give Drive Link Of Task
+            Give Drive Link
           </div>
           <input type="text" className="p-2 border w-11/12 mx-auto bg-white mb-4 text-black font-bold text-lg" placeholder="Task Link" onChange={addTask} />
-          <button type="submit" className="btn px-10  b1n-green" onClick={() => sendMail(studentId)}>Send Mail</button>
+          <div className="flex">
+            <button type="submit" className="btn px-10  b1n-green mx-2" onClick={() => sendMail(studentId)}>Send Task</button>
+            <button type="submit" className="btn px-10  b1n-green mx-2" onClick={() => giveCertificate(studentId)}>Send Certificate</button>
+          </div>
         </div>
       </div >
 
@@ -182,10 +208,20 @@ const Admin = () => {
                   </td>
 
                   <td className="p-2 border text-lg text-white flex-col flex gap-2 justify-center items-center">
-                    {item.isSelectedForInternship ? <><a href={item.taskForStudentLink} target="_blank" className=" w-full"><button className="flex justify-center w-full  sendButton text-white bg-blue-500 p-[6px] focus:outline-none hover:bg-blue-600 rounded" >ViewTask✔</button></a>
+                    {item.isSelectedForInternship ? <>
+                      <a href={item.taskForStudentLink} target="_blank" className=" w-full">
+                        <button className="flex justify-center w-full  sendButton text-white bg-blue-500 p-[6px] focus:outline-none hover:bg-blue-600 rounded" >ViewTask✔</button>
+                      </a>
                       <button className="flex justify-center w-full delelteButton text-white bg-red-500  p-[6px] focus:outline-none hover:bg-red-600 rounded" onClick={() => deleteStudent(item._id)}>Remove❌</button>
-                    </> : <><button className="flex justify-center w-full  sendButton text-white bg-green-500 p-[6px] focus:outline-none hover:bg-green-600 rounded" onClick={() => openAddTaskForm(item._id)} >Select?</button>
-                      <button className="flex justify-center w-full delelteButton text-white bg-red-500  p-[6px] focus:outline-none hover:bg-red-600 rounded" onClick={() => deleteStudent(item._id)}>Delete❌</button></>
+                      {item.isTaskSubmitted &&
+                        <button className="flex justify-center w-full delelteButton text-white bg-green-500  p-[6px] focus:outline-none hover:bg-green-600 rounded" onClick={() => openAddTaskForm(item._id)}>Certification</button>
+                      }
+                    </>
+                      :
+                      <>
+                        <button className="flex justify-center w-full  sendButton text-white bg-green-500 p-[6px] focus:outline-none hover:bg-green-600 rounded" onClick={() => openAddTaskForm(item._id)} >Select?</button>
+                        <button className="flex justify-center w-full delelteButton text-white bg-red-500  p-[6px] focus:outline-none hover:bg-red-600 rounded" onClick={() => deleteStudent(item._id)}>Delete❌</button>
+                      </>
                     }
                   </td>
                 </tr>
