@@ -3,10 +3,10 @@ const FocusedArea = () => {
     return (
         <>
             <div className="discovering_wrapper">
-                <h2 className="discovering_heading heading text-center text-[3rem] font-bold pt-20">WHAT WE FOCUS ON</h2>
+                <h2 className="discovering_heading heading text-center text-[3rem] font-bold pt-20 max-md:pt-1">WHAT WE FOCUS ON</h2>
                 <div className="discovering_card-wrapper">
-                    <div className="discovering_card-top py-8 px-20 flex">
-                        <div className="discovering_card padding-medium z-30 px-10 py-6 rounded-3xl w-[500px] m-3 internship">
+                    <div className="discovering_card-top max-md:flex-col max-md:p-0 py-8 px-20 flex">
+                        <div className="discovering_card padding-medium z-30 px-10 py-6 rounded-3xl w-[500px] max-md:px-4 max-md:w-auto m-3 max-md:mx-0 max-md:my-3 internship">
                             <div className="discovering-heading_wrapper flex justify-around items-center pb-2">
                                 <h3 id="w-node-_235fbc4b-5035-cf4b-01f1-3b648c71363e-9e4283c1" className="discovering_card-heading text-2xl w-3/4 font-bold">Learn by Doing, Not Just Reading</h3>
                                 <div id="w-node-_235fbc4b-5035-cf4b-01f1-3b648c713640-9e4283c1" className="html-embed-2 benefits_icon w-embed">
@@ -19,7 +19,7 @@ const FocusedArea = () => {
                             </div>
                             <p className="discovering_text">Here, you&apos;ll build real websites, apps, and tackle coding challenges. It&apos;s like learning to ride a bike – you actually get to ride it!.</p>
                         </div>
-                        <div className="discovering_card padding-medium z-30 px-10 py-6 rounded-3xl w-[560px] m-3 internship">
+                        <div className="discovering_card padding-medium z-30 px-10 py-6 rounded-3xl w-[560px] max-md:px-4 max-md:w-auto m-3 max-md:mx-0 max-md:my-3 internship">
                             <div className="discovering-heading_wrapper flex justify-around items-center pb-2">
                                 <h3 id="w-node-_235fbc4b-5035-cf4b-01f1-3b648c71363e-9e4283c1" className="discovering_card-heading text-2xl w-3/4 font-bold">Early Career Opportunities</h3>
                                 <div id="w-node-_235fbc4b-5035-cf4b-01f1-3b648c713649-9e4283c1" className="html-embed-2 benefits_icon w-embed">
@@ -34,7 +34,7 @@ const FocusedArea = () => {
                                 We connect you with internships, freelance projects to showcase your skills and build a strong portfolio.</p>
                         </div>
 
-                        <div className="discovering_card padding-medium z-30 px-10 py-6 rounded-3xl w-[500px] m-3 internship">
+                        <div className="discovering_card padding-medium z-30 px-10 py-6 rounded-3xl w-[500px] max-md:px-4 max-md:w-auto m-3 max-md:mx-0 max-md:my-3 internship">
                             <div className="discovering-heading_wrapper flex justify-around items-center pb-2">
                                 <h3 id="w-node-_235fbc4b-5035-cf4b-01f1-3b648c71363e-9e4283c1" className="discovering_card-heading text-2xl w-3/4 font-bold">Level Up Your Skills with Fun Projects! </h3>
                                 <div id="w-node-_235fbc4b-5035-cf4b-01f1-3b648c713650-9e4283c1" className="html-embed-2 benefits_icon w-embed"><svg width="100" height="101" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -44,14 +44,14 @@ const FocusedArea = () => {
                                 </div>
                             </div>
                             <p className="discovering_text">Skip the boring lessons.
-                            Here, you&apos;ll create games, apps, and websites you&apos;ll actually enjoy using. It&apos;s like learning by playing a game – it&apos;s fun and gets you coding skills fast!</p>
+                                Here, you&apos;ll create games, apps, and websites you&apos;ll actually enjoy using. It&apos;s like learning by playing a game – it&apos;s fun and gets you coding skills fast!</p>
                         </div>
 
 
                     </div>
 
-                    <div className="discovering_card-top _2 py-2 px-20 flex">
-                        <div className="discovering_card padding-medium z-30 px-10 py-6 rounded-3xl w-1/2 m-3 internship">
+                    <div className="discovering_card-top_2 max-md:flex-col max-md:p-0  py-2 px-20 flex">
+                        <div className="discovering_card padding-medium z-30 px-10 py-6 rounded-3xl w-1/2 max-sm:w-full m-3 max-md:mx-0 max-md:my-3 internship max-md:px-4">
                             <div className="discovering-heading_wrapper flex justify-around items-center pb-2">
                                 <h3 id="w-node-_235fbc4b-5035-cf4b-01f1-3b648c71363e-9e4283c1" className="discovering_card-heading text-2xl w-3/4 font-bold">Earn Real-World Proof with Certificates</h3>
                                 <div id="w-node-_235fbc4b-5035-cf4b-01f1-3b648c713657-9e4283c1" className="html-embed-2 benefits_icon w-embed">
@@ -66,7 +66,7 @@ const FocusedArea = () => {
                                 When you complete a project, you&apos;ll earn a certificate that shows employers you&apos;ve tackled real-world problems. It&apos;s like a badge of honor for your tech skills! ✨</p>
                         </div>
 
-                        <div className="discovering_card padding-medium z-30 px-10 py-6 rounded-3xl w-1/2 m-3 internship">
+                        <div className="discovering_card padding-medium z-30 px-10 py-6 rounded-3xl w-1/2 max-sm:w-full m-3 max-md:mx-0 max-md:my-3 internship max-md:px-4">
                             <div className="discovering-heading_wrapper flex justify-around items-center pb-2">
                                 <h3 id="w-node-_235fbc4b-5035-cf4b-01f1-3b648c71363e-9e4283c1" className="discovering_card-heading text-2xl w-3/4 font-bold">Join a Community That Cares ❤️</h3>
                                 <div id="w-node-_235fbc4b-5035-cf4b-01f1-3b648c713657-9e4283c1" className="html-embed-2 benefits_icon w-embed"><svg width="100" height="101" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">

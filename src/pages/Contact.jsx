@@ -56,15 +56,15 @@ const Contact = () => {
             <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">Ask Anytime ! , Ask Your Querry Here</h1>
             <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Confused about something? Don&apos;t let your doubts hold you back. Submit your questions and get accurate, timely responses from experts who care about your success. Let&apos;s tackle your queries together!</p>
           </div>
-          <div className="lg:w-1/2 md:w-2/3 mx-auto">
+          <div className="lg:w-1/2 md:w-2/3 mx-auto ">
             <form className="flex flex-wrap -m-2" onSubmit={handleSubmit(onsubmit)}>
-              <div className="p-2 w-1/2">
+              <div className="p-2 w-1/2 max-md:w-full">
                 <div className="relative">
                   <label htmlFor="name" className="leading-7 text-sm text-gray-400">Name</label>
                   <input type="text" id="name" name="name" className="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-green-500 focus:bg-gray-900 focus:ring-2 focus:ring-green-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"  {...register("name")} required />
                 </div>
               </div>
-              <div className="p-2 w-1/2">
+              <div className="p-2 w-1/2 max-md:w-full">
                 <div className="relative">
                   <label htmlFor="email" className="leading-7 text-sm text-gray-400">Email</label>
                   <input type="email" id="email" name="email" className="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-green-500 focus:bg-gray-900 focus:ring-2 focus:ring-green-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"  {...register("email")} required />

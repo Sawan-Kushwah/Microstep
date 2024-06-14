@@ -24,13 +24,13 @@ const App = () => {
           <Navbar />
 
           <section id="hero" className="d-flex flex-column justify-content-center align-items-center">
-            <div className="hero-container w-full flex justify-around relative z-10 top-36 items-center px-5">
-              <div className="hero-text-section  w-3/5 pl-14">
+            <div className="hero-container w-full flex justify-around relative z-10 top-36 items-center px-5 max-md:flex-col max-md:top-40">
+              <div className="hero-text-section  w-3/5 pl-14 max-md:w-full max-md:pl-0">
                 <div className="mainText ">
-                  <h1 className=" pb-6 text-6xl mb-3">LEARN WHAT COLLEGE DOESN&apos;T TEACH YOU</h1>
-                  <p className=" text-md text-slate-400 w-4/5">At <span className=" text-blue-500 cursor-pointer">Microstep</span>, you can gain practical knowledge and learn real-world skills that will help you transform your life at work, college and placement</p>
+                  <h1 className=" pb-6 text-6xl mb-3 max-md:text-3xl">LEARN WHAT COLLEGE DOESN&apos;T TEACH YOU</h1>
+                  <p className=" text-md text-slate-400 w-4/5 max-md:w-full">At <span className=" text-blue-500 cursor-pointer">Microstep</span>, you can gain practical knowledge and learn real-world skills that will help you transform your life at work, college and placement</p>
                 </div>
-                <div className="coursesHappyLearner pt-9">
+                <div className="coursesHappyLearner pt-9 max-md:pt-5">
                   <p className=" text-md text-slate-400 w-4/5 mb-4"><span className=" text-red-500 cursor-pointer">Real-world Project</span> & <span className=" text-red-500 cursor-pointer">Internship</span> Opportunities for Early Learners</p>
                   <div className="button">
                     <div className="flex flex-col gap-4">
@@ -65,11 +65,11 @@ const App = () => {
 
                 </div>
               </div>
-              <div className="hero-container heroImageSection w-2/5">
+              <div className="hero-container heroImageSection w-2/5 max-md:hidden" >
                 <img src={heroImg} alt="" className=" w-full" />
               </div>
             </div>
-            <div className="floatingText absolute bottom-3 w-full h-20  z-50" >
+            <div className="floatingText absolute bottom-3 w-full h-20 z-20" >
               <div className="marquee text-white text text-6xl w-11/12 m-auto h-full overflow-hidden">
                 <h1>
                   <span className="text-red-500">C</span>ode with Confidence:

@@ -28,24 +28,24 @@ const Cpp = () => {
     return (
         <>
 
-            <div id="cpp" className="container internship mx-auto flex px-16 my-16 md:flex-row flex-col items-center w-11/12 text-black bg-gray-100 rounded-[13px] py-10 ">
+            <div id="cpp" className="container internship mx-auto max-md:px-3 max-md:pb-0 flex px-16 my-16 md:flex-row flex-col items-center w-11/12 text-black bg-gray-100 rounded-[13px] py-10 ">
                 <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
                     <div className="box backdrop-blur-lg bg-slate-900 text-white py-2 px-10 text-lg rounded-r-3xl rounded-l-lg font-bold">
                         C++ Programming Internship
                     </div>
-                    <div className="level flex justify-between w-3/5 ">
-                        <a href='#' className="totalIntenship bg-gray-300 py-2 px-8 w-fit mt-5 rounded-3xl cursor-pointer">
-                            <div className="number font-bold text-black text-lg">
+                    <div className="level flex justify-between w-3/5  max-md:w-full ">
+                        <a href='#' className="totalIntenship max-md:px-3 bg-gray-300 py-2 px-8 w-fit mt-5 rounded-3xl cursor-pointer">
+                            <div className="number font-bold text-black text-lg max-sm:text-sm">
                                 @MICROSTEP
                             </div>
                         </a>
-                        <a href='#' className="totalIntenship  bg-gray-300  py-2 px-8 w-fit mt-5 rounded-3xl cursor-pointer">
-                            <div className="number font-bold text-black text-lg">
+                        <a href='#' className="totalIntenship max-md:px-3  bg-gray-300  py-2 px-8 w-fit mt-5 rounded-3xl cursor-pointer">
+                            <div className="number font-bold text-black text-lg max-sm:text-sm">
                                 location India
                             </div>
                         </a>
-                        <a href='#' className="totalIntenship bg-gray-300 py-2 px-8 w-fit mt-5 rounded-3xl cursor-pointer">
-                            <div className="number font-bold text-black text-lg">
+                        <a href='#' className="totalIntenship max-md:px-3 bg-gray-300 py-2 px-8 w-fit mt-5 rounded-3xl cursor-pointer">
+                            <div className="number font-bold text-black text-lg max-sm:text-sm">
                                 Duration : 1 Month
                             </div>
                         </a>
@@ -57,27 +57,27 @@ const Cpp = () => {
                     </div>
                     <div className="line bg-gray-600 w-full  pt-0.5 my-3"> </div>
                     <h2 className=" text-2xl font-bold">Minimum Qualification : </h2>
-                    <div className="qualification py-3 pl-16">
+                    <div className="qualification py-3 pl-16 max-md:pl-4">
                         <ul>
                             <li className="py-1.5 list-disc">
                                 <div className="courses_list-item flex items-center" >
-                                    <p className="courses_card-heading text-size-regular pl-3"><strong className=" text-blue-500">Currently Pursuing a Bachelor&apos;s Degree : </strong>
+                                    <p className="courses_card-heading text-size-regular max-md:text-start pl-3"><strong className=" text-blue-500">Currently Pursuing a Bachelor&apos;s Degree : </strong>
                                         Are you currently enrolled in a Bachelor&apos;s program, in first or second year of study ? We welcome students from all backgrounds with a passion for technology!</p>
                                 </div>
                             </li>
                             <li className="py-1.5 list-disc">
                                 <div className="courses_list-item flex items-center" >
-                                    <p className="courses_card-heading text-size-regular pl-3">Basic proficiency in C++/CPP programming language</p>
+                                    <p className="courses_card-heading text-size-regular max-md:text-start pl-3">Basic proficiency in C++/CPP programming language</p>
                                 </div>
                             </li>
                             <li className="py-1.5 list-disc">
                                 <div className="courses_list-item flex items-center" >
-                                    <p className="courses_card-heading text-size-regular pl-3">Understanding of fundamental programming concepts such as loops, conditionals, and functions.</p>
+                                    <p className="courses_card-heading text-size-regular max-md:text-start pl-3">Understanding of fundamental programming concepts such as loops, conditionals, and functions.</p>
                                 </div>
                             </li>
                             <li className="py-1.5 list-disc">
                                 <div className="courses_list-item flex items-center" >
-                                    <p className="courses_card-heading text-size-regular pl-3">Basic knowledge of object-oriented programming principles.</p>
+                                    <p className="courses_card-heading text-size-regular max-md:text-start pl-3">Basic knowledge of object-oriented programming principles.</p>
                                 </div>
                             </li>
                         </ul>
@@ -86,26 +86,26 @@ const Cpp = () => {
                         <div className="line bg-gray-600 w-full  pt-0.5 my-3"> </div>
                         <div className="preferredQualification">
                             <h2 className=" text-2xl font-bold">Additional Skills (Preferred but not mandatory) : </h2>
-                            <div className="qualification py-3 pl-16">
+                            <div className="qualification py-3 pl-16 max-md:pl-3">
                                 <ul>
                                     <li className="py-1.5 list-disc">
                                         <div className="courses_list-item flex items-center" >
-                                            <p className="courses_card-heading text-size-regular pl-3">Basic understanding of data structures like arrays and linked lists.</p>
+                                            <p className="courses_card-heading text-size-regular max-md:text-start pl-3">Basic understanding of data structures like arrays and linked lists.</p>
                                         </div>
                                     </li>
                                     <li className="py-1.5 list-disc">
                                         <div className="courses_list-item flex items-center" >
-                                            <p className="courses_card-heading text-size-regular pl-3">Experience with basic file handling in C++.</p>
+                                            <p className="courses_card-heading text-size-regular max-md:text-start pl-3">Experience with basic file handling in C++.</p>
                                         </div>
                                     </li>
                                     <li className="py-1.5 list-disc">
                                         <div className="courses_list-item flex items-center" >
-                                            <p className="courses_card-heading text-size-regular pl-3">Strong problem-solving abilities.</p>
+                                            <p className="courses_card-heading text-size-regular max-md:text-start pl-3">Strong problem-solving abilities.</p>
                                         </div>
                                     </li>
                                     <li className="py-1.5 list-disc">
                                         <div className="courses_list-item flex items-center" >
-                                            <p className="courses_card-heading text-size-regular pl-3">Familiarity with concepts of memory management and pointers.</p>
+                                            <p className="courses_card-heading text-size-regular max-md:text-start pl-3">Familiarity with concepts of memory management and pointers.</p>
                                         </div>
                                     </li>
                                 </ul>
@@ -116,44 +116,42 @@ const Cpp = () => {
 
                         <div className="minimumQualification">
                             <h2 className=" text-2xl font-bold">About the Internship : </h2>
-                            <div className="qualification py-3 pl-16">
+                            <div className="qualification py-3 pl-16 max-md:pl-0">
                                 <ul>
                                     <li className="py-1.5">
                                         <div className="courses_list-item flex items-center" >
-                                            <p className="courses_card-heading text-size-regular pl-3">  <strong>Game Development Projects : </strong>Engage in real-world game development projects where you will apply your knowledge of C++/CPP programming.</p>
+                                            <p className="courses_card-heading text-size-regular max-md:text-start pl-3">  <strong>Game Development Projects : </strong>Engage in real-world game development projects where you will apply your knowledge of C++/CPP programming.</p>
                                         </div>
                                     </li>
                                     <li className="py-1.5">
                                         <div className="courses_list-item flex items-center" >
-                                            <p className="courses_card-heading text-size-regular pl-3"> <strong>Skill Enhancement : </strong> Gain hands-on experience with advanced C++ programming techniques and game development frameworks like Unreal Engine or similar.</p>
+                                            <p className="courses_card-heading text-size-regular max-md:text-start pl-3"> <strong>Skill Enhancement : </strong> Gain hands-on experience with advanced C++ programming techniques and game development frameworks like Unreal Engine or similar.</p>
                                         </div>
                                     </li>
                                     <li className="py-1.5">
                                         <div className="courses_list-item flex items-center" >
-                                            <p className="courses_card-heading text-size-regular pl-3"> <strong>Certification : </strong>Upon successful completion of the internship, you will receive a certification that acknowledges your skills and contributions.</p>
+                                            <p className="courses_card-heading text-size-regular max-md:text-start pl-3"> <strong>Certification : </strong>Upon successful completion of the internship, you will receive a certification that acknowledges your skills and contributions.</p>
                                         </div>
                                     </li>
                                     <li className="py-1.5">
                                         <div className="courses_list-item flex items-center" >
-                                            <p className="courses_card-heading text-size-regular pl-3"> Flexible working hours to accommodate your academic schedule.</p>
+                                            <p className="courses_card-heading text-size-regular max-md:text-start pl-3"> Flexible working hours to accommodate your academic schedule.</p>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
 
                         </div>
-                        <div className="flex justify-center mt-2">
+                        <div className="flex justify-center mt-2 max-md:justify-start">
                             <button className="py-2 px-5 border bg-blue-600 text-white rounded-lg hover:bg-blue-700 " onClick={goToApplyNow}>
                                 Apply now
                             </button>
                         </div>
                     </div>
-                    <div className="flex justify-center pl-16">
-                        {/* <NavLink to={"/applicationPageWeb1Month"}> */}
+                    <div className="flex justify-center pl-16 max-md:justify-start max-md:pl-0">
                         <button id="learnCpp" className="py-3 px-7 border text-blue-500 hover:bg-gray-200 hover:text-blue-600 " onClick={learnMoreButton}>
                             Read more
                         </button>
-                        {/* </NavLink> */}
                     </div>
                 </div>
             </div>
