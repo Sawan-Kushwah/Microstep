@@ -17,7 +17,6 @@ const Drive = () => {
 
     const getStudentId = (e) => {
         setStudentID(e.target.value);
-        console.log(e.target.value);
         seterror("");
     }
 
@@ -33,8 +32,6 @@ const Drive = () => {
                 body: JSON.stringify({ studentID: studentID })
             })
             let res = await response.json();
-            console.log(res);
-
             if (response.status === 200) {
                 navigate("/submitTask", { state: { studentID: studentID, email: res.email , from : "drive" } });
             } else {

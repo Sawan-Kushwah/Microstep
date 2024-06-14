@@ -9,7 +9,6 @@ const Faqs = () => {
 
         let text = document.getElementsByClassName('textToShow')[index];
         let srcImg = document.getElementsByClassName('srcImg')[index];
-        console.log(text);
         if (text.classList.contains("hidden")) {
             text.classList.remove('hidden');
             srcImg.src = minus;

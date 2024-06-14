@@ -19,8 +19,7 @@ const Contact = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ ...data })
     });
-    let res = await response.json();
-    console.log(res);
+    await response.json();
     toast.success('Your Querry has been sent successfully 🚀', {
       position: "top-right",
       autoClose: 5000,
@@ -31,7 +30,6 @@ const Contact = () => {
       progress: undefined,
       theme: "dark",
     });
-    // console.log(data)
     reset();
   }
   useEffect(() => {

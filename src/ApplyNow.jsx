@@ -19,8 +19,6 @@ const ApplyNow = () => {
 
   const onSubmitUserData = async (data) => {
     try {
-
-      console.log(data)
       let formData = new FormData(); // formData is used because we are submitting file
       formData.append("firstName", data.firstName);
       formData.append("lastName", data.lastName);
@@ -36,7 +34,6 @@ const ApplyNow = () => {
       let res = await axios.post("http://localhost:3000/savedata", formData, { // axios is used instead of fetch for file type data submission
         headers: { 'Content-Type': 'multipart/form-data' },
       })
-      console.log(res.status === 200);
       if (res.status === 200) {
         navigate("/successfullySubmitted");
       }

@@ -16,7 +16,6 @@ const sendMailToSelectedStudent = (student) => {
         completionDate.setMonth(completionDate.getMonth() + 1);
     }
     completionDate = completionDate.toDateString();
-    console.log("got data for sending email")
     const transporter = nodemailer.createTransport({
         service: "gmail",
         host: "smtp.gmail.com",
@@ -78,8 +77,6 @@ const sendMailToSelectedStudent = (student) => {
         </div>
     </div>`, // html body
         });
-
-        console.log("Email has been sent successfully to " + student.email);
     }
 
     main().catch(console.error);

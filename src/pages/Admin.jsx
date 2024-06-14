@@ -17,11 +17,9 @@ const Admin = () => {
 
   const addTask = (e) => {
     setTask(e.target.value);
-    console.log(e.target.value);
   }
 
   const openAddTaskForm = (id) => {
-    console.log("clicked to open")
     setStudentId(id);
     let form = document.getElementById('addTask');
     form.classList.remove('hidden');
@@ -38,7 +36,7 @@ const Admin = () => {
         body: JSON.stringify({ id, taskLink: task })
       });
       if (response.status === 200) {
-        toast.success('Mail send successfully 🚀', {
+        toast.success('Internship Task sent successfully 🚀', {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
@@ -76,15 +74,6 @@ const Admin = () => {
     }
   }
 
-  // const showDrop = () => {
-  //   let drop = document.querySelector(".dropdown");
-  //   console.log(drop)
-  //   if (drop.classList.contains("hidden")) {
-  //     drop.classList.remove("hidden");
-  //   } else {
-  //     drop.classList.add("hidden");
-  //   }
-  // }
   const giveCertificate = async (id) => {
     if (confirm(`Do you want to give CERTIFIFCATE to this student? ${id}`)) {
       let response = await fetch("http://localhost:3000/sendCertificate", {
@@ -202,8 +191,6 @@ const Admin = () => {
                           </ul>
                         </div>
                       </div>
-
-                      // <a href={item.viewResume} target="__blank"><button className="flex justify-center w-full delelteButton text-white bg-green-500  p-[6px] focus:outline-none hover:bg-green-600 rounded">Task submitted</button></a>
                     }
                   </td>
 
@@ -236,9 +223,4 @@ const Admin = () => {
     </>
   )
 }
-
-
-
-// onClick={() => sendMail(item._id)}
-
 export default Admin

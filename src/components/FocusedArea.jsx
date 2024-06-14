@@ -2,17 +2,10 @@ import "../css/globalHero.css"
 const FocusedArea = () => {
     return (
         <>
-
-
-
-
             <div className="discovering_wrapper">
                 <h2 className="discovering_heading heading text-center text-[3rem] font-bold pt-20">WHAT WE FOCUS ON</h2>
                 <div className="discovering_card-wrapper">
-
                     <div className="discovering_card-top py-8 px-20 flex">
-
-
                         <div className="discovering_card padding-medium z-30 px-10 py-6 rounded-3xl w-[500px] m-3 internship">
                             <div className="discovering-heading_wrapper flex justify-around items-center pb-2">
                                 <h3 id="w-node-_235fbc4b-5035-cf4b-01f1-3b648c71363e-9e4283c1" className="discovering_card-heading text-2xl w-3/4 font-bold">Learn by Doing, Not Just Reading</h3>
@@ -24,10 +17,8 @@ const FocusedArea = () => {
                                     </svg>
                                 </div>
                             </div>
-                            <p className="discovering_text">Here, you&apos;ll build real websites, apps, and tackle coding challenges. It's like learning to ride a bike – you actually get to ride it!.</p>
+                            <p className="discovering_text">Here, you&apos;ll build real websites, apps, and tackle coding challenges. It&apos;s like learning to ride a bike – you actually get to ride it!.</p>
                         </div>
-
-
                         <div className="discovering_card padding-medium z-30 px-10 py-6 rounded-3xl w-[560px] m-3 internship">
                             <div className="discovering-heading_wrapper flex justify-around items-center pb-2">
                                 <h3 id="w-node-_235fbc4b-5035-cf4b-01f1-3b648c71363e-9e4283c1" className="discovering_card-heading text-2xl w-3/4 font-bold">Early Career Opportunities</h3>
@@ -91,12 +82,7 @@ const FocusedArea = () => {
 
                 </div>
             </div>
-
-
         </>
-
-
-
     )
 }
 

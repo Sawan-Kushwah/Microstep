@@ -5,7 +5,6 @@ import { useEffect } from 'react';
 
 const SubmittedTask = () => {
     let location = useLocation();
-    // console.log(location.state)
     let navigate = useNavigate();
 
     const {
@@ -27,7 +26,6 @@ const SubmittedTask = () => {
 
     useEffect(() => {
         if (location.state === null) {
-            // console.log("khali h bhai")
             navigate("/");
         }
     }, [])

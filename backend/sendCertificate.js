@@ -1,15 +1,7 @@
 import nodemailer from "nodemailer"
 import "dotenv/config"
-let currentDate = new Date();
-// let completionDate = new Date(currentDate);
-// completionDate.setMonth(completionDate.getMonth() + 1);
-// completionDate = completionDate.toDateString();
-
 
 const sendCertificate = (student, certificate) => {
-    console.log("got data for sending email")
-    console.log(student)
-    console.log(student.email);
     const transporter = nodemailer.createTransport({
         service: "gmail",
         host: "smtp.gmail.com",
@@ -62,8 +54,6 @@ const sendCertificate = (student, certificate) => {
         </div>
     </div>`, // html body
         });
-
-        console.log("Email has been sent successfully to " + student.email);
     }
 
     main().catch(console.error);

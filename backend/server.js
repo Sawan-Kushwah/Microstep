@@ -74,7 +74,6 @@ app.post('/savedata', upload.single("resume"), async (req, res) => { // resume =
 // Admin Dashboard activity
 app.post('/sendMailToSelectedStudent', async (req, res) => {
     try {
-        console.log(req.body);
         await userdata.findOneAndUpdate({ _id: req.body.id }, { "$set": { isSelectedForInternship: true, taskForStudentLink: req.body.taskLink } })
         let studentInformation = await userdata.findOne({ _id: req.body.id });
         sendMailToSelectedStudent(studentInformation);
@@ -108,9 +107,7 @@ app.delete("/rejectStudent", async (req, res) => {
 // Submit task
 app.post("/checkStudentEnrollment", async (req, res) => {
     try {
-        console.log(req.body);
         let student = await userdata.findOne({ _id: req.body.studentID });
-        console.log(student)
         if (student === null) {
             res.status(404).json({ message: "Student is not Enrolled in any program" })
         } else if (student.isSelectedForInternship === false) {
@@ -140,9 +137,7 @@ app.get('/getDataFromDatabase', async (req, res) => {
 // Task submission work will be handled here
 app.post("/submitTask", async (req, res) => {
     try {
-        console.log(req.body);
-        let student = await userdata.findOneAndUpdate({ _id: req.body.submissionID }, { "$set": { isTaskSubmitted: true, driveLink: req.body.driveLink, linkedinLink: req.body.linkedinLink, githubLink: req.body.githubLink } })
-        console.log(student);
+        await userdata.findOneAndUpdate({ _id: req.body.submissionID }, { "$set": { isTaskSubmitted: true, driveLink: req.body.driveLink, linkedinLink: req.body.linkedinLink, githubLink: req.body.githubLink } })
         res.status(200).json({ message: "Got it " });
     } catch (error) {
         console.log(error)
@@ -152,9 +147,7 @@ app.post("/submitTask", async (req, res) => {
 // Provide certification 
 app.post("/sendCertificate", async (req, res) => {
     try {
-        // console.log(req.body);
         let student = await userdata.findOne({ _id: req.body.id });
-        // console.log(student);
         sendCertificate(student, req.body.certificateLink);
         res.status(200).json({ message: "Sent successfully" });
     } catch (error) {
@@ -165,10 +158,8 @@ app.post("/sendCertificate", async (req, res) => {
 
 app.post("/querryFromStudent", (req, res) => {
     try {
-        console.log(req.body);
         sendQuerry(req.body);
         res.status(200).json({ message: "Sent successfully" });
-
     } catch (error) {
         console.log(error);
     }

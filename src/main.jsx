@@ -14,15 +14,6 @@ import SubmittedTask from './pages/SubmittedTask.jsx'
 import Private from './components/Private.jsx'
 import HowToSubmitCode from './pages/HowToSubmitCode.jsx'
 
-// let char = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvxyz0123456789";
-// let charLen = char.length;
-// let randomString = "";
-// for (let i = 0; i < charLen; i++) {
-//   randomString += char.charAt(Math.floor(Math.random() * charLen));
-// }
-// console.log(randomString);
-
-
 const router = createBrowserRouter([
   {
     path: '/',

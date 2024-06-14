@@ -2,7 +2,6 @@ import nodemailer from "nodemailer"
 import "dotenv/config"
 
 const sendMailToAdmin = (userdata) => {
-    console.log("got data for sending email")
     const transporter = nodemailer.createTransport({
         service: "gmail",
         host: "smtp.gmail.com",
@@ -86,8 +85,6 @@ const sendMailToAdmin = (userdata) => {
             </table>
         </div>`, // html body
         });
-
-        console.log(`Email has been sent to admin => ${process.env.ADMIN_EMAIL_ID} one user is regestered`);
     }
 
     main().catch(console.error);

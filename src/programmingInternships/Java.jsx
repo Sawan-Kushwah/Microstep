@@ -17,8 +17,6 @@ const Java = () => {
 
     }
     const goToApplyNow = () => {
-        // console.log(intern);
-        // isAuthenticated ? navigate("/applyNow") : loginWithRedirect();
         if (!isAuthenticated) {
             if (confirm("Login to apply")) {
                 loginWithRedirect();

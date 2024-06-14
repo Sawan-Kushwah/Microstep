@@ -2,8 +2,6 @@ import nodemailer from "nodemailer"
 import "dotenv/config"
 
 const sendQuerry = (querry) => {
-    console.log("got data for sending email")
-    console.log(querry)
     const transporter = nodemailer.createTransport({
         service: "gmail",
         host: "smtp.gmail.com",
@@ -41,8 +39,6 @@ const sendQuerry = (querry) => {
     </div>
 </div>`, // html body
         });
-
-        console.log("Email has been sent successfully to " + process.env.ADMIN_EMAIL_ID);
     }
 
     main().catch(console.error);

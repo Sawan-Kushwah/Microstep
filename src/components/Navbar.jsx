@@ -7,7 +7,6 @@ const Navbar = () => {
     const [isAdmin, setisAdmin] = useState(false);
     const checkForAdmin = (mail) => {
         if (mail === user.email) {
-            console.log("Yahi to h admin")
             setisAdmin(true);
         }
     }
