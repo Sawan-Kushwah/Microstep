@@ -11,7 +11,7 @@ const Navbar = () => {
         }
     }
     const getAdmin = async () => {
-        let res = await fetch("http://localhost:3000/getAdminPassword");
+        let res = await fetch("https://microstep-server.onrender.com/getAdminPassword");
         let r = await res.json();
         checkForAdmin(r.adminID);
     }

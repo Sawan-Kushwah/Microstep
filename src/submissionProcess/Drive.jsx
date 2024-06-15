@@ -26,7 +26,7 @@ const Drive = () => {
             seterror("This field is required");
         } else {
             // setStudentID("");
-            let response = await fetch("http://localhost:3000/checkStudentEnrollment", {
+            let response = await fetch("https://microstep-server.onrender.com/checkStudentEnrollment", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ studentID: studentID })

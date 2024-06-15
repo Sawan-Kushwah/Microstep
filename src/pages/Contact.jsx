@@ -14,7 +14,7 @@ const Contact = () => {
   } = useForm()
 
   const onsubmit = async (data) => {
-    let response = await fetch("http://localhost:3000/querryFromStudent", {
+    let response = await fetch("https://microstep-server.onrender.com/querryFromStudent", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ ...data })

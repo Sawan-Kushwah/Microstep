@@ -31,7 +31,7 @@ const ApplyNow = () => {
       formData.append("resume", data.resume[0]);
       formData.append("internshipFor", data.internshipFor);
 
-      let res = await axios.post("http://localhost:3000/savedata", formData, { // axios is used instead of fetch for file type data submission
+      let res = await axios.post("https://microstep-server.onrender.com/savedata", formData, { // axios is used instead of fetch for file type data submission
         headers: { 'Content-Type': 'multipart/form-data' },
       })
       if (res.status === 200) {

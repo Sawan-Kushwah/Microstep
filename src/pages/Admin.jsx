@@ -10,7 +10,7 @@ const Admin = () => {
   const [studentId, setStudentId] = useState("")
 
   const getAllUser = async () => {
-    let response = await fetch('http://localhost:3000/getDataFromDatabase');
+    let response = await fetch('https://microstep-server.onrender.com/getDataFromDatabase');
     let student = await response.json();
     setstudentInformation(student);
   }
@@ -30,7 +30,7 @@ const Admin = () => {
 
   const sendMail = async (id) => {
     if (confirm("Do you really want to select this student?")) {
-      let response = await fetch("http://localhost:3000/sendMailToSelectedStudent", {
+      let response = await fetch("https://microstep-server.onrender.com/sendMailToSelectedStudent", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ id, taskLink: task })
@@ -53,7 +53,7 @@ const Admin = () => {
   }
   const deleteStudent = async (id) => {
     if (confirm("Do you really want to delete this student?")) {
-      let response = await fetch("http://localhost:3000/rejectStudent", {
+      let response = await fetch("https://microstep-server.onrender.com/rejectStudent", {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ id })
@@ -76,7 +76,7 @@ const Admin = () => {
 
   const giveCertificate = async (id) => {
     if (confirm(`Do you want to give CERTIFIFCATE to this student? ${id}`)) {
-      let response = await fetch("http://localhost:3000/sendCertificate", {
+      let response = await fetch("https://microstep-server.onrender.com/sendCertificate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ id, certificateLink: task })
