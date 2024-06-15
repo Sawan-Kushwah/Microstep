@@ -19,7 +19,7 @@ const Webdevelopment = () => {
                 <div className="hero-container w-full flex justify-around relative z-10 top-36 items-center px-5 max-md:flex-col">
                     <div className="hero-text-section  w-3/5 pl-14 max-md:w-full max-md:pl-0">
                         <div className="mainText ">
-                            <span className='flex flex-col space-y-3 mb-5 max-md:text-3xl'><h1 className="  text-green-500 text-6xl w-1/2 max-md:w-full">THE WEB DEVELOPER : </h1> <span className='text-5xl font-bold'>MAKE WEBSITE</span><span className='text-4xl font-bold'>CREATION YOUR CARRIER</span></span>
+                            <span className='flex flex-col space-y-3 mb-5 max-md:text-3xl'><h1 className="  text-green-500 text-6xl w-1/2 max-md:w-full max-sm:text-4xl">THE WEB DEVELOPER : </h1> <span className='text-5xl font-bold'>MAKE WEBSITE</span><span className='text-4xl font-bold'>CREATION YOUR CARRIER</span></span>
                             <p className=" text-md text-slate-400 w-4/5 max-md:w-full">Have you ever dream of becoming a <span className=" text-blue-500 cursor-pointer"> Web developer?</span> This is your first step to getting there. Whether you want to take up web development as a full time career or a part-time job, this all-in-one course is your perfect plan of action.</p>
                         </div>
                         <div className="totalIntenship bg-gray-900 p-5 w-fit mt-5 rounded-3xl max-md:hidden">

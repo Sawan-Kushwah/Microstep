@@ -47,8 +47,8 @@ const Navbar = () => {
                         <NavLink to={"/webdevelopment"} className="py-2 px-6  text-xl  navItems">Web development</NavLink>
                         <NavLink to={"/programming"} className="py-2 px-6  text-xl  navItems">Programming</NavLink>
                         <NavLink to={"/about"} className="py-2 px-6  text-xl  navItems">About</NavLink>
-                        {!isAdmin && <NavLink to={"/contact"} className="py-2 px-6  text-xl  navItems">Any Querry</NavLink>}
-                        {isAdmin && <NavLink to={"/private/admin"} className="py-2 px-6  text-xl  navItems">Admin Dashboard</NavLink>}
+                        {!isAdmin && <NavLink to={"/contact"} className="py-2 px-6  text-xl max-sm:mb-44  navItems">Any Querry</NavLink>}
+                        {isAdmin && <NavLink to={"/private/admin"} className="py-2 px-6  text-xl max-sm:mb-44  navItems">Admin Dashboard</NavLink>}
                     </nav>
 
                     {isAuthenticated && <div>
@@ -73,8 +73,8 @@ const Navbar = () => {
                             </svg>
                         </button>
                     }
-                    <div className="burger btn btn-login max-[500]:p-0 cursor-pointer z-[700]" onClick={showNavBar}>
-                        buger
+                    <div className="burger btn btn-login max-sm:px-2 cursor-pointer z-[700] max-sm:absolute max-sm:top-16 hidden max-md:block" onClick={showNavBar}>
+                        MENU
                     </div>
                 </div>
             </header>

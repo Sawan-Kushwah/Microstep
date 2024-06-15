@@ -9,7 +9,7 @@ const SubmittedSuccessfully = () => {
       <div className="w-[100vw] h-[100vh]  flex justify-center items-center bg-black">
         <div className="main text-center">
           <div className="img flex justify-center mb-2">
-            <img src={submittedImg} alt="verify" className="w-[400px]" />
+            <img src={submittedImg} alt="verify" className="w-[400px] max-sm:w-48" />
           </div>
           <div className="text-2xl mb-1">
             Submitted Successfully

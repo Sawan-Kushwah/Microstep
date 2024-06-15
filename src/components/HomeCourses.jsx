@@ -72,7 +72,7 @@ const HomeCourses = () => {
                         </div>
                         <div className="flex justify-center z-30">
                             <NavLink to={"/webdevelopment"}>
-                                <button className="btn btn-green">
+                                <button className="btn btn-green max-sm:px-20">
                                     getting started
                                 </button>
                             </NavLink>
@@ -141,7 +141,7 @@ const HomeCourses = () => {
                         <div className="flex justify-center z-30">
                             <NavLink to={"/programming"}>
 
-                                <button className="btn btn-red">getting started</button>
+                                <button className="btn btn-red max-sm:px-20">getting started</button>
                             </NavLink>
 
 

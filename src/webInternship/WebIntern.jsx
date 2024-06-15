@@ -14,7 +14,7 @@ const WebIntern = () => {
                     <div className="mb-4 font-bold">
                         <h1>INTERNSHIPS</h1>
                     </div>
-                    <div className="text text-[3rem]">
+                    <div className="text text-[3rem] max-sm:text-2xl">
                         BECOME SKILLED AT WHAT MATTER&apos;S
                     </div>
                 </div>
