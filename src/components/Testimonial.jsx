@@ -219,7 +219,7 @@ const Testimonial = () => {
                                 </div>
 
                             </div>
-                            <button id="showButton" className="btn btn-red hover:bg-red-700 bg-red-800" onClick={showMoreTestimonials}>Show more</button>
+                            <button id="showButton" className="btn btn-red hover:bg-red-700 bg-red-800 max-sm:px-24" onClick={showMoreTestimonials}>Show more</button>
 
                         </div>
                     </div>

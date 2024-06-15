@@ -46,7 +46,7 @@ const ApplyNow = () => {
   return (
     <>
       <Navbar />
-      <section className="px-10 py-28 bg-black">
+      <section className="px-10 py-28 max-sm:pt-36 bg-black">
         <div className="container w-3/5 m-auto max-sm:w-full">
           <form className=" max-lg:max-w-md max-lg:mx-auto" onSubmit={handleSubmit(onSubmitUserData)}>
             <div className="grid md:grid-cols-2 md:gap-6">

@@ -34,9 +34,9 @@ const SubmittedTask = () => {
         <>
 
             <section className="text-gray-400 bg-gray-900 body-font relative h-[100vh] flex justify-center items-center ">
-                <div className="container px-5 py-12 mx-auto">
+                <div className="container px-5 py-32  max-sm:pb-0 mx-auto">
                     <div className="flex flex-col text-center w-full mb-12">
-                        <h1 className="  text-3xl title-font mb-4 text-white font-bold">Submitting Your Work: Showcase Your Skills!</h1>
+                        <h1 className="  text-3xl title-font mb-4 text-white font-bold max-sm:text-2xl">Submitting Your Work: Showcase Your Skills!</h1>
                         <p className="lg:w-2/3 mx-auto leading-relaxe text-xl">We offer multiple ways to submit your work for evaluation, ensuring flexibility and catering to your preferences.
                             Here are your options : <strong className=' text-white'> You can fill Anyone or Three of them</strong> </p>
 

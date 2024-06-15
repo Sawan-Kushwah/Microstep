@@ -41,13 +41,13 @@ const Drive = () => {
     }
     return (
         <>
-            <div id="studentIdFormDrive" className="border p-15 h-96  w-2/3 space-x-4 bg-slate-900 absolute top-[61%] left-[18%] hidden  z-[100]">
+            <div id="studentIdFormDrive" className=" max-sm:w-full max-sm:left-0 border p-15 h-96  w-2/3 space-x-4 bg-slate-900 absolute top-[61%] left-[18%] hidden  z-[100]">
                 <div className="close mb-5  text-end p-5 cursor-pointer" onClick={closeFrom}>Close</div>
                 <div className="  m-0 form flex flex-col justify-center items-center">
                     <div className="text font-bold text-3xl pb-6 text-white">
                         Give Your Submission ID
                     </div>
-                    <p className="relative right-[36%] text-sm text-gray-200 font-normal mb-2">Sent on the mail with offer letter</p>
+                    <p className="relative right-[36%] text-sm text-gray-200 font-normal mb-2 max-sm:right-0">Sent on the mail with offer letter</p>
                     <input type="text" className="p-2 border w-11/12 mx-auto bg-white text-black font-bold text-lg mb-8" placeholder="Submission ID" onChange={getStudentId} value={studentID ? studentID : ""} required/>
                     {error && <p className="relative  -top-7   text-red-400 font-normal">*{error}</p>}
                     <button type="submit" className="btn px-20 btn-green" onClick={checkStudentIsEnrolled}>Verify</button>
@@ -84,10 +84,10 @@ const Drive = () => {
                                 <span className="text-gray-300">Share the folder link with clear access permissions for our reviewers.</span>
                             </div>
                             <div className="flex items-center">
-                                <span className="title-font font-medium text-2xl text-white"><svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="text-blue-400 w-9 h-12 mb-3 inline-block" viewBox="0 0 24 24"><path d="M8 17l4 4 4-4m-4-5v9"></path><path d="M20.88 18.09A5 5 0 0018 9h-1.26A8 8 0 103 16.29"></path></svg><span className=" text-green-500 ml-2">
+                                <span className="title-font font-medium text-2xl text-white"><svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="text-blue-400 w-9 h-12 mb-3 inline-block" viewBox="0 0 24 24"><path d="M8 17l4 4 4-4m-4-5v9"></path><path d="M20.88 18.09A5 5 0 0018 9h-1.26A8 8 0 103 16.29"></path></svg><span className=" text-green-500 ml-2 max-sm:text-sm">
                                     76 Drive submission</span></span>
                                 < button onClick={showStudentIdForm} className="flex ml-auto text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded font-bold" >Submit Your Link</button>
-                                <button className="rounded-full w-10 h-10 bg-gray-800 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
+                                <button className="rounded-full w-10 h-10 max-sm:hidden bg-gray-800 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
                                     <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
                                         <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
                                     </svg>

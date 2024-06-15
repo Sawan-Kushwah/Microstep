@@ -28,23 +28,23 @@ const Java = () => {
     return (
         <>
 
-            <div id="java" className="container internship max-md:px-3 max-md:pb-0 mx-auto flex px-16 my-16 md:flex-row flex-col items-center w-11/12 text-black bg-gray-100 rounded-[13px] py-10 ">
-                <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                    <div className="box backdrop-blur-lg bg-slate-900 text-white py-2 px-10 text-lg rounded-r-3xl rounded-l-lg font-bold">
+            <div id="java" className=" max-md:w-full container internship max-m d:px-3 max-md:pb-0 mx-auto flex px-16 my-16 md:flex-row flex-col items-center w-11/12 text-black bg-gray-100 rounded-[13px] py-10 ">
+                <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-6 md:mb-0 items-center text-center">
+                    <div className="box backdrop-blur-lg bg-slate-900 text-white py-2 px-10 text-lg rounded-r-3xl rounded-l-lg font-bold max-sm:text-sm max-sm:px-7">
                         JAVA Programming Internship
                     </div>
                     <div className="level flex justify-between w-3/5  max-md:w-full ">
-                        <a href='#' className="totalIntenship max-md:px-3 bg-gray-300 py-2 px-8 w-fit mt-5 rounded-3xl cursor-pointer">
+                        <a href='#' className="totalIntenship max-sm:px-2 max-md:px-3 bg-gray-300 py-2 px-8 w-fit mt-5 rounded-3xl cursor-pointer">
                             <div className="number font-bold text-black text-lg max-sm:text-sm">
                                 @MICROSTEP
                             </div>
                         </a>
-                        <a href='#' className="totalIntenship max-md:px-3  bg-gray-300  py-2 px-8 w-fit mt-5 rounded-3xl cursor-pointer">
+                        <a href='#' className="totalIntenship max-sm:px-2 max-md:px-3  bg-gray-300  py-2 px-8 w-fit mt-5 rounded-3xl cursor-pointer">
                             <div className="number font-bold text-black text-lg max-sm:text-sm">
                                 location India
                             </div>
                         </a>
-                        <a href='#' className="totalIntenship max-md:px-3 bg-gray-300 py-2 px-8 w-fit mt-5 rounded-3xl cursor-pointer">
+                        <a href='#' className="totalIntenship max-sm:px-2 max-md:px-3 bg-gray-300 py-2 px-8 w-fit mt-5 rounded-3xl cursor-pointer">
                             <div className="number font-bold text-black text-lg max-sm:text-sm">
                                 Duration : 1 Month
                             </div>

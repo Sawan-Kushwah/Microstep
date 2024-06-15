@@ -3,12 +3,12 @@ const NoteForSubmission = () => {
         <>
 
             <section className="text-gray-400 bg-gray-900 body-font">
-                <div className="container px-5 py-24 mx-auto">
-                    <div className="flex flex-col text-center w-full mb-20">
+                <div className="container px-5 py-24 mx-auto max-sm:py-12">
+                    <div className="flex flex-col text-center w-full mb-20 max-sm:mb-7">
                         <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">Important Note : </h1>
-                        <p className="lg:w-2/3 mx-auto leading-relaxed text-xl">No matter which method you choose,
+                        <p className="lg:w-2/3 mx-auto leading-relaxed text-xl max-sm:text-sm">No matter which method you choose,
                             clear and well-commented code is essential for successful evaluation. Our reviewers need to be able to easily access and understand your work.</p>
-                        <p className="para text-lg"><strong className=' text-white'>Remember : </strong>
+                        <p className="para text-lg max-sm:text-sm"><strong className=' text-white'>Remember : </strong>
                             Completing tasks with your own code is crucial for the certification process.  We encourage independent learning and problem-solving.</p>
                     </div>
                     <div className="flex flex-wrap -m-4 text-center">

@@ -119,7 +119,7 @@ const Admin = () => {
       />
       <Navbar />
 
-      <div id="addTask" className="border p-15 h-96  w-2/3 space-x-4 z-50 bg-slate-900 absolute top-[22%] left-[18%] hidden">
+      <div id="addTask" className="border p-15 h-96  w-2/3 space-x-4 z-50 bg-slate-900 absolute top-[22%] left-[18%] hidden max-sm:left-0 max-sm:w-full">
         <div className="close mb-5  text-end p-5 cursor-pointer" onClick={closeFrom}>Close</div>
         <div className="  m-0 form flex flex-col justify-center items-center">
           <div className="text font-bold text-3xl pb-6">
@@ -127,8 +127,8 @@ const Admin = () => {
           </div>
           <input type="text" className="p-2 border w-11/12 mx-auto bg-white mb-4 text-black font-bold text-lg" placeholder="Task Link" onChange={addTask} />
           <div className="flex">
-            <button type="submit" className="btn px-10  b1n-green mx-2" onClick={() => sendMail(studentId)}>Send Task</button>
-            <button type="submit" className="btn px-10  b1n-green mx-2" onClick={() => giveCertificate(studentId)}>Send Certificate</button>
+            <button type="submit" className="btn px-10 max-sm:px-4  b1n-green mx-2" onClick={() => sendMail(studentId)}>Send Task</button>
+            <button type="submit" className="btn px-10 max-sm:px-4  b1n-green mx-2" onClick={() => giveCertificate(studentId)}>Send Certificate</button>
           </div>
         </div>
       </div >

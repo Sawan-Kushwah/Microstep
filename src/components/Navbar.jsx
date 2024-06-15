@@ -32,8 +32,8 @@ const Navbar = () => {
 
         <>
             <header id='navbarBox' className="text-gray-400 bg-transparent backdrop-blur-md body-font absolute top-0 left-0 w-full z-50">
-                <div className="container mx-auto flex py-5 px-5 max-[500px]:px-2 items-center max-md:justify-between max-md:pl-0">
-                    <NavLink className="flex title-font font-medium items-center text-white mb-4 max-md:mb-0 border-none">
+                <div className="container mx-auto flex py-5 px-5 items-center max-md:justify-between max-md:pl-0 ">
+                    <NavLink className="flex title-font font-medium items-center text-white mb-4 max-md:mb-0 border-none max-sm:pl-3">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-10 h-10 text-white p-2 bg-green-500 rounded-full" viewBox="0 0 24 24">
                             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
                         </svg>

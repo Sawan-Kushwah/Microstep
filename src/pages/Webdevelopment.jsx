@@ -47,7 +47,7 @@ const Webdevelopment = () => {
                         <div className="coursesHappyLearner pt-10 max-md:pt-5">
                             <div className="button">
                                 <a href="#webIntern">
-                                    <button className="btn btn-green max-md:px-20">
+                                    <button className="btn btn-green max-md:px-12 max-md:m-auto">
                                         join today to started
                                     </button>
                                 </a>
