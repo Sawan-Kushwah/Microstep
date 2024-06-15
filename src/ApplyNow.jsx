@@ -30,7 +30,6 @@ const ApplyNow = () => {
       formData.append("about", data.about);
       formData.append("resume", data.resume[0]);
       formData.append("internshipFor", data.internshipFor);
-      console.log(formData);
       let res = await axios.post("https://microstep-server.onrender.com/savedata", formData, { // axios is used instead of fetch for file type data submission
         headers: { 'Content-Type': 'multipart/form-data' },
       })
@@ -38,7 +37,6 @@ const ApplyNow = () => {
         navigate("/successfullySubmitted");
       }
     } catch (error) {
-      console.log(error)
       alert("Invalid information")
     }
   }

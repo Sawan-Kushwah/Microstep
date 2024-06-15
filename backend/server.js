@@ -41,8 +41,6 @@ const upload = multer({ storage: storage })
 
 app.post('/savedata', upload.single("resume"), async (req, res) => { // resume == this is from frontend side inside FormData()
     try {
-        console.log("student register")
-        console.log(req.body);
         const correctedPath = req.file.path.replace(/\\/g, '/');
         let userdataFromClientSide = {
             firstName: req.body.firstName,
@@ -63,12 +61,10 @@ app.post('/savedata', upload.single("resume"), async (req, res) => { // resume =
             linkedinLink: "Not yet submitted",
             githubLink: "Not yet submitted",
         }
-        console.log(userdataFromClientSide)
         await userdata.create(userdataFromClientSide);
         sendMailToAdmin(userdataFromClientSide);
         res.status(200).send({ message: "Received data" })
     } catch (error) {
-        console.log(error)
         res.status(500).json({ message: "Invalid information" });
     }
 })
