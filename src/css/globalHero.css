@@ -77,6 +77,34 @@
     height: fit-content;
 }
 
+.line {
+    border-bottom: 1px solid #787878;
+    width: 90%;
+    margin: auto;
+    display: none;
+}
+
+@media only screen and (max-width : 700px) {
+    .testimonialBox {
+        box-shadow: none;
+    }
+
+    .box-shadow {
+        box-shadow: none;
+    }
+
+    .internship {
+        box-shadow: none;
+        /* border-bottom: 2px solid rgb(107, 107, 107);
+        border-radius: 0px !important; */
+
+    }
+
+    .line {
+        display: block;
+    }
+}
+
 .navItems {
     transition: all 0.3s ease-in-out;
 }
@@ -154,4 +182,5 @@
     width: 65vw;
     top: 0;
     z-index: 500;
+    left: 0px;
 }

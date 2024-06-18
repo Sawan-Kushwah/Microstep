@@ -16,8 +16,8 @@ const HomeCourses = () => {
 
                 {/* web development */}
 
-                <div className="container mx-auto max-md:flex-col-reverse max-md:pl-0 max-md:w-full flex my-16 md:flex-row flex-col items-center w-11/12 border rounded-[25px]  pl-8 box-shadow">
-                    <div className="lg:flex-grow md:w-11/12 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center max-md:pt-4 max-md:px-2">
+                <div className="container max-sm:shadow-none max-sm:border-none mx-auto max-xl:flex-col-reverse max-xl:pl-0 max-xl:w-full flex my-16  flex-col items-center w-11/12 border rounded-[25px]  pl-8 box-shadow">
+                    <div className="lg:flex-grow md:w-11/12 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center max-xl:py-4 max-xl:px-2">
                         <div className="box backdrop-blur-lg bg-gray-300 text-black py-3 px-14 text-lg rounded-r-3xl rounded-l-lg font-bold mb-4">
                             Web Development
                         </div>
@@ -85,8 +85,8 @@ const HomeCourses = () => {
                 </div>
 
                 {/* programming */}
-                <div className="container mx-auto max-md:flex-col-reverse max-md:pl-0 max-md:w-full flex  my-16 md:flex-row-reverse flex-row-reverse items-center w-11/12 border rounded-[25px] box-shadow">
-                    <div className="lg:flex-grow pl-5 max-md:px-2 max-md:pt-4 md:w-11/12 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                <div className="container max-sm:shadow-none max-sm:border-none mx-auto max-xl:flex-col-reverse max-xl:pl-0 max-xl:w-full flex  my-16  flex-row-reverse items-center w-11/12 border rounded-[25px] box-shadow">
+                    <div className="lg:flex-grow pl-5 max-xl:px-2 max-xl:py-4 md:w-11/12 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
                         <div className="box backdrop-blur-lg bg-gray-300 text-black py-3 px-14 text-lg rounded-l-3xl rounded-r-lg font-bold mb-4">
                             Programmer
                         </div>

@@ -35,7 +35,7 @@ const App = () => {
                   <div className="button">
                     <div className="flex flex-col gap-4">
                       <a href="#courses" className=" w-fit">
-                        <button className="btn">
+                        <button className="btn max-[400px]:px-16">
                           Explore Internships
                         </button>
                       </a>
@@ -69,7 +69,7 @@ const App = () => {
                 <img src={heroImg} alt="" className=" w-full" />
               </div>
             </div>
-            <div className="floatingText absolute bottom-3 w-full h-20 z-20" >
+            <div className="floatingText absolute bottom-3 w-full h-20 z-20 max-[400px]:-bottom-5" >
               <div className="marquee text-white text text-6xl w-11/12 m-auto h-full overflow-hidden">
                 <h1>
                   <span className="text-red-500">C</span>ode with Confidence:
