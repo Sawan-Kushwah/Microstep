@@ -16,7 +16,7 @@ const HomeCourses = () => {
 
                 {/* web development */}
 
-                <div className="container max-sm:shadow-none max-sm:border-none mx-auto max-xl:flex-col-reverse max-xl:pl-0 max-xl:w-full flex my-16  flex-col items-center w-11/12 border rounded-[25px]  pl-8 box-shadow">
+                <div className="container max-sm:shadow-none max-sm:border-none mx-auto max-xl:flex-col-reverse max-xl:pl-0 max-xl:w-full flex my-16  flex-row items-center w-11/12 border rounded-[25px]  pl-8 box-shadow">
                     <div className="lg:flex-grow md:w-11/12 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center max-xl:py-4 max-xl:px-2">
                         <div className="box backdrop-blur-lg bg-gray-300 text-black py-3 px-14 text-lg rounded-r-3xl rounded-l-lg font-bold mb-4">
                             Web Development
@@ -80,7 +80,7 @@ const HomeCourses = () => {
                         </div>
                     </div>
                     <div className="w-full h-[588px] max-md:h-auto ">
-                        <img className="object-cover object-center rounded h-full w-full rounded-tr-[25px] rounded-tl-[25px]" alt="hero" src="https://img.freepik.com/free-photo/programming-background-collage_23-2149901770.jpg?w=1380&amp;t=st=1718100370~exp=1718100970~hmac=e812751d5d0d93d1fa86df7b80ae3051a008029d1fc0b9c2c9e1f429ddcc13e4" />
+                        <img className="object-cover object-center rounded h-full w-full max-xl:rounded-br-none rounded-br-[25px] rounded-tr-[25px] max-xl:rounded-tl-[25px]" alt="hero" src="https://img.freepik.com/free-photo/programming-background-collage_23-2149901770.jpg?w=1380&amp;t=st=1718100370~exp=1718100970~hmac=e812751d5d0d93d1fa86df7b80ae3051a008029d1fc0b9c2c9e1f429ddcc13e4" />
                     </div>
                 </div>
 

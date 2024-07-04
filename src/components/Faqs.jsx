@@ -37,7 +37,7 @@ const Faqs = () => {
                     <h1 className="text-2xl font-semibold text-center text-gray-800 lg:text-3xl dark:text-white">Frequently asked questions</h1>
 
                     <div className="mt-12 space-y-4">
-                        <div className="border-2 border-gray-100 rounded-lg dark:border-gray-700">
+                        <div className="border-2 border-gray-100 rounded-lg hover:bg-gray-800 dark:border-gray-700">
                             <button className="flex items-center justify-between w-full p-6" onClick={() => handleClick(0)}>
                                 <h1 className="font-semibold text-gray-700 dark:text-white text-xl">Earning your certificate is easy? <strong className=' text-blue-500'>Here steps</strong>
                                 </h1>
@@ -60,7 +60,7 @@ const Faqs = () => {
                             </p>
                         </div>
 
-                        <div className="border-2 border-gray-100 rounded-lg dark:border-gray-700">
+                        <div className="border-2 border-gray-100 rounded-lg hover:bg-gray-800 dark:border-gray-700">
                             <button className="flex items-center justify-between w-full p-6" onClick={() => handleClick(1)}>
                                 <h1 className="font-semibold text-gray-700 dark:text-white text-xl">What do I need to submit for project completion?
                                 </h1>
@@ -80,7 +80,7 @@ const Faqs = () => {
                                 <NavLink to={'/submitYourCodeHere'} className=" text-blue-500 underline cursor-pointer">For more details visit here</NavLink>
                             </p>
                         </div>
-                        <div className="border-2 border-gray-100 rounded-lg dark:border-gray-700">
+                        <div className="border-2 border-gray-100 rounded-lg hover:bg-gray-800 dark:border-gray-700">
                             <button className="flex items-center justify-between w-full p-6" onClick={() => handleClick(2)}>
                                 <h1 className="font-semibold text-gray-700 dark:text-white text-xl">How do I submit my code for review?</h1>
 
@@ -96,7 +96,7 @@ const Faqs = () => {
                                 <NavLink to={'/submitYourCodeHere'} className=" text-blue-500 underline cursor-pointer">For more details visit here</NavLink>
                             </p>
                         </div>
-                        <div className="border-2 border-gray-100 rounded-lg dark:border-gray-700">
+                        <div className="border-2 border-gray-100 rounded-lg hover:bg-gray-800 dark:border-gray-700">
                             <button className="flex items-center justify-between w-full p-6" onClick={() => handleClick(3)}>
                                 <h1 className="font-semibold text-gray-700 dark:text-white text-xl">On what basis certificate has been given ?
                                 </h1>
@@ -118,7 +118,7 @@ const Faqs = () => {
                         </div>
 
 
-                        <div className="border-2 border-gray-100 rounded-lg dark:border-gray-700">
+                        <div className="border-2 border-gray-100 rounded-lg hover:bg-gray-800 dark:border-gray-700">
                             <button className="flex items-center justify-between w-full p-6" onClick={() => handleClick(4)}>
                                 <h1 className="font-semibold text-gray-700 dark:text-white text-xl">Can I use code I find online to complete my projects?
                                 </h1>
@@ -141,7 +141,7 @@ const Faqs = () => {
                             </p>
                         </div>
                         <div className="showMoreFaqs hidden space-y-4">
-                            <div className="border-2 border-gray-100 rounded-lg dark:border-gray-700">
+                            <div className="border-2 border-gray-100 rounded-lg hover:bg-gray-800 dark:border-gray-700">
                                 <button className="flex items-center justify-between w-full p-6" onClick={() => handleClick(5)}>
                                     <h1 className="font-semibold text-gray-700 dark:text-white text-xl">Is Linkedin post can be consider as submission?</h1>
 
@@ -156,7 +156,7 @@ const Faqs = () => {
                                     <strong className=' text-green-500'>YES ,</strong> Linkedin Post is consider as your submission , you just have to follow code submission process and <strong className=' text-blue-500'>you can give link of your linkedin post</strong>
                                 </p>
                             </div>
-                            <div className="border-2 border-gray-100 rounded-lg dark:border-gray-700">
+                            <div className="border-2 border-gray-100 rounded-lg hover:bg-gray-800 dark:border-gray-700">
                                 <button className="flex items-center justify-between w-full p-6" onClick={() => handleClick(6)}  >
                                     <h1 className="font-semibold text-gray-700 dark:text-white text-xl">How much does it cost?</h1>
 
@@ -174,7 +174,7 @@ const Faqs = () => {
 
 
 
-                            <div className="border-2 border-gray-100 rounded-lg dark:border-gray-700">
+                            <div className="border-2 border-gray-100 rounded-lg hover:bg-gray-800 dark:border-gray-700">
                                 <button className="flex items-center justify-between w-full p-6" onClick={() => handleClick(7)}>
                                     <h1 className="font-semibold text-gray-700 dark:text-white text-xl">Who will review my code?
                                     </h1>
@@ -191,7 +191,7 @@ const Faqs = () => {
                                 </p>
                             </div>
 
-                            <div className="border-2 border-gray-100 rounded-lg dark:border-gray-700">
+                            <div className="border-2 border-gray-100 rounded-lg hover:bg-gray-800 dark:border-gray-700">
                                 <button className="flex items-center justify-between w-full p-6" onClick={() => handleClick(8)}>
                                     <h1 className="font-semibold text-gray-700 dark:text-white text-xl">Will I get Offer letter ?
                                     </h1>
